@@ -2,7 +2,13 @@
 /shirtDesigner
 Custom shirts.docx
 
+# Native Files #
+#################
 
+*.psd
+*.ai
+*.NEF
+*.xmp
 
 # Compiled source #
 ###################
