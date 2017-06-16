@@ -1,3 +1,14 @@
+<!--
+
+to add:
+make nav static when it contacts top of page
+    logo appears in brand position
+
+Overlay semi transparent div over girl on piano image
+    have it scale with a percentage of page width
+
+
+-->
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -8,7 +19,7 @@
 
         <title>Central Avenue T-Shirt Co</title>
 
-        <link href="https://fonts.googleapis.com/css?family=Eczar:600|Roboto:400,400i,700" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Eczar:600|Roboto:100,400,400i,700" rel="stylesheet">
 
         <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -19,16 +30,6 @@
     <body>
         
         <div id="mainBody">
-            <div class="container-fluid">
-                <div class="row infoBarDiv">
-                    <div class="col-xs-6">
-                        <p class="infoBar text-left"><a href="tel:727-123-4567"><span class="glyphicon glyphicon-earphone" aria-hidden="true"></span></a></p>
-                    </div>
-                    <div class="col-xs-6">
-                        <p class="infoBar text-right"><a href="mailto:info@centralaveshirts"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span></a></p>
-                    </div>
-                </div>
-            </div>
             <div id="logoDiv">
                 <img src="images/cascLogo1.svg" id="mainLogo" class="img-responsive center-block">
             </div>
@@ -49,13 +50,10 @@
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                   <ul class="nav navbar-nav">
-                    <li><a href="#" class="text-uppercase">Home <span class="sr-only">(current)</span></a></li>
-                    <li><a href="#" class="text-uppercase">About</a></li>
-                    <li><a href="#" class="text-uppercase">Pricing</a></li>
+                    <li><a href="#" class="text-uppercase">Who We Are</a></li>
                     <li><a href="#" class="text-uppercase">Catalog</a></li>
                     <li><a href="#" class="text-uppercase">Samples</a></li>
-                    <li><a href="#" class="text-uppercase">Design</a></li>
-                    <li><a href="#" class="text-uppercase">Quote</a></li>
+                    <li><a href="#" class="text-uppercase">Get a Quote</a></li>
                   </ul>
                 </div><!-- /.navbar-collapse -->
               </div><!-- /.container-fluid -->
@@ -66,8 +64,16 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-7">
-                    <h1 class="text-uppercase orangeUl">Custom T-Shirts &amp; Hats</h1>
-                    <p>For over 40 years, we’ve been making custom apparel for the St. Pete area. Let us put our state of the art equipment and experience to work for you. We specialize in screen printing, full color direct to garment printing and embroidery on a variety of apparel.  Check our catalog to see what we offer. Contact us to see what we can do.</p>
+                    <h1 class="text-uppercase orangeUl">Who We Are</h1>
+                    <div class="whoWeAreImg">
+                    <div class="grad">
+                    
+                         <p class="whiteTxt">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                         quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.
+                         </p>
+                    </div>
+                    </div>
                 </div>
                 <div class="col-md-5">
                     <h1 class="text-uppercase ltBlueUl">Catalog</h1>
@@ -99,8 +105,10 @@
             <div class="row">
               <div class="col-md-12">
                 <h1 class="text-uppercase orangeUl">From Idea to Apparel</h1>
-                <p>Have an idea of what you want and don’t know where to start? You can either design your own art or come in and have one of our experienced artists put something together for you.<br>
-                Already have art and just need something to print it on? Great! We have access to quality apparel at affordable prices. Let us know what you want to do, we’ll make it happen. There should be more of this, but it’s not my job to write it out.</p>
+                <div  class="grad">
+                    <p class="whiteTxt">Have an idea of what you want and don’t know where to start? You can either design your own art or come in and have one of our experienced artists put something together for you.<br>
+                     Already have art and just need something to print it on? Great! We have access to quality apparel at affordable prices. Let us know what you want to do, we’ll make it happen. There should be more of this, but it’s not my job to write it out.</p>
+                </div>
               </div>
             </div>
 

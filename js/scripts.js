@@ -24,10 +24,10 @@ function nextShirt(){
 		shirtNumber++;
 		shirtSrcString = "images/catImages/item_" + shirtNumber + ".svg";
 	}
-	$(".catViewerImg").animate({opacity: 0,left:"-=150px"},200, function(){
+	$(".catViewerImg").animate({opacity: 0,left:"+=150px"},200, function(){
 		$(".catViewerImg").attr("src", shirtSrcString);
-		$(".catViewerImg").animate({left:"+=300px"},1);
-		$(".catViewerImg").animate({opacity:1,left:"-=150px"},200);
+		$(".catViewerImg").animate({left:"-=300px"},1);
+		$(".catViewerImg").animate({opacity:1,left:"+=150px"},200);
 		displayInfo();
 		updateLinks();
 	});
@@ -43,10 +43,10 @@ function prevShirt(){
 		shirtNumber--;
 		shirtSrcString = "images/catImages/item_" + shirtNumber + ".svg";
 	}
-	$(".catViewerImg").animate({opacity: 0,left:"+=150px"},200, function(){
+	$(".catViewerImg").animate({opacity: 0,left:"-=150px"},200, function(){
 		$(".catViewerImg").attr("src", shirtSrcString);
-		$(".catViewerImg").animate({left:"-=300px"},1);
-		$(".catViewerImg").animate({opacity:1,left:"+=150px"},200);
+		$(".catViewerImg").animate({left:"+=300px"},1);
+		$(".catViewerImg").animate({opacity:1,left:"-=150px"},200);
 		displayInfo();
 		updateLinks()
 	});
