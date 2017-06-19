@@ -9,6 +9,8 @@ Off White:  #f4f4f4 | RGB  244,244,244
 
 /*utilities*/
 
+
+
 #testBox{
 	height: 10px;
 	width: 10px;
@@ -17,9 +19,6 @@ Off White:  #f4f4f4 | RGB  244,244,244
 
 .whiteTxt{
 	color:white;
-	padding: 2rem 50% 2rem 2rem;
-	line-height: 2rem;
-	font: 100 1.5rem 'Roboto', sans-serif;
 }
 
 .noPadding{
@@ -66,8 +65,8 @@ Off White:  #f4f4f4 | RGB  244,244,244
 	font-size: 3rem;
 }
 
-#bs-example-navbar-collapse-1{
-	background-color: #042a2b;
+#navbar-collapse{
+	background-color: #f4f4f4;
 	color: #e8d6cb;
 
 }
@@ -87,11 +86,36 @@ Off White:  #f4f4f4 | RGB  244,244,244
     color: #f4f4f4;
     background-color: #d84727;
 }
+.navbar-collapse {
+  text-align:center;
+  box-shadow: 0 .5rem 1rem rgba(4,42,43,.8);
+}
 
+.navbar-nav li{
+	padding: 0 3rem;
+}
+.navbar-nav {
+    display:inline-block;
+    float:none;
+}
+
+.navLinks{
+	padding: 2rem 50% 2rem 2rem;
+	line-height: 2rem;
+	font: 2rem 'Anton', sans-serif;
+	letter-spacing: .5rem;
+	
+}
+
+/*overrides navbar default text color*/
+.navbar-default .navbar-nav>li>a {
+    color:#042a2b;
+}
 
 #logoDiv{
 	background-color: #042a2b;
 	padding:2.75rem 0;
+	padding: 10rem 0 7rem 0;
 }
 
 #mainLogo{
@@ -197,3 +221,44 @@ p{
 	color: #f4f4f4;
 	height: 20rem;
 }
+
+@media (min-width: 575px){
+	#logoDiv{
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+		background-origin:padding-box;
+		background-position:center 3rem;
+		padding: 15rem 0 7rem 0;
+	}
+
+}
+
+@media (min-width: 750px) { 
+	#mainLogo{
+		width: 20rem;
+	}
+	.navLinks{
+		padding: 0 1rem;
+		line-height: 2rem;
+		font: 1.5rem 'Anton', sans-serif;
+		letter-spacing: .25rem;
+	}
+
+	.navbar-nav li{
+		padding: 0 1rem;
+	}
+
+
+}
+
+
+@media (min-width: 970px){
+	.navLinks{
+		padding: 2rem 50% 2rem 2rem;
+		line-height: 2rem;
+		font: 2rem 'Anton', sans-serif;
+		letter-spacing: .5rem;
+	}
+	
+}
+

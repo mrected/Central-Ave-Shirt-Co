@@ -75,3 +75,31 @@ $("#testBtn").click(function(){
 	$("#testLink").attr("href",shirtLinks[shirtNumber]);
 	console.log($("#testLink").attr("href"));
 });
+
+
+//banner randomizer
+
+//make array with image paths or use data file
+
+var bannerArray = ["Banner-ColoredStreet.jpg",
+				   "Banner-Est.jpg",
+				   "Banner-Monk.jpg",
+				   "Banner-Mural.jpg",
+				   "Banner-Piano.jpg",
+				   "Banner-Sidewalk.jpg",
+				   "Banner-Street.jpg"];
+
+
+$(document).ready(function(){
+	var getRandNum = Math.floor(Math.random()*(bannerArray.length-1));
+	var bannerImage="images/bannerImages/" + bannerArray[getRandNum];
+	$("#logoDiv").css('background-image', 'url('+ bannerImage + ')');
+});
+
+
+
+
+
+
+
+
