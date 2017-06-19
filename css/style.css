@@ -225,10 +225,10 @@ p{
 @media (min-width: 575px){
 	#logoDiv{
 		background-repeat: no-repeat;
-		background-attachment: fixed;
-		background-origin:padding-box;
-		background-position:center 3rem;
-		padding: 15rem 0 7rem 0;
+	    background-attachment: fixed;
+	    background-origin: padding-box;
+	    background-position: center 5rem;
+	    padding: 15rem 0 27rem 0;
 	}
 
 }
