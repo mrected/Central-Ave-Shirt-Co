@@ -71,9 +71,10 @@ Off White:  #f4f4f4 | RGB  244,244,244
 
 }
 
-.navbar-header{
-	border-bottom: solid .5rem #d84727;
-}
+#socialDropdown{
+		display: none;
+	}
+
 
 	/*overrides bootstrap nav*/
 
@@ -228,14 +229,16 @@ p{
 	    background-attachment: fixed;
 	    background-origin: padding-box;
 	    background-position: center 5rem;
-	    padding: 15rem 0 27rem 0;
+	    padding: 15rem 0 17rem 0;
 	}
+
+	
 
 }
 
-@media (min-width: 750px) { 
+@media (min-width: 770px) { 
 	#mainLogo{
-		width: 20rem;
+		width: 30rem;
 	}
 	.navLinks{
 		padding: 0 1rem;
@@ -247,7 +250,14 @@ p{
 	.navbar-nav li{
 		padding: 0 1rem;
 	}
+	#socialDropdown{
+		display: initial;
+		padding-right: 3rem;
+	}
 
+	#socialDropdown .fa{
+		padding: 1.75rem .5rem 0 0;
+	}
 
 }
 
