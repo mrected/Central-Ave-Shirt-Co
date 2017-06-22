@@ -22,10 +22,10 @@ git pull https://github.com/mrected/Central-Ave-Shirt-Co.git
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <title>Central Avenue T-Shirt Co</title>
-        <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link href="https://fonts.googleapis.com/css?family=Anton|Eczar:600|Roboto:100,400,400i,700" rel="stylesheet">
 
         <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.css">
+        <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Anton|Eczar:600|Roboto:100,400,400i,700" rel="stylesheet">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
         <link rel="stylesheet" type="text/css" href="css/style.css">
 
@@ -44,7 +44,7 @@ git pull https://github.com/mrected/Central-Ave-Shirt-Co.git
 
                 <div class="navbar-header">
                 <ul class="nav navbar-nav navbar-right">
-                    <li><button type="button" class="btn btn-info navbar-btn btn-lg"><i class="fa fa-comments" aria-hidden="true"></i> Chat now!</button></li>
+                    <li><a href="#"><button type="button" class="btn btn-info navbar-btn btn-lg"><i class="fa fa-comments" aria-hidden="true"></i> Chat now</button></a></li>
                 </ul>
                   <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
                     <span class="sr-only">Toggle navigation</span>
@@ -58,10 +58,10 @@ git pull https://github.com/mrected/Central-Ave-Shirt-Co.git
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="navbar-collapse">
                   <ul class="nav navbar-nav">
-                    <li><a href="#" class="text-uppercase navLinks">Who We Are</a></li>
-                    <li><a href="#" class="text-uppercase navLinks">Catalog</a></li>
-                    <li><a href="#" class="text-uppercase navLinks">Get a Quote</a></li>
-                    <li><a href="#" class="text-uppercase navLinks">Contact Us</a></li>
+                    <li class="navLinks"><a href="#" class="text-uppercase">Design</a></li>
+                    <li class="navLinks"><a href="#" class="text-uppercase">Catalog</a></li>
+                    <li class="navLinks"><a href="#" class="text-uppercase">Get a Quote</a></li>
+                    <li class="navLinks"><a href="#" class="text-uppercase">Contact Us</a></li>
                   </ul>
                   <span id="socialDropdown" class="navbar-right">
                       <a href="#"><i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i> </a>
@@ -77,18 +77,95 @@ git pull https://github.com/mrected/Central-Ave-Shirt-Co.git
 
         <div class="container">
             <div class="row">
-                <div class="col-md-7">
-                    <h1 class="text-uppercase orangeUl">Who We Are</h1>
-                    <div class="whoWeAreImg">
-                    <div class="grad">
-                    
-                         <p class="whiteTxt">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                         quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.
-                         </p>
+
+                <div class="col-sm-4">
+                  <div class="thumbnail mainThumbnail">
+                    <div class="caption">
+                      <h3 class="text-center">Choose your style</h3>
+                      <div id="catViewer">
+                          <div id="catViewerMain">
+                              <a href="whiteT.html" id="shirtImgLink"><img src='images/catImages/item_0.svg' class='img-responsive catViewerImg'></a>
+                          </div>
+                      </div>
+                      <div class="styleDetails">
+                        <h4 class="text-center"><strong><span id="shirtType"></span></strong></h4>
+                        <p><strong>Description: </strong><span id="shirtDesc"></span></p>
+                      </div>
+                      <div class="row">
+                        <div class="col-xs-6" align="center">
+                          <button id="catViewerPrev" class="btn btn-default"><i class="fa fa-chevron-circle-left fa-3x" aria-hidden="true" alt="Previous Style"></i></button>
+                        </div>
+                        <div class="col-xs-6" align="center">
+                          <button id="catViewerNext" class="btn btn-default"><i class="fa fa-chevron-circle-right fa-3x" aria-hidden="true" alt="Previous Style"></i></button>
+                        </div>
+                      </div>
                     </div>
-                    </div>
+                  </div>
                 </div>
+
+                <div class="col-sm-4">
+                  <div class="thumbnail">
+                  <div class="caption">
+                      <h3 class="text-center">Get a Quote</h3>
+                    <div align="center"><i class="fa fa-usd sectionIcon" aria-hidden="true"></i></div>
+                    
+                      <form name="calc" id="calc">
+                        <label>Number of colors</label>
+                        <select name="numColors" id="numColors">
+                          <option value="c1">1</option>
+                          <option value="c2">2</option>
+                          <option value="c3">3</option>
+                          <option value="c4">4</option>
+                          <option value="c5">5</option>
+                        </select>
+                        <br>
+                        <label>Number of shirts</label>
+                        <input type="number" name="numShirts" id="numShirts"><br>
+                        <label>Shirt Type</label>
+                        <select name="shirtType" id="shirtType">
+                          <option value="ss">Short Sleeve</option>
+                          <option value="ls">Long Sleeve</option>
+                        </select><br>
+                        <p>Cost per shirt: <span id="shirtTotal"></span> Total: <span id="costTotal"></span></p>
+                        <p class="bg-warning" id="info"></p>
+                        <input type="button" class="btn btn-primary btn-block" id="submit" value="Calculate Cost">
+                        <a href="#"  data-toggle="modal" data-target="#priceChartModal">Full Price Chart</a>
+                      </form>                   
+
+                      <div class="modal fade" id="priceChartModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                        <div class="modal-dialog" role="document">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                              <h4 class="modal-title" id="myModalLabel">Full Price Chart</h4>
+                            </div>
+                            <div class="modal-body">
+                              <h1 id="selectedShirt"></h1>
+                              <table class="table table-hover table-responsive text-center" id="priceChart">
+                              </table>
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-4">
+                  <div class="thumbnail">
+                    <img class="img-responsive center-block" src="..." alt="...">
+                    <div class="caption">
+                      <h3 class="text-center">Design</h3>
+                      <p>...</p>
+                      <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+                    </div>
+                  </div>
+                </div>
+            </div>
                 <div class="row">
                     <div class="col-md-12">
                         <div id="whatWeDoCarousel" class="carousel slide" data-ride="carousel">
@@ -138,31 +215,7 @@ git pull https://github.com/mrected/Central-Ave-Shirt-Co.git
                     </div>
                 </div>
 
-                <div class="col-md-5">
-                    <h1 class="text-uppercase ltBlueUl">Catalog</h1>
-                    <div class="row center-block">
-                        <div class="col-lg-7">
-                            <div id="catViewer">
-                                <div id="catViewerPrev" class="center-block">
-                                    <span class="glyphicon glyphicon-triangle-left"></span>
-                                </div>
-                                <div id="catViewerMain">
-                                    <a href="whiteT.html" id="shirtImgLink"><img src='images/catImages/item_0.svg' class='img-responsive catViewerImg'></a>
-                                </div>
-                                <div id="catViewerNext">
-                                    <span class="glyphicon glyphicon-triangle-right"></span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-5">
-                            <div id="shirtDetailsDiv">
-                                <p><strong>Shirt Type:</strong><br><span id="shirtType"></span></p>
-                                <p><strong>Description:</strong><br><span id="shirtDesc"></span></p>
-                                <a href="whiteT.html" id="shirtImgBtn" role="button" class="btn btn-sm btn-primary">Shop Now</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+
             </div>
 
             <div class="row">
@@ -197,6 +250,9 @@ git pull https://github.com/mrected/Central-Ave-Shirt-Co.git
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="js/shirtData.js"></script>
+        <script type="text/javascript" src="js/shirtCalc.js"></script>
+
         <script type="text/javascript" src="js/shirtViewerData.js"></script>
         <script type="text/javascript" src="js/scripts.js"></script>
 
