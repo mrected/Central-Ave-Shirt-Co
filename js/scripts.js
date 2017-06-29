@@ -1,3 +1,23 @@
+//Call Designer Plugin
+
+$(document).ready(function(){
+
+  var $fpd = $('#fpd'),
+        pluginOpts = {stageWidth: 1200, stageHeight: 800};
+ 
+  var yourDesigner = new FancyProductDesigner($fpd, pluginOpts);
+
+ //api methods can be used
+ yourDesigner.print()
+
+  //you can listen to events
+  $fpd.on('productCreate', function() {
+	//do something
+  });
+});
+
+
+//Designer Plugin End
 
 var numberOfShirts = shirtsArray.length;
 var shirtNumber=0;
