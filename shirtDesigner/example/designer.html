@@ -126,7 +126,8 @@ git pull https://github.com/mrected/Central-Ave-Shirt-Co.git
 					  	</div>
 					  	<div id="my-variations"></div>
 					  	<p class="fpd-container"><span class="fpd-btn" id="send-image-mail-php">Send image to mail</span></p>
-					  	<p id="emailMsg"></p>
+					  	<p class="fpd-container"><span class="fpd-btn" id="checkout-button">Submit image</span></p>
+					  	
 					  	<!--end designer-->
 					</div>
 				</div>
@@ -201,9 +202,9 @@ git pull https://github.com/mrected/Central-Ave-Shirt-Co.git
 			    	},
 			    	actions:  {
 						'top': [],
-						'right': ['info','save','load','download'],
+						'right': [],
 						'bottom': ['undo','redo'],
-						'left': ['zoom', 'reset-product', 'manage-layers']
+						'left': ['manage-layers', 'zoom', 'reset-product', 'save','load','download']
 					},
 					mainBarModules: ['products','images', 'designs', 'text'],
 					colorSelectionPlacement: 'inside-br',
@@ -227,6 +228,12 @@ git pull https://github.com/mrected/Central-Ave-Shirt-Co.git
 
 				});
 
+			});
+
+			$('#checkout-button').click(function(){
+				var product = yourDesigner.getProduct();
+				console.log(product);
+				return false;
 			});
 
 	    });
