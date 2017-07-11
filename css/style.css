@@ -9,12 +9,8 @@ Off White:  #f4f4f4 | RGB  244,244,244
 
 /*utilities*/
 
-
-
-#testBox{
-	height: 10px;
-	width: 10px;
-	background-color: red;
+body{
+	font-family: 'Roboto' sans-serif;
 }
 
 .whiteTxt{
@@ -25,10 +21,14 @@ Off White:  #f4f4f4 | RGB  244,244,244
 	padding:0;
 }
 
+.hideSmallScreens{
+	display: none;
+}
 
 #mainBody{
 	min-height: 100vh;
 }
+
 
 .grad {
   background: #042a2b; /* For browsers that do not support gradients */
@@ -38,42 +38,51 @@ Off White:  #f4f4f4 | RGB  244,244,244
   background: linear-gradient(to right, rgba(4,42,43,1), rgba(4,42,43,0)); /*Standard*/
 }
 
-/*.whoWeAreImg{
-	background-image: url("../images/navBg.jpg");
-	background-repeat: no-repeat;
-    
-    background-position: right center; 
-}*/
 
-
-/*page head*/
-
-/*.infoBarDiv{
-	background-color: #042a2b;
-	padding:1rem 0 .15rem 0;
-	border-bottom: solid .15rem #e8d6cb;
-}*/
-
-/*.infoBar{9
-	font-size: 1.5rem;
-	color:#e8d6cb;
-}
-*/
-/*.infoBar a:hover, .infoBar a:active, .infoBar a:focus, .infoBar a:visited, .infoBar a{
+#contactBar{
+	padding: .5rem 3rem .75rem;
 	text-decoration: none;
-	color:#e8d6cb;
-	font-size: 3rem;
-}*/
+	background-color: #042a2b;
+}
+
+.phoneEmailLinks{
+	padding:.75rem 0 0 0;
+}
+
+
+#contactBar a:visited, #contactBar a:active, #contactBar a:hover, #contactBar a{
+	color: #f4f4f4;
+	text-decoration: none;
+}
+
+#navBlock{
+	position: fixed;
+	width: 100%;
+    z-index: 1000;
+}
+
+
+#navbarToggleBtn, #navbarToggleBtn a:visited{
+	background-color: #2292a4;
+	margin-right: 2rem;
+}
+
+
+#navbarToggleBtn:hover, #navbarToggleBtn:active{
+	background-color: #d84727;
+}
+
+#navbarToggleBtn .icon-bar{
+	background-color: #f4f4f4;
+}
+
+
 
 #navbar-collapse{
 	background-color: #f4f4f4;
 	color: #e8d6cb;
-
 }
 
-#socialDropdown{
-		display: none;
-	}
 
 
 	/*overrides bootstrap nav*/
@@ -88,6 +97,10 @@ Off White:  #f4f4f4 | RGB  244,244,244
   text-align:center;
   box-shadow: 0 .5rem 1rem rgba(4,42,43,.8);
 }
+
+/*.downArrow{
+	display: none;
+}*/
 
 .navbar-nav li{
 	padding: 0 3rem;
@@ -114,15 +127,23 @@ Off White:  #f4f4f4 | RGB  244,244,244
 
 #logoDiv{
 	background-color: #042a2b;
-	padding:2.75rem 0;
-	padding: 10rem 0 7rem 0;
-	margin-bottom: 6rem;
+	background-position: center 8rem;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-origin: padding-box;
+	padding-top: 10rem;
+
 }
 
 #mainLogo{
-	width: 15rem;
+	width: 17rem;
 }
 
+.downArrow{
+	padding-top: 9rem;
+	text-shadow: 0 .5rem .5rem rgba(4,42,43,.8);
+	width: 8rem;
+}
 
 /*body styles*/
 
@@ -131,16 +152,32 @@ h1{
 }
 
 .orangeUl{
-	border-bottom: solid .5rem #d84727;
+	border-bottom: solid .25rem #d84727;
 }
 
 .ltBlueUl{
-	border-bottom: solid .5rem #2292a4;
+	border-bottom: solid .25rem #2292a4;
 }
 
 p{
 	font:1.25rem 'Roboto', sans-serif;
 }
+
+.homeColumns{
+	padding-right: .25rem;
+	padding-left: .25rem;
+}
+
+.thumbnail{
+	overflow: hidden;
+	border: 0;
+}
+
+.thumbnailTitle{
+	font: 1.5rem/1.5rem 'Anton', sans-serif;
+	text-transform: uppercase;
+	padding-bottom: .5rem;
+}	
 
 /*catviewer styles*/
 
@@ -148,8 +185,20 @@ p{
 	height:15rem;
 }
 
+.productStyleTitle{
+	font: 500 1.5rem/1.5rem 'Roboto', sans-serif;
+	color:#042a2b;
+}
+
 .styleDetails{
-	height: 9rem;
+	height: 6rem;
+	background-color: rgba(4,42,43,.5);
+	padding:.5rem 1rem;
+	border-radius: .75rem;
+}
+
+#shirtDesc{
+	font: 300 1.25rem/.25rem 'Roboto', sans-serif;
 }
 
 #catViewer{
@@ -160,6 +209,11 @@ p{
 
 #catViewerPrev, #catViewerNext{
 	color:#2292a4;
+}
+
+.catViewerBtnDiv{
+	padding-right: .25rem;
+	padding-left: .25rem;
 }
 
 
@@ -215,7 +269,7 @@ p{
 	position: relative;
 	display: inline-block;
 	height: 7rem;
-	padding: .5rem 1rem;
+	padding: .5rem 0;
 
 }
 
@@ -242,27 +296,50 @@ p{
 }
 
 @media (min-width: 575px){
-	#logoDiv{
-		background-repeat: no-repeat;
-	    background-attachment: fixed;
-	    background-origin: padding-box;
-	    background-position: center 5rem;
-	    padding: 15rem 0 17rem 0;
-	}
 
+	.hideSmallScreens{
+		display: initial;
+	}
+	
+	.thumbnailTitle{
+		font: 2.5rem/2rem 'Anton', sans-serif;
+		padding-bottom: 1rem;
+	}
+	.productStyleTitle{
+		font-size:1.75rem;
+		line-height: 1.75rem;
+		font-weight: 100;
+	}
 	
 
 }
 
 @media (min-width: 770px) { 
+
+
 	#mainLogo{
 		width: 30rem;
+		padding-top: 10rem;
+	}
+	#logoDiv{    
+	    background-color: #042a2b;
+		background-position: center 8rem;
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+		background-origin: padding-box;
+		padding: 5rem 0 3rem 0;
+		margin-bottom: 6rem;
+		box-shadow: 0 .5rem 1rem rgba(4,42,43,.8);
 	}
 	.navLinks{
 		padding: 0 1rem;
 		line-height: 2rem;
 		font: 1.5rem 'Anton', sans-serif;
 		letter-spacing: .25rem;
+	}
+
+	.thumbnailTitle{
+		font: 3rem/3rem 'Anton', sans-serif;
 	}
 
 	.navbar-nav li{
@@ -275,6 +352,10 @@ p{
 
 	#socialDropdown .fa{
 		padding: 1.75rem .5rem 0 0;
+	}
+
+	.productStyleTitle{
+		font-size:2.75rem;
 	}
 
 }

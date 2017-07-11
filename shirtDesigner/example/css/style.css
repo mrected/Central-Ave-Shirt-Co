@@ -114,13 +114,17 @@ Off White:  #f4f4f4 | RGB  244,244,244
 
 #logoDiv{
 	background-color: #042a2b;
-	padding:2.75rem 0;
-	padding: 10rem 0 7rem 0;
+	padding: 12.75rem 0 7rem 0;
 	margin-bottom: 6rem;
 }
 
 #mainLogo{
 	width: 15rem;
+}
+
+.designerContainer{
+	padding: 14rem 0 7rem 0;
+	margin-bottom: 6rem;
 }
 
 

@@ -1,23 +1,10 @@
-//Call Designer Plugin
-
-$(document).ready(function(){
-
-  var $fpd = $('#fpd'),
-        pluginOpts = {stageWidth: 1200, stageHeight: 800};
- 
-  var yourDesigner = new FancyProductDesigner($fpd, pluginOpts);
-
- //api methods can be used
- yourDesigner.print()
-
-  //you can listen to events
-  $fpd.on('productCreate', function() {
-	//do something
-  });
+$(function () {
+  $('[data-toggle="popover"]').popover()
 });
 
-
-//Designer Plugin End
+$("#popover").click(function(e){
+	e.preventDefault();
+});
 
 var numberOfShirts = shirtsArray.length;
 var shirtNumber=0;
@@ -25,7 +12,7 @@ var shirtNumber=0;
 var shirtSrcString = "images/catImages/item_" + shirtNumber + ".jpg";
 
 function displayInfo(){
-	$("#shirtType").html(shirtType[shirtNumber]);
+	$("#cvShirtType").html(cvShirtType[shirtNumber]);
 	$("#shirtDesc").html(shirtDesc[shirtNumber]);
 }
 
@@ -68,7 +55,7 @@ function prevShirt(){
 		$(".catViewerImg").animate({left:"+=300px"},1);
 		$(".catViewerImg").animate({opacity:1,left:"-=150px"},200);
 		displayInfo();
-		updateLinks()
+		updateLinks();
 	});
 }
 
@@ -84,7 +71,7 @@ $("#catViewerPrev").click(function(){
 });
 
 $("#catViewerPrev").hover(function(){
-	$("#")
+	$("#");
 });
 
 $("#catViewerNext").click(function(){
@@ -101,17 +88,24 @@ $("#testBtn").click(function(){
 
 //make array with image paths or use data file
 
-var bannerArray = ["Banner-ColoredStreet.jpg",
-				   "Banner-Est.jpg",
-				   "Banner-Monk.jpg",
-				   "Banner-Mural.jpg",
-				   "Banner-Piano.jpg",
-				   "Banner-Sidewalk.jpg",
-				   "Banner-Street.jpg"];
+var bannerArray = ["Banner-cheetah.jpg",
+					"Banner-dogWalker.jpg",
+					"Banner-downCentral.jpg",
+					"Banner-estInStPete.jpg",
+					"Banner-Fergs.jpg",
+					"Banner-Jannus.jpg",
+					"Banner-localArt.jpg",
+					"Banner-Monk.jpg",
+					"Banner-piano.jpg",
+					"Banner-Sidewalk.jpg",
+					"Banner-sidewalk2.jpg",
+					"Banner-streetColors.jpg",
+					"Banner-Trolley.jpg"
+					];
 
 
 $(document).ready(function(){
-	var getRandNum = Math.floor(Math.random()*(bannerArray.length-1));
+	var getRandNum = Math.floor(Math.random()*(bannerArray.length));
 	var bannerImage="images/bannerImages/" + bannerArray[getRandNum];
 	$("#logoDiv").css('background-image', 'url('+ bannerImage + ')');
 });

@@ -140,6 +140,7 @@ function roundCurrency(cost){
 	return cost;
 }
 
+
 $("#shirtType").change(function(){
 	switch($("#shirtType").val()){
 		case "ss":
@@ -152,6 +153,29 @@ $("#shirtType").change(function(){
 			shirtType = "ls";
 			addCost = 2.5;
 			$("#selectedShirt").text("Long Sleeve Shirts");
+			break;
+		case "tt":
+			shirtType = "tt";
+			addCost = 0;
+			$("#selectedShirt").text("Tank Top");
+			break;
+
+		case "po":
+			shirtType = "po";
+			addCost = 3.5;
+			$("#selectedShirt").text("Polo Shirts");
+			break;
+
+		case "ho":
+			shirtType = "ho";
+			addCost = 5;
+			$("#selectedShirt").text("Hoodies");
+			break;
+
+		case "ht":
+			shirtType = "ht";
+			addCost = 1.5;
+			$("#selectedShirt").text("Hats");
 			break;
 
 		default:
@@ -190,7 +214,7 @@ $("#shirtType").change(function(){
 		$("#priceChart").children().remove();
 		createPriceTable();
 	}
-})
+});
 
 
 $("#submit").click(function(){

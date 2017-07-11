@@ -32,85 +32,92 @@ git pull https://github.com/mrected/Central-Ave-Shirt-Co.git
     </head>
 
     <body>
+      <div id="navBlock"">
         
-        <div id="mainBody">
-            <div id="logoDiv">
-                <img src="images/cascLogo1.svg" id="mainLogo" class="img-responsive center-block">
+          <div id="contactBar">
+            <a href="#" class="pull-right"> <button type="button" class="btn btn-default btn-xs"><i class="fa fa-comments" aria-hidden="true"></i> Chat now</button></a>
+              <a class="phoneEmailLinks" href="tel:727-327-3333"><i class="fa fa-phone" aria-hidden="true"></i> 727-327-3333</a>&nbsp;&nbsp;&nbsp;&nbsp;
+              <a class="phoneEmailLinks" href="mailto:artdept@helinger.com"><i class="fa fa-envelope-o" aria-hidden="true"></i> info</a>
+          </div>
+        
+          
+        <nav class="navbar navbar-default">
+          <div class="container-fluid noPadding">
+
+            <div class="navbar-header">
+              <button type="button" id="navbarToggleBtn" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+             <!--  <a class="navbar-brand" href="#">Home</a> -->
             </div>
 
-            <nav class="navbar navbar-default navbar-fixed-top">
-              <div class="container-fluid noPadding">
-                <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="collapse navbar-collapse" id="navbar-collapse">
 
-                <div class="navbar-header">
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#"><button type="button" class="btn btn-info navbar-btn btn-lg"><i class="fa fa-comments" aria-hidden="true"></i> Chat now</button></a></li>
+              <div id="topNavSection">
+                <ul class="nav navbar-nav">
+                  <li class="navLinks"><a href="shirtDesigner/designer.html" class="text-uppercase">Design</a></li>
+                  <li class="navLinks"><a href="#" class="text-uppercase">Catalog</a></li>
+                  <li class="navLinks"><a href="#" class="text-uppercase">Get a Quote</a></li>
+                  <li class="navLinks"><a href="#" class="text-uppercase">Contact Us</a></li>
+                  <li><!-- <a href="#"><i class="fa fa-twitter socialIcon" aria-hidden="true"></i> </a>
+                      <a href="#"><i class="fa fa-facebook socialIcon" aria-hidden="true"></i> </a>
+                      <a href="#"><i class="fa fa-instagram socialIcon" aria-hidden="true"></i> </a>
+                      <a href="#"><i class="fa fa-tumblr socialIcon" aria-hidden="true"></i> </a> -->
+                  </li>
                 </ul>
-                  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                  </button>
-                 <!--  <a class="navbar-brand" href="#">Home</a> -->
-                </div>
-
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse" id="navbar-collapse">
-                  <ul class="nav navbar-nav">
-                    <li class="navLinks"><a href="designer.html" class="text-uppercase">Design</a></li>
-                    <li class="navLinks"><a href="#" class="text-uppercase">Catalog</a></li>
-                    <li class="navLinks"><a href="#" class="text-uppercase">Get a Quote</a></li>
-                    <li class="navLinks"><a href="#" class="text-uppercase">Contact Us</a></li>
-                  </ul>
-                  <span id="socialDropdown" class="navbar-right">
-                      <a href="#"><i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i> </a>
-                      <a href="#"><i class="fa fa-facebook-official fa-2x" aria-hidden="true"></i> </a>
-                      <a href="#"><i class="fa fa-instagram fa-2x" aria-hidden="true"></i> </a>
-                      <a href="#"><i class="fa fa-tumblr-square fa-2x" aria-hidden="true"></i> </a>
-                  </span>
-                </div><!-- /.navbar-collapse -->
-              </div><!-- /.container-fluid -->
-            </nav>
-
-        
-
+              </div>
+            </div><!-- /.navbar-collapse -->
+            
+          </div><!-- /.container-fluid -->
+      </nav>
+    </div>
+    <div id="logoDiv" class="center-block">
+      <img src="images/cascLogo1.svg" id="mainLogo" class="img-responsive center-block"><br>
+    </div>
+<div id="mainBody">
         <div class="container">
-            <div class="row">
+          <section id="topPageSection">
 
-                <div class="col-sm-4">
-                  <div class="thumbnail mainThumbnail">
-                    <div class="caption">
-                      <h3 class="text-center">Choose your style</h3>
+            <div class="row">
+              <div class="col-xs-4 homeColumns">
+                <div class="thumbnail mainThumbnail">
+                  <div class="caption">
+                    <h3 class="text-center thumbnailTitle orangeUl">Choose a style</h3>
                       <div id="catViewer">
-                          <div id="catViewerMain">
-                              <a href="whiteT.html" id="shirtImgLink"><img src='images/catImages/item_0.jpg' class='img-responsive catViewerImg'></a>
+                        <div id="catViewerMain">
+                          <h4 class="text-center productStyleTitle"><span id="cvShirtType"></span></h4>
+                          <a href="whiteT.html" id="shirtImgLink"><img src='images/catImages/item_0.jpg' class='img-responsive catViewerImg'></a>
+
+                          <div class="row">
+                            <div class="col-xs-6 catViewerBtnDiv" align="center">
+                              <button id="catViewerPrev" class="btn btn-default btn-xs pull-right"><i class="fa fa-chevron-circle-left " aria-hidden="true" alt="Previous Style"></i> Prev</button>
+                            </div>
+                            <div class="col-xs-6 catViewerBtnDiv" align="center">
+                              <button id="catViewerNext" class="btn btn-default btn-xs pull-left">Next <i class="fa fa-chevron-circle-right " aria-hidden="true" alt="Previous Style"></i></button>
+                            </div>
                           </div>
+
+                        </div>
                       </div>
                       <div class="styleDetails">
-                        <h4 class="text-center"><strong><span id="shirtType"></span></strong></h4>
-                        <p><strong>Description: </strong><span id="shirtDesc"></span></p>
+                        <p class="whiteTxt text-justify"><span id="shirtDesc"></span></p>
                       </div>
-                      <div class="row">
-                        <div class="col-xs-6" align="center">
-                          <button id="catViewerPrev" class="btn btn-default"><i class="fa fa-chevron-circle-left fa-3x" aria-hidden="true" alt="Previous Style"></i></button>
-                        </div>
-                        <div class="col-xs-6" align="center">
-                          <button id="catViewerNext" class="btn btn-default"><i class="fa fa-chevron-circle-right fa-3x" aria-hidden="true" alt="Previous Style"></i></button>
-                        </div>
-                      </div>
-                    </div>
                   </div>
                 </div>
+              </div>
+              <!--END CHOOSE YOUR STYLE-->
 
-                <div class="col-sm-4">
-                  <div class="thumbnail">
+              <div class="col-xs-4 homeColumns">
+                <div class="thumbnail mainThumbnail">
                   <div class="caption">
-                      <h3 class="text-center">Get a Quote</h3>
-                    <div align="center"><i class="fa fa-usd sectionIcon" aria-hidden="true"></i></div>
-                    
-                      <form name="calc" id="calc">
-                        <label>Number of colors</label>
+                    <h3 class="text-center thumbnailTitle orangeUl">Get a Quote</h3>
+                      <div class="text-center"><i class="fa fa-usd sectionIcon" aria-hidden="true"></i></div>
+
+                    <form name="calc" id="calc">
+                      <label>Number of colors</label>
                         <select name="numColors" id="numColors">
                           <option value="c1">1</option>
                           <option value="c2">2</option>
@@ -118,6 +125,7 @@ git pull https://github.com/mrected/Central-Ave-Shirt-Co.git
                           <option value="c4">4</option>
                           <option value="c5">5</option>
                         </select>
+                         <a id="popover" href="#" data-toggle="popover" data-trigger="focus" data-placement="top" title="Determining Number of Colors" data-content="The number of colors is the number of ink colors needed to print your art on a shirt. You may need to check with the artist that made it for you or consult one of ours to determine this. Full color digital printing does not require a number here."><i class="fa fa-exclamation-circle" aria-hidden="true"></i></a>
                         <br>
                         <label>Number of shirts</label>
                         <input type="number" name="numShirts" id="numShirts"><br>
@@ -125,107 +133,94 @@ git pull https://github.com/mrected/Central-Ave-Shirt-Co.git
                         <select name="shirtType" id="shirtType">
                           <option value="ss">Short Sleeve</option>
                           <option value="ls">Long Sleeve</option>
-                        </select><br>
+                          <option value="tt">Tank Top</option>
+                          <option value="po">Polo</option>
+                          <option value="ho">Hoodie</option>
+                          <option value="ht">Hats</option>
+                        </select>
+                        <br>
                         <p>Cost per shirt: <span id="shirtTotal"></span> Total: <span id="costTotal"></span></p>
                         <p class="bg-warning" id="info"></p>
                         <input type="button" class="btn btn-primary btn-block" id="submit" value="Calculate Cost">
                         <a href="#"  data-toggle="modal" data-target="#priceChartModal">Full Price Chart</a>
-                      </form>                   
+                    </form>
 
-                      <div class="modal fade" id="priceChartModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-                        <div class="modal-dialog" role="document">
-                          <div class="modal-content">
-                            <div class="modal-header">
-                              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                              <h4 class="modal-title" id="myModalLabel">Full Price Chart</h4>
-                            </div>
-                            <div class="modal-body">
-                              <h1 id="selectedShirt"></h1>
-                              <table class="table table-hover table-responsive text-center" id="priceChart">
-                              </table>
-                            </div>
+                    <div class="modal fade" id="priceChartModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                      <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title" id="myModalLabel">Full Price Chart</h4>
+                          </div>
+                          <div class="modal-body">
+                            <h1 id="selectedShirt"></h1>
+                            <table class="table table-hover table-responsive text-center" id="priceChart"></table>
+                          </div>
                             <div class="modal-footer">
                               <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
                             </div>
-                          </div>
                         </div>
                       </div>
-
-
                     </div>
+
                   </div>
-                </div>
-                <div class="col-sm-4">
-                  <div class="thumbnail">
-                    <img class="img-responsive center-block" src="..." alt="...">
-                    <div class="caption">
-                      <h3 class="text-center">Design</h3>
-                      <p>...</p>
-                      <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
-                    </div>
-                  </div>
-                </div>
-            </div>
-                <div class="row">
-                    <div class="col-md-12">
-                        <div id="whatWeDoCarousel" class="carousel slide" data-ride="carousel">
-                              <!-- Indicators -->
-                              <ol class="carousel-indicators">
-                                <li data-target="#whatwedoCarousel" data-slide-to="0" class="active"></li>
-                                <li data-target="#whatwedoCarousel" data-slide-to="1"></li>
-                                <li data-target="#whatwedoCarousel" data-slide-to="2"></li>
-                              </ol>
-
-                              <!-- Wrapper for slides -->
-                              <div class="carousel-inner" role="listbox">
-                                <div class="item active">
-                                  <img src="images/carouselScreenPrinting.jpg" alt="Image of a Screen Printing Machine">
-                                  <div class="carousel-caption">
-                                    <h3>Screen Printing</h3>
-                                    <p>Some info about how we can screen print and are awesome goes here</p>
-                                  </div>
-                                </div>
-                                <div class="item">
-                                  <img src="images/carouselDTG.jpg" alt="Image of a DTG Printer">
-                                  <div class="carousel-caption">
-                                    <h3>Direct to Garment Printing</h3>
-                                    <p>Some info about how we can direct to garment print and how that's awesome too</p>
-                                  </div>
-                                </div>
-                                <div class="item">
-                                  <img src="images/carouselEmbroidery.jpg" alt="Image of an embroidery machine">
-                                  <div class="carousel-caption">
-                                    <h3>Embroidery</h3>
-                                    <p>Some info about how we can embroider stuff and things. Also mention the awesomeness</p>
-                                  </div>
-                                </div>
-                                ...
-                              </div>
-
-                              <!-- Controls -->
-                              <a class="left carousel-control" href="#whatwedoCarousel" role="button" data-slide="prev">
-                                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                                <span class="sr-only">Previous</span>
-                              </a>
-                              <a class="right carousel-control" href="#whatwedoCarousel" role="button" data-slide="next">
-                                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                                <span class="sr-only">Next</span>
-                              </a>
-                        </div>
-                    </div>
-                </div>
-
-
-            </div>
-
-            <div class="row">
-              <div class="col-md-12">
-                <h1 class="text-uppercase orangeUl">From Idea to Apparel</h1>
-                <div  class="grad">
-                    <p class="whiteTxt">Have an idea of what you want and don’t know where to start? You can either design your own art or come in and have one of our experienced artists put something together for you.<br>
-                     Already have art and just need something to print it on? Great! We have access to quality apparel at affordable prices. Let us know what you want to do, we’ll make it happen. There should be more of this, but it’s not my job to write it out.</p>
                 </div>
               </div>
+              <!--END GET A QUOTE-->
+
+              <div class="col-xs-4 homeColumns">
+                <div class="thumbnail mainThumbnail">
+                  <div class="caption">
+                    <h3 class="text-center thumbnailTitle orangeUl">Design it</h3>
+                    <img class="img-responsive center-block" src="images/blueShirt.jpg" alt="...">
+                    
+                  </div>
+                </div>
+              </div>
+              <!--END DESIGN-->
+   
+            </div>
+          </section>
+
+              <section id="productsSection"> 
+
+                <div class="row">
+                  
+                    <div class="col-md-4">
+                        <div class="thumbnail">
+                          <img class="img-responsive center-block" src="images/blueShirt.jpg" alt="...">
+                          <div class="caption">
+                            <h3 class="text-center">Design</h3>
+                            <p>...</p>
+                            <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+                          </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        
+                    </div>
+                    <div class="col-md-4">
+                        
+                    </div>
+
+                </div>
+
+                <div class="row">
+                  
+                    <div class="col-md-4">
+                        
+                    </div>
+                    <div class="col-md-4">
+                        
+                    </div>
+                    <div class="col-md-4">
+                        
+                    </div>
+
+                </div>
+
+              </section>
+
             </div>
 
         </div>
@@ -253,7 +248,7 @@ git pull https://github.com/mrected/Central-Ave-Shirt-Co.git
         <script type="text/javascript" src="js/shirtData.js"></script>
         <script type="text/javascript" src="js/shirtCalc.js"></script>
 
-        <script type="text/javascript" src="js/shirtViewerData.js"></script>
+        
         <script type="text/javascript" src="js/scripts.js"></script>
 
     </body>

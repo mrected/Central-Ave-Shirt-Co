@@ -1,3 +1,5 @@
+// for get a quote
+
 var shirtData = {
 
 	c1:[18,11.5,9,7.75,5.98,5.25,4.98,4.7,4.4,4.1,3.75,3.55,3.43,3.15],
@@ -9,3 +11,34 @@ var shirtData = {
 }
 
 var shirtNumbers = ["1-5","6-10","11-15","16-20","21-40","41-60","61-80","81-100","101-140","141-200","201-300","301-400","401-500","500+"];
+
+// for catagory viewer
+
+var shirtsArray = ["images/catImages/item_0.jpg",
+				   "images/catImages/item_1.jpg",
+				   "images/catImages/item_2.jpg",
+				   "images/catImages/item_3.jpg",
+				   "images/catImages/item_4.jpg",
+				   "images/catImages/item_5.jpg"];
+
+var cvShirtType=["T-Shirt",
+				"Long Sleeve",
+				"Tank Top",
+				"Polo Shirt",
+				"Hoodie",
+				"Hats"];
+
+var shirtDesc =["Defined slub cotton adds more dimension to this everyday tee.",
+				"The long sleeve version of our value-priced, moisture-wicking, snag-resistant, breathable favorite.",
+				"This silky soft tank drapes wonderfully and has a bit of attitude.",
+				"Now designed to resist shrinkage, our new and improved polo has a stain-release finish to defend against stains wash after wash.",
+				"You'll cheer for this smooth-faced fleece in your favorite collegiate and professional sports team colors.",
+				"The patented Flexfit fit meets the easygoing look and softness of a garment wash."];
+
+var shirtLinks =["shortSleeve.html",
+				 "longSleeve.html",
+				 "tankTop.html",
+				 "poloShirt.html",
+				 "hoodie.html",
+				 "hats"];
+

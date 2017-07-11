@@ -3,7 +3,7 @@ var shirtsArray = ["images/catImages/item_1.svg",
 				   "images/catImages/item_3.svg",
 				   "images/catImages/item_4.svg"];
 
-var shirtType=["Plain White Tshirt",
+var cvShirtType=["Plain White Tshirt",
 				"Some Fruity Number",
 				"Long Sleeve Blue Shirt",
 				"Trashy Tank Top"];
