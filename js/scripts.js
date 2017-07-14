@@ -22,6 +22,15 @@ var shirtNumber=0;
 
 var shirtSrcString = "images/catImages/item_" + shirtNumber + ".jpg";
 
+function preloadImages(){
+	let preloaderString = "";
+	for(let i=0; i<numberOfShirts;i++){
+		preloaderString+="<img aria-hidden='true' src='images/catImages/item_" + i + ".jpg'>";
+		console.log(preloaderString);
+	}
+	$("#preloader").html(preloaderString);
+}
+preloadImages();
 function displayInfo(){
 	$("#cvShirtType").html(cvShirtType[shirtNumber]);
 	$("#shirtDesc").html(shirtDesc[shirtNumber]);

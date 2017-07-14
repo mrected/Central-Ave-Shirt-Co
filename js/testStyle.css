@@ -1,0 +1,14 @@
+.parentDiv{
+	width: 80%;
+	height:10rem;
+	background-color: green;
+	/*box-sizing: border-box;*/
+	padding:1rem;
+	overflow: scroll;
+}
+
+.getParentWidth{
+	background-color: blue;
+	width: 100px;
+	/*box-sizing: border-box;*/
+}
