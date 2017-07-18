@@ -15,6 +15,12 @@ body{
 	font-family: 'Roboto' sans-serif;
 }
 
+#preloader{
+	position: absolute;
+	left: -9999px;
+	top:  -9999px;
+}
+
 .whiteTxt{
 	color:white;
 }
@@ -150,7 +156,7 @@ body{
 /*body styles*/
 
 h1{
-	font: 700 5rem 'Zilla Slab', serif;
+	font: 700 3rem 'Zilla Slab', serif;
 	letter-spacing: 1rem;
 	margin-bottom: 4rem;
 }
@@ -349,6 +355,9 @@ p{
 
 @media (min-width: 770px) { 
 
+	h1{
+		font-size: 5rem;
+	}
 
 	#mainLogo{
 		width: 30rem;
