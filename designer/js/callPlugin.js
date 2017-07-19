@@ -1,5 +1,11 @@
 $(document).ready(function(){
 
+	//sets main item on Product Designer
+	var setProduct = "#" + localStorage.getItem("sendProduct");
+	$("#designShirt").before($(setProduct));
+
+	//starts plugin
+
 	if(typeof FancyProductDesignerPlus === 'undefined') {
 			    alert("For this demo the Fancy Product Designer Plus Add-On is required!");
 			    return false;
@@ -85,6 +91,15 @@ $(document).ready(function(){
 			console.log(productViews[i]);
 		}
 	});
+
+
+
+/*
+
+pass variable from option chosen on home page to designer
+switch statement that takes that variable and matches corresponding div and places it at the top of the stack of items
+
+*/
 
 });
 

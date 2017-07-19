@@ -89,7 +89,7 @@ git pull https://github.com/mrected/Central-Ave-Shirt-Co.git
 
       <div id="designer" class="fpd-shadow-2 fpd-sidebar fpd-tabs fpd-tabs-side fpd-top-actions-centered fpd-bottom-actions-centered fpd-views-inside-left fpd-grid-columns-2"">
 
-        <div class="fpd-product" title="Shirt" data-thumbnail="products/cnBlack-Front.png">
+        <div class="fpd-product" title="Shirt" data-thumbnail="products/cnBlack-Front.png" id="designShirt">
           <img src="images/designerImages/tshirt-base.png" title="Base" data-parameters='{"x":500, "y":375, "colors": "#d59211,#00a8b0,#990000,#000,#fff","colorLinkGroup": "Base", "price": 20}'>
           <img src="images/designerImages/tshirt-highlights.png" title="Hightlights" data-parameters='{"x":500, "y":375}'>
           <img src="images/designerImages/tshirt-shadows.png" title="Shadow" data-parameters='{"x":500, "y":375}'>
@@ -101,7 +101,7 @@ git pull https://github.com/mrected/Central-Ave-Shirt-Co.git
           <!-- <span title="Its_a_black_shirt" data-parameters='{"x":150, "y":250, "removable":true, "draggable":true, "rotatable":true, "colors":"#000,#fff,#900"}'>Black Shirt</span> -->
         </div>
 
-        <div class="fpd-product" title="Hat" data-thumbnail="products/hatBlue-Front.png">
+        <div class="fpd-product" title="Hat" data-thumbnail="products/hatBlue-Front.png" id="designHat">
           <img src="products/hatBlue-Front.png" title="Base" data-parameters='{"x":500, "y":406, "colors": "#2f3ead,#990000,#000,#fff","colorLinkGroup": "Base", "price": 10}'>
           <img src="images/designerImages/hat-highlights.png" title="Hightlights" data-parameters='{"x":500, "y":375}'>
           <img src="images/designerImages/hat-shadows.png" title="Shadow" data-parameters='{"x":500, "y":375}'>
@@ -169,6 +169,8 @@ git pull https://github.com/mrected/Central-Ave-Shirt-Co.git
         <script src="js/FancyProductDesigner-all.min.js" type="text/javascript"></script>
         <script src="js/FancyProductDesignerPlus.min.js" type="text/javascript"></script>
         <script type="text/javascript" src="js/callPlugin.js"></script>
+          $("#hat").before($("#shirt"));
+        </script>
         <!--END SHIRT DESIGNER FILES-->
       
 

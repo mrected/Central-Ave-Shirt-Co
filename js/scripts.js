@@ -9,6 +9,14 @@ $(window).resize(function(){
 	$(this).width($(".getParentWidth").parent().width());
 });
 
+
+//gets product name and transfers to designer page to arrange divs
+
+$(".designThisBtn").click(function sendProductVar(){
+	var product = $(this).attr("name");
+	localStorage.setItem("sendProduct",product);
+});
+
 //End Utilities
 
 $(function () {
