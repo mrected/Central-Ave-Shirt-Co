@@ -1,7 +1,7 @@
 //Utilities
 $(document).ready(function(){
 
-
+	//cancels default action
 	$(".xlDefault").click(function(e){
 		e.preventDefault();
 	});
@@ -27,24 +27,39 @@ $(document).ready(function(){
 	});
 
 
-	//Reposition logo/change contactBar height once screen stops scrolling for 250
+	//Reposition logo/change contactBar height once screen stops scrolling for 50
+
+	function moveSectionOut(){
+		$("#leftNavSection").stop().animate({left:"-6.125rem"}),
+		$("#rightNavSection").animate({left:"6.125rem"},),
+		$("#topNavSection").animate({height: "7.5rem"},
+			{"duration":600, complete: function(){
+				$("#smallLogo").fadeIn("slow").css("width","8.25rem");
+			}
+		});
+	}
+
+	function moveSectionIn(){
+		$("#leftNavSection").stop().animate({left:0}),
+		$("#rightNavSection").animate({left:0}),
+		$("#smallLogo").css("width",0).fadeOut("slow", function(){
+			$("#topNavSection").animate({height: "5rem"},600)
+		});
+	}
+
 	$(window).scroll(function(){
 		clearTimeout($.data(this, 'scrollTimer'));
 		$.data(this, 'scrollTimer', setTimeout(function(){
 			if($(window).scrollTop()>300){
-				$("#contactBar").stop().animate({height: "11rem"},
-					{"duration":300, done: function(){
-						$("#smallLogo").fadeIn("slow");
-					}
-				});
+				moveSectionOut();
 			}
 			else{
-				$("#smallLogo").fadeOut("slow", function(){
-					$("#contactBar").stop().animate({height: "3rem"},300)
-				});
+				moveSectionIn();
 
 			}
 		},50));
+
+
 		
 
 		// $("#contactBar").stop().animate({height: "3rem"},
