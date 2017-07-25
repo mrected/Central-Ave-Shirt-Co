@@ -51,6 +51,8 @@ body{
 	padding: .5rem 3rem .75rem;
 	text-decoration: none;
 	background-color: #042a2b;
+	height: 3rem;
+	transition: 500;
 }
 
 .phoneEmailLinks{
@@ -63,12 +65,26 @@ body{
 	text-decoration: none;
 }
 
+
 #navBlock{
 	position: fixed;
 	width: 100%;
     z-index: 1000;
 }
 
+.navSection{
+	display: inline-block;
+}
+
+#leftNavSection{
+	position:relative;
+
+}
+
+#rightNavSection{
+	position:relative;
+
+}
 
 #navbarToggleBtn, #navbarToggleBtn a:visited{
 	background-color: #2292a4;
@@ -147,6 +163,19 @@ body{
 	width: 17rem;
 }
 
+#smallLogoDiv{
+	position: absolute;
+	left:0;
+	right:0;
+	margin:0 auto;
+
+}
+
+#smallLogo{
+	display: none;
+	width: 0;
+	width:8rem;
+}
 .downArrow{
 	padding-top: 9rem;
 	text-shadow: 0 .5rem .5rem rgba(4,42,43,.8);

@@ -1,9 +1,10 @@
 $(document).ready(function(){
 
-	//sets main item on Product Designer
-	var setProduct = "#" + localStorage.getItem("sendProduct");
+	//sets main item on Product Designer from Home
+	var setProduct = sessionStorage.getItem("sendProduct");
 	$("#designShirt").before($(setProduct));
-
+	sessionStorage.removeItem("sendProduct");
+	// setProduct=("#designShirt");
 	//starts plugin
 
 	if(typeof FancyProductDesignerPlus === 'undefined') {

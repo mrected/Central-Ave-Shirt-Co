@@ -149,7 +149,11 @@ body{
 /*    background-color: #d84727;*/
 }
 
-#logoDiv{
+.navNoBanner{
+	height:7.5rem;
+}
+
+.logoDiv{
 	background-color: #042a2b;
 	background-position: center 8rem;
 	background-repeat: no-repeat;
@@ -157,6 +161,10 @@ body{
 	background-origin: padding-box;
 	padding-top: 10rem;
 
+}
+
+#logoDivCatalog{
+	background-image: url("../images/catalogTopImg.png");
 }
 
 #mainLogo{
@@ -392,7 +400,7 @@ p{
 		width: 30rem;
 		padding-top: 10rem;
 	}
-	#logoDiv{    
+	.logoDiv{    
 	    background-color: #042a2b;
 		background-position: center 8rem;
 		background-repeat: no-repeat;

@@ -182,7 +182,7 @@ $(document).ready(function(){
 	$(document).ready(function(){
 		var getRandNum = Math.floor(Math.random()*(bannerArray.length));
 		var bannerImage="images/bannerImages/" + bannerArray[getRandNum];
-		$("#logoDiv").css('background-image', 'url('+ bannerImage + ')');
+		$("#logoDivMain").css('background-image', 'url('+ bannerImage + ')');
 	});
 
 

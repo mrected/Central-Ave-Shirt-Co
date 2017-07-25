@@ -32,14 +32,14 @@ git pull https://github.com/mrected/Central-Ave-Shirt-Co.git
     </head>
 
     <body>
-      <div id="navBlock"">
+      <!--START NAV BLOCK-->
+      <div id="navBlock">
         
-          <div id="contactBar">
-            <a href="#" class="pull-right"> <button type="button" class="btn btn-default btn-xs"><i class="fa fa-comments" aria-hidden="true"></i> Chat now</button></a>
-              <a class="phoneEmailLinks" href="tel:727-327-3333"><i class="fa fa-phone" aria-hidden="true"></i> 727-327-3333</a>&nbsp;&nbsp;&nbsp;&nbsp;
-              <a class="phoneEmailLinks" href="mailto:artdept@helinger.com"><i class="fa fa-envelope-o" aria-hidden="true"></i> info</a>
-          </div>
-        
+        <div id="contactBar" class="contactBarOpen">
+          <a href="#" class="pull-right"> <button type="button" class="btn btn-default btn-xs"><i class="fa fa-comments" aria-hidden="true"></i> Chat now</button></a>
+            <a class="phoneEmailLinks" href="tel:727-327-3333"><i class="fa fa-phone" aria-hidden="true"></i> 727-327-3333</a>&nbsp;&nbsp;&nbsp;&nbsp;
+            <a class="phoneEmailLinks" href="mailto:artdept@helinger.com"><i class="fa fa-envelope-o" aria-hidden="true"></i> info</a>
+        </div>
           
         <nav class="navbar navbar-default">
           <div class="container-fluid noPadding">
@@ -51,102 +51,101 @@ git pull https://github.com/mrected/Central-Ave-Shirt-Co.git
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-             <!--  <a class="navbar-brand" href="#">Home</a> -->
+
             </div>
 
             <div class="collapse navbar-collapse" id="navbar-collapse">
 
-              <div id="topNavSection">
-                <ul class="nav navbar-nav">
-                  <li class="navLinks"><a href="designer/designer.html" class="text-uppercase">Design</a></li>
-                  <li class="navLinks"><a href="#" class="text-uppercase">Catalog</a></li>
-                  <li class="navLinks"><a href="#" class="text-uppercase">Get a Quote</a></li>
-                  <li class="navLinks"><a href="#" class="text-uppercase">Contact Us</a></li>
-                  <li><!-- <a href="#"><i class="fa fa-twitter socialIcon" aria-hidden="true"></i> </a>
-                      <a href="#"><i class="fa fa-facebook socialIcon" aria-hidden="true"></i> </a>
-                      <a href="#"><i class="fa fa-instagram socialIcon" aria-hidden="true"></i> </a>
-                      <a href="#"><i class="fa fa-tumblr socialIcon" aria-hidden="true"></i> </a> -->
-                  </li>
-                </ul>
+              <div id="topNavSection-xs" class=" visible-xs">
+
+                  <ul class="nav navbar-nav">
+                    <li class="navLinks"><a href="designer/designer.html" class="text-uppercase">Design</a></li>
+                    <li class="navLinks"><a href="#" class="text-uppercase">Catalog</a></li>
+                    <li class="navLinks"><a href="#" class="text-uppercase">Pricing</a></li>
+                    <li class="navLinks"><a href="#" class="text-uppercase">Contact</a></li>
+                  </ul>
+
               </div>
+
+              <div id="topNavSection" class="hidden-xs" aria-hidden="true">
+
+                <div id="leftNavSection" class="navSection">
+                  <ul class="nav navbar-nav">
+                    <li class="navLinks"><a href="designer/designer.html" class="text-uppercase">Design</a></li>
+                    <li class="navLinks"><a href="#" class="text-uppercase">Catalog</a></li>
+                  </ul>
+                </div>
+                
+                <div id="smallLogoDiv" class="navSection">
+                  <img src="images/cascLogoSmall.svg" id="smallLogo" class="img-responsive navSection">
+                </div>
+
+                <div id="rightNavSection" class="navSection">
+                  <ul class="nav navbar-nav">
+                    <li class="navLinks"><a href="#" class="text-uppercase">Pricing</a></li>
+                    <li class="navLinks"><a href="#" class="text-uppercase">Contact</a></li>
+                  </ul>
+                </div>
+
+              </div>
+
+
+
             </div><!-- /.navbar-collapse -->
             
           </div><!-- /.container-fluid -->
-      </nav>
-    </div>
-    <div id="logoDiv" class="center-block">
-      <img src="images/cascLogo1.svg" id="mainLogo" class="img-responsive center-block"><br>
-    </div>
-<div id="mainBody">
+        </nav>
+      </div>
+      <!--END NAV BLOCK-->
+
+      <!--START TOP IMAGE/LOGO BLOCK-->
+      <div id="logoDiv" class="center-block">
+        <img src="images/cascLogo1.svg" id="mainLogo" class="img-responsive center-block"><br>
+      </div>
+      <!--END TOP IMAGE/LOGO BLOCK-->
+
+      <!--START MAIN BODY-->
+      <div id="mainBody">
         <div class="container">
           <section id="topPageSection">
 
             <div class="row">
-              <!-- <div class="col-xs-6 col-md-4 homeColumns">
-                <div class="thumbnail mainThumbnail">
-                  <div class="caption">
-                    <h3 class="text-center thumbnailTitle orangeUl">Choose a style</h3>
-                      <div id="catViewer">
-                        <div id="catViewerMain">
-                          
-                          <a href="whiteT.html" id="shirtImgLink"><img src='images/catImages/item_0.jpg' class='img-responsive catViewerImg'></a>
-
-                        </div>
-                      </div>
-                      <div class="styleDetails">
-                        <p class="text-center productStyleTitle"><span id="cvShirtType"></span></p>
-                        <p class="whiteTxt text-justify"><span id="shirtDesc"></span></p>
-                      </div>
-
-                      <div class="row">
-                        <div class="col-xs-6 catViewerBtnDiv" align="center">
-                          <button id="catViewerPrev" class="btn btn-default btn-xs pull-right"><i class="fa fa-chevron-circle-left " aria-hidden="true" alt="Previous Style"></i> Prev</button>
-                        </div>
-                        <div class="col-xs-6 catViewerBtnDiv" align="center">
-                          <button id="catViewerNext" class="btn btn-default btn-xs pull-left">Next <i class="fa fa-chevron-circle-right " aria-hidden="true" alt="Previous Style"></i></button>
-                        </div>
-                      </div>
-
-                  </div>
-                </div>
-              </div> -->
-
+              
+              <!--START CHOOSE YOUR STYLE-->
               <div class="col-xs-6 col-md-4 homeColumns">
                 <div class="thumbnail mainThumbnail">
                   <div class="caption">
                     <h3 class="text-center thumbnailTitle orangeUl">Choose a style</h3>
                     <div id="catViewerMain">
                       <div id="preloader">
-
                       </div>
                       <div id="catViewerBtnDiv" class="center-block">
+
                         <div class="catViewerBtnPrevDiv getParentWidth">
                           <a id="catViewerPrev" class="xlDefault pull-right testBox"><i class="fa fa-angle-double-left fa-4x" aria-hidden="true" alt="Previous Style"></i></a>
                         </div>
+
                         <div class="catViewerBtnNextDiv">
                           <a id="catViewerNext" class="xlDefault pull-left testBox"><i class="fa fa-angle-double-right fa-4x" aria-hidden="true" alt="Previous Style"></i></a>
                         </div>
-                      </div>
 
+                      </div>
+                      
                       <a href="whiteT.html" id="shirtImgLink"><img src='images/catImages/item_0.jpg' class='img-responsive catViewerImg'></a>
 
                     </div>
+                    
                     <div class="styleDetails">
-                        <p class="text-center productStyleTitle"><span id="cvShirtType"></span></p>
-                        <p class="whiteTxt text-justify"><span id="shirtDesc"></span></p>
-
+                      <p class="text-center productStyleTitle"><span id="cvShirtType"></span></p>
+                      <p class="whiteTxt text-justify"><span id="shirtDesc"></span></p>
                     </div>
-
-
-                        
-
 
                   </div>
                 </div>
               </div>
               <!--END CHOOSE YOUR STYLE-->
 
-
+              <!--START DESIGNER-->
               <div class="col-xs-6 col-md-4 homeColumns">
                 <div class="thumbnail mainThumbnail">
                   <div class="caption">
@@ -160,8 +159,9 @@ git pull https://github.com/mrected/Central-Ave-Shirt-Co.git
                   </div>
                 </div>
               </div>
-              <!--END DESIGN-->
+              <!--END DESIGNER-->
 
+              <!--START GET A QUOTE-->
               <div class="col-xs-12 col-md-4 homeColumns">
                 <div class="thumbnail mainThumbnail">
                   <div class="caption">
@@ -286,7 +286,7 @@ git pull https://github.com/mrected/Central-Ave-Shirt-Co.git
 
                     <div class="col-md-4">
                       <div class="thumbnail">
-                        <img src="images/products/cnBlue-Front.png">
+                        <img src="images/products/tshirtBlue.png">
                         <div class="caption">
                           <h3 class="text-center thumbnailTitle orangeUl">T-Shirt</h3>
                           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -305,14 +305,14 @@ git pull https://github.com/mrected/Central-Ave-Shirt-Co.git
 
                     <div class="col-md-4">
                       <div class="thumbnail">
-                        <img src="images/products/lsBlack-Front.png">
+                        <img src="images/products/lsGray.png">
                         <div class="caption">
                           <h3 class="text-center thumbnailTitle orangeUl">Long Sleeve</h3>
                           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                           tempor incididunt ut labore et dolore magna aliqua.</p>
                           <div class="btn-group btn-group-justified" aria-label="Design it or Price it buttons">
                             <div class="btn-group" role="group">
-                              <button type="button" class="btn btn-primary designThisBtn">Design this</button>
+                               <a href="designer/designer.html"><button type="button" class="btn btn-primary designThisBtn" id="tshirtDesignBtn" name="designLs">Design this</button></a>
                             </div>
                             <div class="btn-group" role="group">
                              <button type="button" class="btn btn-primary">Price this</button>
@@ -324,14 +324,14 @@ git pull https://github.com/mrected/Central-Ave-Shirt-Co.git
 
                     <div class="col-md-4">
                       <div class="thumbnail">
-                        <img src="images/products/ttPink-Front.jpg">
+                        <img src="images/products/tankPink.png">
                         <div class="caption">
                           <h3 class="text-center thumbnailTitle orangeUl">Tank Top</h3>
                           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                           tempor incididunt ut labore et dolore magna aliqua.</p>
                           <div class="btn-group btn-group-justified" aria-label="Design it or Price it buttons">
                             <div class="btn-group" role="group">
-                              <button type="button" class="btn btn-primary designThisBtn">Design this</button>
+                               <a href="designer/designer.html"><button type="button" class="btn btn-primary designThisBtn" id="tshirtDesignBtn" name="designTank">Design this</button></a>
                             </div>
                             <div class="btn-group" role="group">
                              <button type="button" class="btn btn-primary">Price this</button>
@@ -347,14 +347,14 @@ git pull https://github.com/mrected/Central-Ave-Shirt-Co.git
 
                     <div class="col-md-4">
                       <div class="thumbnail">
-                        <img src="images/products/polo.jpg">
+                        <img src="images/products/poloCoastalBlue.png">
                         <div class="caption">
                           <h3 class="text-center thumbnailTitle orangeUl">Polo</h3>
                           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                           tempor incididunt ut labore et dolore magna aliqua.</p>
                           <div class="btn-group btn-group-justified" aria-label="Design it or Price it buttons">
                             <div class="btn-group" role="group">
-                              <button type="button" class="btn btn-primary designThisBtn">Design this</button>
+                               <a href="designer/designer.html"><button type="button" class="btn btn-primary designThisBtn" id="tshirtDesignBtn" name="designPolo">Design this</button></a>
                             </div>
                             <div class="btn-group" role="group">
                              <button type="button" class="btn btn-primary">Price this</button>
@@ -366,14 +366,14 @@ git pull https://github.com/mrected/Central-Ave-Shirt-Co.git
 
                     <div class="col-md-4">
                       <div class="thumbnail">
-                        <img src="images/products/hoodie.jpg">
+                        <img src="images/products/hoodieCardinalRed.png">
                         <div class="caption">
                           <h3 class="text-center thumbnailTitle orangeUl">Hoodie</h3>
                           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                           tempor incididunt ut labore et dolore magna aliqua.</p>
                           <div class="btn-group btn-group-justified" aria-label="Design it or Price it buttons">
                             <div class="btn-group" role="group">
-                              <button type="button" class="btn btn-primary designThisBtn">Design this</button>
+                               <a href="designer/designer.html"><button type="button" class="btn btn-primary designThisBtn" id="tshirtDesignBtn" name="designHoodie">Design this</button></a>
                             </div>
                             <div class="btn-group" role="group">
                              <button type="button" class="btn btn-primary">Price this</button>
@@ -385,7 +385,7 @@ git pull https://github.com/mrected/Central-Ave-Shirt-Co.git
 
                     <div class="col-md-4">
                       <div class="thumbnail">
-                        <img src="images/products/hatBlue-Front.png">
+                        <img src="images/products/hatBlue.png">
                         <div class="caption">
                           <h3 class="text-center thumbnailTitle orangeUl">Hats</h3>
                           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
