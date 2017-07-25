@@ -23,52 +23,53 @@ $(document).ready(function(){
 
 	//Enable popovers
 	$(function () {
-	  $('[data-toggle="popover"]').popover()
+	  $('[data-toggle="popover"]').popover();
 	});
 
 
-	//Reposition logo/change contactBar height once screen stops scrolling for 50
+	
 
-	function moveSectionOut(){
-		$("#leftNavSection").stop().animate({left:"-6.125rem"}),
-		$("#rightNavSection").animate({left:"6.125rem"},),
-		$("#topNavSection").animate({height: "7.5rem"},
-			{"duration":600, complete: function(){
-				$("#smallLogo").fadeIn("slow").css("width","8.25rem");
-			}
-		});
+	//Opening and closing navbar
+	var navOpenState;
+
+	function openNav(){
+		navOpenState = true;
+		if(navOpenState===true){
+			$("#leftNavSection").stop().animate({left:"-6.125rem"});
+			$("#rightNavSection").stop().animate({left:"6.125rem"});
+			$("#topNavSection").animate({height: "7.5rem"},{duration:300, complete: function(){
+				$("#smallLogo").fadeIn("slow");
+			}});
+		}
 	}
 
-	function moveSectionIn(){
-		$("#leftNavSection").stop().animate({left:0}),
-		$("#rightNavSection").animate({left:0}),
-		$("#smallLogo").css("width",0).fadeOut("slow", function(){
-			$("#topNavSection").animate({height: "5rem"},600)
-		});
+	function closeNav(){
+		navOpenState = false;
+		if(navOpenState===false){
+			
+			$("#smallLogo").stop().fadeOut("fast", function(){
+				$("#topNavSection").animate({height: "5rem"},{duration:300});
+				$("#leftNavSection").animate({left:0});
+				$("#rightNavSection").animate({left:0});
+			});
+		}
 	}
 
-	$(window).scroll(function(){
+		$(window).scroll(function(){
 		clearTimeout($.data(this, 'scrollTimer'));
 		$.data(this, 'scrollTimer', setTimeout(function(){
 			if($(window).scrollTop()>300){
-				moveSectionOut();
+				openNav();
 			}
-			else{
-				moveSectionIn();
-
+			else if($(window).scrollTop()<250){
+				closeNav();
 			}
 		},50));
 
-
-		
-
-		// $("#contactBar").stop().animate({height: "3rem"},
-		// 	{"duration":300, complete: function(){
-		// 		$("#smallLogo").fadeOut("fast");
-		// 	}
-		// });
-		
 	});
+
+
+
 
 	//End Utilities
 
@@ -183,6 +184,8 @@ $(document).ready(function(){
 		var bannerImage="images/bannerImages/" + bannerArray[getRandNum];
 		$("#logoDiv").css('background-image', 'url('+ bannerImage + ')');
 	});
+
+
 
 });
 //End Randomizer

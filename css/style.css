@@ -164,18 +164,17 @@ body{
 }
 
 #smallLogoDiv{
-
-	display: inline-block;
-	top: 0;
+	position: absolute;
+	left:0;
+	right:0;
 	margin:0 auto;
 
 }
 
 #smallLogo{
-	margin-top: -2rem;
 	display: none;
 	width: 0;
-
+	width:8rem;
 }
 .downArrow{
 	padding-top: 9rem;
