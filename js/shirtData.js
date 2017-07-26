@@ -28,12 +28,15 @@ var cvShirtType=["T-Shirt",
 				"Hoodie",
 				"Hats"];
 
-var shirtDesc =["Defined slub cotton adds more dimension to this everyday tee.",
-				"The long sleeve version of our value-priced, moisture-wicking, snag-resistant, breathable favorite.",
-				"This silky soft tank drapes wonderfully and has a bit of attitude.",
-				"Now designed to resist shrinkage, our new and improved polo has a stain-release finish to defend against stains wash after wash.",
-				"You'll cheer for this smooth-faced fleece in your favorite collegiate and professional sports team colors.",
-				"The patented Flexfit fit meets the easygoing look and softness of a garment wash."];
+var shirtDesc =["Starts at $6 <br><a href='designer/designer.html' class='designThisBtn' name='designShirt'>Design this</a> | <a href='#'>Quote this</a> | <a href='#'>More info</a>",
+				"Starts at $8 <br><a href='designer/designer.html' class='designThisBtn' name='designLs'>Design this</a> | <a href='#'>Quote this</a> | <a href='#'>More info</a>",
+				"Starts at $5 <br><a href='#'>Design this</a> | <a href='#'>Quote this</a> | <a href='#'>More info</a>",
+				"Starts at $15 <br><a href='#'>Design this</a> | <a href='#'>Quote this</a> | <a href='#'>More info</a>",
+				"Starts at $20 <br><a href='#'>Design this</a> | <a href='#'>Quote this</a> | <a href='#'>More info</a>",
+				"Starts at $4 <br><a href='#'>Design this</a> | <a href='#'>Quote this</a> | <a href='#'>More info</a>"];
+
+
+				// class='designThisBtn' name='designShirt'
 
 var shirtLinks =["shortSleeve.html",
 				 "longSleeve.html",

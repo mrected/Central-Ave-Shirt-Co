@@ -7,13 +7,12 @@ Tan:      	#e8d6cb | RGB  232,214,203
 Off White:  #f4f4f4 | RGB  244,244,244
 ***********/
 
-/*utilities*/
-
-
-
 body{
 	font-family: 'Roboto' sans-serif;
 }
+
+/*utilities*/
+
 
 #preloader{
 	position: absolute;
@@ -23,6 +22,10 @@ body{
 
 .whiteTxt{
 	color:white;
+}
+
+.ltBlueTxt{
+	color:#2292a4;
 }
 
 .noPadding{
@@ -35,6 +38,18 @@ body{
 
 #mainBody{
 	min-height: 100vh;
+}
+
+.roundedBorderHeavy{
+	border-radius: 2rem;
+}
+
+.roundedBorderLight{
+	border-radius: .5rem;
+}
+
+.big1stLetter{
+	font-size:5rem;
 }
 
 
@@ -237,26 +252,38 @@ p{
 /*catviewer styles*/
 
 .productStyleTitle{
-	font: 500 1rem/1rem 'Roboto', sans-serif;
+	font: 700 1rem/2rem 'Zilla Slab', serif;
 	color:#f4f4f4;
+	background-color: #042a2b;
+	padding:.5rem;
+}
+
+.productDesignTitle{
+	font: 700 1rem/2rem 'Zilla Slab', serif;
+	color:#f4f4f4;
+	background-color: #d84727;
+	padding:.5rem;
 }
 
 .styleDetails{
 	height: 8rem;
-	background-color: rgba(4,42,43,.5);
-	padding:.5rem 1rem;
+	background-color: #fff;
+	/*padding:.5rem 1rem;*/
 	border-radius: .75rem;
+	border:solid .15rem #042a2b;
+	color: #042a2b;
 	/*position:absolute;*/
 }
 
-#shirtDesc{
-	font: 300 1.25rem/.25rem 'Roboto', sans-serif;
+.homeThumbnailDesc{
+	padding:0 1rem;
+	font: 500 1.25rem/.25rem 'Roboto', sans-serif;
 }
 
 .designDetails{
 	height: 8rem;
-	background-color: rgba(216,71,39,.8);
-	padding:.5rem 1rem;
+	border:solid .15rem #d84727;
+	background-color: #fff;
 	border-radius: .75rem;
 }
 
@@ -361,6 +388,31 @@ p{
 	margin: 3rem 0;
 }
 
+
+#apparelHomeSection{
+	background-position: center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-origin: padding-box;
+	background-image: url('../images/productsHomeBg.png');
+}
+
+.apparelHomeImg{
+	padding-bottom: 2rem;
+}
+
+#apparelHomeTxtDiv{
+	/*background-color: rgba(255,255,255,.5);*/
+	background-color: rgba(10,10,10,.3);
+	margin-bottom: 6rem;
+	padding:1rem 0;
+	color: #042a2b;
+}
+
+.apparelHomeTxt{
+	font: 300 1.5rem 'Zilla Slab', serif;
+}
+
 /*footer styles*/
 
 #footerDiv{
@@ -382,6 +434,12 @@ p{
 		padding-bottom: 1rem;
 	}
 	.productStyleTitle{
+		font-size:1.75rem;
+		line-height: 1.75rem;
+		font-weight: 100;
+	}
+
+	.productDesignTitle{
 		font-size:1.75rem;
 		line-height: 1.75rem;
 		font-weight: 100;
@@ -437,6 +495,15 @@ p{
 		font-size:2rem;
 	}
 
+	.productDesignTitle{
+		font-size: 2rem;
+	}
+
+	.apparelHomeTxt{
+		font-size: 1.75rem;
+	}
+
+
 }
 
 
@@ -446,6 +513,10 @@ p{
 		line-height: 2rem;
 		font: 2rem 'Anton', sans-serif;
 		letter-spacing: .5rem;
+	}
+
+	.apparelHomeTxt{
+		font-size: 2rem;
 	}
 	
 }

@@ -1,6 +1,7 @@
 $(document).ready(function(){
 
 	//sets main item on Product Designer from Home
+	// alert(sessionStorage.getItem("sendProduct"));
 	var setProduct = sessionStorage.getItem("sendProduct");
 	$("#designShirt").before($(setProduct));
 	sessionStorage.removeItem("sendProduct");
@@ -20,7 +21,7 @@ $(document).ready(function(){
         	fonts: [
 				    	{name: 'Helvetica'},
 				    	{name: 'Times New Roman'},
-				    	{name: 'Pacifico', url: 'Enter_URL_To_Pacifico'},
+				    	{name: 'Pacifico', url: 'google'},
 				    	{name: 'Arial'},
 			    		{name: 'Lobster', url: 'google'},
 			    		{name: 'Fresca', url: 'google'},
@@ -63,7 +64,7 @@ $(document).ready(function(){
 						'left': ['manage-layers','info','save','load']
 					},
 			mainBarModules: ['products','images', 'designs', 'text'],
-					colorSelectionPlacement: 'inside-br',
+					colorSelectionPlacement: 'outside-br',
 					namesNumbersDropdown: ['S', 'M', 'L', 'XL'],
 					namesNumbersEntryPrice: 10,
 					bulkVariationsPlacement: '#my-variations',

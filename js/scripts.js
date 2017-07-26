@@ -12,12 +12,7 @@ $(document).ready(function(){
 	});
 
 
-	//gets product name and transfers to designer page to arrange divs
 
-	$(".designThisBtn").click(function sendProductVar(){
-		var product = "#" + $(this).attr("name");
-		sessionStorage.setItem("sendProduct",product);
-	});
 
 
 
@@ -35,8 +30,8 @@ $(document).ready(function(){
 	function openNav(){
 		navOpenState = true;
 		if(navOpenState===true){
-			$("#leftNavSection").stop().animate({left:"-6.125rem"});
-			$("#rightNavSection").stop().animate({left:"6.125rem"});
+			$("#leftNavSection").stop().animate({left:"-6.125rem"},{duration:200});
+			$("#rightNavSection").stop().animate({left:"6.125rem"},{duration:200});
 			$("#topNavSection").animate({height: "7.5rem"},{duration:300, complete: function(){
 				$("#smallLogo").fadeIn("slow");
 			}});
@@ -49,8 +44,8 @@ $(document).ready(function(){
 			
 			$("#smallLogo").stop().fadeOut("fast", function(){
 				$("#topNavSection").animate({height: "5rem"},{duration:300});
-				$("#leftNavSection").animate({left:0});
-				$("#rightNavSection").animate({left:0});
+				$("#leftNavSection").animate({left:0},{duration:200});
+				$("#rightNavSection").animate({left:0},{duration:200});
 			});
 		}
 	}
@@ -114,6 +109,7 @@ $(document).ready(function(){
 			displayInfo();
 			updateLinks();
 		});
+		
 	}
 
 	function prevShirt(){
@@ -133,6 +129,7 @@ $(document).ready(function(){
 			displayInfo();
 			updateLinks();
 		});
+
 	}
 
 	$("#catViewerPrev, #catViewerNext").hover(function(){
@@ -185,6 +182,19 @@ $(document).ready(function(){
 		$("#logoDivMain").css('background-image', 'url('+ bannerImage + ')');
 	});
 
+
+	function getDesignerBtnLink(){
+		var product = "#" + $(".designThisBtn").attr("name");
+		sessionStorage.setItem("sendProduct",product);
+	}
+
+
+		//gets product name and transfers to designer page to arrange divs
+
+	$(".designThisBtn").click(function sendProductVar(){
+		var product = "#" + $(this).attr("name");
+		sessionStorage.setItem("sendProduct",product);
+	});
 
 
 });
