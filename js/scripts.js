@@ -43,20 +43,24 @@ $(document).ready(function(){
 		if(navOpenState===false){
 			
 			$("#smallLogo").stop().fadeOut("fast", function(){
-				$("#topNavSection").animate({height: "5rem"},{duration:300});
+				$("#topNavSection").animate({height: "5.45rem"},{duration:300});
 				$("#leftNavSection").animate({left:0},{duration:200});
 				$("#rightNavSection").animate({left:0},{duration:200});
 			});
 		}
 	}
 
+	
+		
+		
+
 		$(window).scroll(function(){
 		clearTimeout($.data(this, 'scrollTimer'));
 		$.data(this, 'scrollTimer', setTimeout(function(){
-			if($(window).scrollTop()>300){
+			if($(window).scrollTop()>500){
 				openNav();
 			}
-			else if($(window).scrollTop()<250){
+			else if($(window).scrollTop()<350){
 				closeNav();
 			}
 		},50));

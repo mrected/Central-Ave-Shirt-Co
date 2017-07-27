@@ -52,6 +52,10 @@ body{
 	font-size:5rem;
 }
 
+.blockLink{
+	display: block;
+}
+
 
 .grad {
   background: #042a2b; /* For browsers that do not support gradients */
@@ -175,7 +179,6 @@ body{
 	background-attachment: fixed;
 	background-origin: padding-box;
 	padding-top: 10rem;
-
 }
 
 #logoDivCatalog{
@@ -196,9 +199,10 @@ body{
 
 #smallLogo{
 	display: none;
-	width: 0;
 	width:8rem;
 }
+
+
 .downArrow{
 	padding-top: 9rem;
 	text-shadow: 0 .5rem .5rem rgba(4,42,43,.8);
@@ -445,6 +449,7 @@ p{
 		font-weight: 100;
 	}
 	
+	
 
 }
 
@@ -456,7 +461,7 @@ p{
 
 	#mainLogo{
 		width: 30rem;
-		padding-top: 10rem;
+		margin-top: 15rem;
 	}
 	.logoDiv{    
 	    background-color: #042a2b;
@@ -467,6 +472,7 @@ p{
 		padding: 5rem 0 3rem 0;
 		margin-bottom: 6rem;
 		box-shadow: 0 .5rem 1rem rgba(4,42,43,.8);
+		height:60rem;
 	}
 	.navLinks{
 		padding: 0 1rem;
@@ -501,6 +507,10 @@ p{
 
 	.apparelHomeTxt{
 		font-size: 1.75rem;
+	}
+
+	#smallLogoBrand{
+		display: none;
 	}
 
 
