@@ -52,7 +52,7 @@ git pull https://github.com/mrected/Central-Ave-Shirt-Co.git
                 <span class="icon-bar"></span>
               </button>
             </div>
-
+              
             <div class="collapse navbar-collapse" id="navbar-collapse">
 
               <div id="topNavSection-xs" class=" visible-xs">
@@ -145,12 +145,27 @@ git pull https://github.com/mrected/Central-Ave-Shirt-Co.git
               </div>
               <!--END CHOOSE YOUR STYLE-->
 
-              <!--START DESIGNER-->
+              <!--START QUOTE-->
               <div class="col-xs-6 col-md-4 homeColumns">
                 <div class="thumbnail mainThumbnail">
                   <div class="caption">
-                    <h3 class="text-center thumbnailTitle orangeUl">Design it</h3>
+                    <h3 class="text-center thumbnailTitle orangeUl">Quote it</h3>
                   
+                    <a href="designer/designer.html"><img class="img-responsive" src="images/dollaDollaBillYall.png" alt="George Washington in a t shirt"></a>
+                    <div class="quoteDetails">
+                        <p class="text-center quoteTitle">Check here for pricing</p>
+                        <p class="text-center"><strong>Check out our <a href="designer/designer.html">design lab</a>.<br> Upload your own art or make your own.</strong></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--END QUOTE-->
+
+              <!--START DESIGN-->
+              <div class="col-xs-12 col-md-4 homeColumns">
+                <div class="thumbnail mainThumbnail">
+                  <div class="caption">
+                    <h3 class="text-center thumbnailTitle orangeUl">Design it</h3>
                     <a href="designer/designer.html"><img class="img-responsive" src="images/designModels.png" alt="image of 2 people in t-shirts"></a>
                     <div class="designDetails">
                         <p class="text-center productDesignTitle">Have an idea or need an idea?</p>
@@ -159,66 +174,8 @@ git pull https://github.com/mrected/Central-Ave-Shirt-Co.git
                   </div>
                 </div>
               </div>
-              <!--END DESIGNER-->
-
-              <!--START GET A QUOTE-->
-              <div class="col-xs-12 col-md-4 homeColumns">
-                <div class="thumbnail mainThumbnail">
-                  <div class="caption">
-                    <h3 class="text-center thumbnailTitle orangeUl">Get a Quote</h3>
-                      <div class="text-center"><i class="fa fa-usd sectionIcon" aria-hidden="true"></i></div>
-
-                    <form name="calc" id="calc">
-                      <label>Number of colors</label>
-                        <select name="numColors" id="numColors">
-                          <option value="c1">1</option>
-                          <option value="c2">2</option>
-                          <option value="c3">3</option>
-                          <option value="c4">4</option>
-                          <option value="c5">5</option>
-                        </select>
-                         <a id="popover" class="xlDefault" href="#" data-toggle="popover" data-trigger="focus" data-placement="top" title="Determining Number of Colors" data-content="The number of colors is the number of ink colors needed to print your art on a shirt. You may need to check with the artist that made it for you or consult one of ours to determine this. Full color digital printing does not require a number here."><i class="fa fa-exclamation-circle" aria-hidden="true"></i></a>
-                        <br>
-                        <label>Number of shirts</label>
-                        <input type="number" name="numShirts" id="numShirts"><br>
-                        <label>Shirt Type</label>
-                        <select name="shirtType" id="shirtType">
-                          <option value="ss">Short Sleeve</option>
-                          <option value="ls">Long Sleeve</option>
-                          <option value="tt">Tank Top</option>
-                          <option value="po">Polo</option>
-                          <option value="ho">Hoodie</option>
-                          <option value="ht">Hats</option>
-                        </select>
-                        <br>
-                        <p>Cost per shirt: <span id="shirtTotal"></span> Total: <span id="costTotal"></span></p>
-                        <p class="bg-warning" id="info"></p>
-                        <input type="button" class="btn btn-primary btn-block" id="submit" value="Calculate Cost">
-                        <a href="#"  data-toggle="modal" data-target="#priceChartModal">Full Price Chart</a>
-                    </form>
-
-                    <div class="modal fade" id="priceChartModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-                      <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                          <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                            <h4 class="modal-title" id="myModalLabel">Full Price Chart</h4>
-                          </div>
-                          <div class="modal-body">
-                            <h1 id="selectedShirt"></h1>
-                            <table class="table table-hover table-responsive text-center" id="priceChart"></table>
-                          </div>
-                            <div class="modal-footer">
-                              <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
-                            </div>
-                        </div>
-                      </div>
-                    </div>
-
-                  </div>
-                </div>
-              </div>
-              <!--END GET A QUOTE-->
+              
+              <!--END DESIGN-->
 
    
             </div>

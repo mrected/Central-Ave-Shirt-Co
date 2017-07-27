@@ -33,7 +33,7 @@ $(document).ready(function(){
 			$("#leftNavSection").stop().animate({left:"-6.125rem"},{duration:200});
 			$("#rightNavSection").stop().animate({left:"6.125rem"},{duration:200});
 			$("#topNavSection").animate({height: "7.5rem"},{duration:300, complete: function(){
-				$("#smallLogo").fadeIn("slow");
+				$("#smallLogo").fadeIn("fast");
 			}});
 		}
 	}
