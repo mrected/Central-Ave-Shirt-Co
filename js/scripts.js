@@ -183,9 +183,11 @@ $(document).ready(function(){
 
 
 	function pickBannerImg(){
-		var getRandNum = Math.floor(Math.random()*(bannerArray.length));
-			var bannerImage="images/bannerImages/" + bannerArray[getRandNum];
+		let getRandNum = Math.floor(Math.random()*(bannerArray.length));
+			let currentImg = $("#logoDivMain").css('background-image')
+			let bannerImage="images/bannerImages/" + bannerArray[getRandNum];
 			$("#logoDivMain").css('background-image', 'url('+ bannerImage + ')');
+			// alert(currentImg + " " + bannerImage);
 	}
 
 	$(document).ready(function(){
