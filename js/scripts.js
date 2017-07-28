@@ -35,6 +35,7 @@ $(document).ready(function(){
 			$("#topNavSection").animate({height: "7.5rem"},{duration:300, complete: function(){
 				$("#smallLogo").fadeIn("fast");
 			}});
+			pickBannerImg();
 		}
 	}
 
@@ -180,10 +181,15 @@ $(document).ready(function(){
 						"Banner-Trolley.jpg"
 						];
 
-	$(document).ready(function(){
+
+	function pickBannerImg(){
 		var getRandNum = Math.floor(Math.random()*(bannerArray.length));
-		var bannerImage="images/bannerImages/" + bannerArray[getRandNum];
-		$("#logoDivMain").css('background-image', 'url('+ bannerImage + ')');
+			var bannerImage="images/bannerImages/" + bannerArray[getRandNum];
+			$("#logoDivMain").css('background-image', 'url('+ bannerImage + ')');
+	}
+
+	$(document).ready(function(){
+		pickBannerImg();
 	});
 
 

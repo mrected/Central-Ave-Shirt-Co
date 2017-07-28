@@ -14,7 +14,7 @@ body{
 /*utilities*/
 
 
-#preloader{
+.preloader{
 	position: absolute;
 	left: -9999px;
 	top:  -9999px;
@@ -30,6 +30,11 @@ body{
 
 .noPadding{
 	padding:0;
+}
+
+.listNoDecor{
+	list-style: none;
+	padding-left: 1rem;
 }
 
 .hideSmallScreens{
@@ -90,6 +95,7 @@ body{
 	position: absolute;
 	top:0;
 	display: inline;
+	z-index: 1001
 }
 
 #navBlock{
@@ -176,7 +182,7 @@ body{
 }
 
 .navNoBanner{
-	height:7.5rem;
+	height:initial;
 }
 
 .logoDiv{
@@ -429,7 +435,7 @@ p{
 }
 
 .apparelHomeImg{
-	padding-bottom: 2rem;
+	margin-bottom: 2rem;
 }
 
 #apparelHomeTxtDiv{
@@ -540,6 +546,9 @@ p{
 		display: none;
 	}
 
+	.navNoBanner{
+		height:7.5rem;
+	}
 
 }
 
