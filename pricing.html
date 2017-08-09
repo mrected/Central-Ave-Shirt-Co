@@ -110,8 +110,68 @@ git pull https://github.com/mrected/Central-Ave-Shirt-Co.git
                 <h1 class="text-uppercase text-center">Pricing<br><small>What's all this gonna cost</small></h1>
                   <div class="row">
 
-                    <div class="col-md-12">
+                    <div class="col-sm-4 col-sm-offset-2 col-xs-8 col-xs-offset-2">
+                      <div class="thumbnail">
+                        <div class="caption">
+                          <h3 class="text-center thumbnailTitle orangeUl">Choose a style</h3>
+                          <div id="catViewerMain">
+                            
+                            <div id="catViewerBtnDiv" class="center-block">
+
+                              <div class="catViewerBtnPrevDiv getParentWidth">
+                                <a id="catViewerPrev" class="xlDefault pull-right"><i class="fa fa-angle-double-left fa-4x" aria-hidden="true" alt="Previous Style"></i></a>
+                              </div>
+
+                              <div class="catViewerBtnNextDiv">
+                                <a id="catViewerNext" class="xlDefault pull-left"><i class="fa fa-angle-double-right fa-4x" aria-hidden="true" alt="Previous Style"></i></a>
+                              </div>
+
+                            </div>
+                            
+                            <a href="whiteT.html" id="shirtImgLink"><img src='images/catImages/item_0.jpg' class='img-responsive catViewerImg'></a>
+
+                          </div>
+                          
+                        </div>
+
+                      </div>
+                    </div>
+
+
+                  <div class="col-sm-4  col-sm-offset-0 col-xs-8 col-xs-offset-2">
+                    <div class="styleDetails">
+                      <p class="text-center productStyleTitle"><span id="cvShirtType"></span></p>
+                      <p class="text-center"><strong><span id="shirtDesc"></span></strong></p>
+                      <label><strong>Number of Items</strong></label>
+                      <br>
+                      <input type="number" name="numItems" id="numItemsOpts" min="1" max="10000">
+                      <p class="bg-warning" id="info"></p>
+                      <br>
+                      <label><strong>Production Method</strong></label>
+                      <br>
+                      <select name="prodMethod" id="prodMethodOpts">
+                        <option value="scr">Screen Printed</option>
+                        <option value="dtg">Digital Full Color</option>
+                        <option value="emb">Embroidered</option>
+                      </select>
+                      <br>
+                      <label><strong>Cost per Item</strong></label>
+                      <span id="itemTotal"></span>
+                      <br>
+                      <label><strong>Total</strong></label>
+                      <span id="total"></span>
+
+                  </div>
+
                     
+
+                  </div>
+
+                  </div>
+                  <!-- <div class="row">
+
+                    <div class="col-md-12">
+                            
                         <div class="thumbnail mainThumbnail">
                           <div class="caption">
                             <h3 class="text-center thumbnailTitle orangeUl">Get a Quote</h3>
@@ -140,7 +200,7 @@ git pull https://github.com/mrected/Central-Ave-Shirt-Co.git
                                   <option value="ht">Hats</option>
                                 </select>
                                 <br>
-                                <p>Cost per shirt: <span id="shirtTotal"></span> Total: <span id="costTotal"></span></p>
+                                <p>Cost per shirt: <span id="shirtTotal"></span>  Total: <span id="costTotal"></span></p>
                                 <p class="bg-warning" id="info"></p>
                                 <input type="button" class="btn btn-primary btn-block" id="submit" value="Calculate Cost">
                                 <a href="#"  data-toggle="modal" data-target="#priceChartModal">Full Price Chart</a>
@@ -170,7 +230,7 @@ git pull https://github.com/mrected/Central-Ave-Shirt-Co.git
 
                     </div>
    
-            </div>
+            </div> -->
           </section>
 
         </div>
@@ -196,7 +256,7 @@ git pull https://github.com/mrected/Central-Ave-Shirt-Co.git
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
         <script type="text/javascript" src="js/shirtData.js"></script>
-        <script type="text/javascript" src="js/shirtCalc.js"></script>
+        <script type="text/javascript" src="js/pricingScripts.js"></script>
         
         <script type="text/javascript" src="js/scripts.js"></script>
 

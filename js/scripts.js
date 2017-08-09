@@ -1,6 +1,8 @@
 //Utilities
 $(document).ready(function(){
 
+	
+	
 	//cancels default action
 	$(".xlDefault").click(function(e){
 		e.preventDefault();
