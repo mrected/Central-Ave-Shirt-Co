@@ -1,6 +1,6 @@
 // for get a quote
 
-const shirtData = {
+const itemCostData = {
 
 	c1:[18,11.5,9,7.75,5.98,5.25,4.98,4.7,4.4,4.1,3.75,3.55,3.43,3.15],
 	c2:[21,13.50,10.75,9.50,7.25,6.25,5.97,5.5,5.10,4.95,4.40,4.20,3.9,3.30],
@@ -19,21 +19,74 @@ const shirtsArray = ["images/catImages/item_0.jpg",
 				   "images/catImages/item_2.jpg",
 				   "images/catImages/item_3.jpg",
 				   "images/catImages/item_4.jpg",
-				   "images/catImages/item_5.jpg"];
+				   "images/catImages/item_5.jpg"];//REMOVED FROM PRICING SCRIPTS, SCRIPTS
 
-const cvShirtType=["T-Shirt",
+const cvItemType=["T-Shirt",
 				"Long Sleeve",
 				"Tank Top",
 				"Polo Shirt",
 				"Hoodie",
 				"Hats"];
 
-const shirtDesc =[`Starts at $${shirtData.c1[0]} <br><a href='designer/designer.html' class='designThisBtn' name='designShirt'>Design this</a> | <a href='#'>Quote this</a> | <a href='#'>More info</a>`,
-				`Starts at $${(shirtData.c1[0]+2.50).toFixed(2)} <br><a href='designer/designer.html' class='designThisBtn' name='designLs'>Design this</a> | <a href='#'>Quote this</a> | <a href='#'>More info</a>`,
-				`Starts at $${shirtData.c1[0]} <br><a href='#'>Design this</a> | <a href='#'>Quote this</a> | <a href='#'>More info</a>`,
-				`Starts at $${(shirtData.c1[0]+3.50).toFixed(2)}  <br><a href='#'>Design this</a> | <a href='#'>Quote this</a> | <a href='#'>More info</a>`,
-				`Starts at $${(shirtData.c1[0]+5).toFixed(2)}  <br><a href='#'>Design this</a> | <a href='#'>Quote this</a> | <a href='#'>More info</a>`,
-				`Starts at $${(shirtData.c1[0]+1.50).toFixed(2)}  <br><a href='#'>Design this</a> | <a href='#'>Quote this</a> | <a href='#'>More info</a>`]
+const shirtDesc =[`Starts at $${itemCostData.c1[0]} <br><a href='designer/designer.html' class='designThisBtn' name='designShirt'>Design this</a> | <a href='#'>Quote this</a> | <a href='#'>More info</a>`,
+				`Starts at $${(itemCostData.c1[0]+2.50).toFixed(2)} <br><a href='designer/designer.html' class='designThisBtn' name='designLs'>Design this</a> | <a href='#'>Quote this</a> | <a href='#'>More info</a>`,
+				`Starts at $${itemCostData.c1[0]} <br><a href='designer/designer.html' class='designThisBtn' name='designTank'>Design this</a> | <a href='#'>Quote this</a> | <a href='#'>More info</a>`,
+				`Starts at $${(itemCostData.c1[0]+3.50).toFixed(2)}  <br><a href='designer/designer.html' class='designThisBtn' name='designPolo'>Design this</a> | <a href='#'>Quote this</a> | <a href='#'>More info</a>`,
+				`Starts at $${(itemCostData.c1[0]+5).toFixed(2)}  <br><a href='designer/designer.html' class='designThisBtn' name='designHoodie'>Design this</a> | <a href='#'>Quote this</a> | <a href='#'>More info</a>`,
+				`Starts at $${(itemCostData.c1[0]+1.50).toFixed(2)}  <br><a href='designer/designer.html' class='designThisBtn' name='designHat'>Design this</a> | <a href='#'>Quote this</a> | <a href='#'>More info</a>`]
+
+const itemInfo = [
+	{
+		image:"images/catImages/item_0.jpg",
+		name:"T-Shirt",
+		adtnlChrg:0,
+		linkAttr_design:"designShirt",
+		linkAttr_quote:"quoteShirt",
+		linkAttr_info:"infoShirt"
+	},
+	{
+		image:"images/catImages/item_1.jpg",
+		name:"Long Sleeve",
+		adtnlChrg:2.5,
+		linkAttr_design:"designLs",
+		linkAttr_quote:"quoteLs",
+		linkAttr_info:"<a href='catalog.html' name='infoLs'>More Info</a>"
+	},
+	{
+		image:"images/catImages/item_2.jpg",
+		name:"Tank Top",
+		adtnlChrg:0,
+		linkAttr_design:"designTank",
+		linkAttr_quote:"quoteTank",
+		linkAttr_info:"<a href='catalog.html' name='infoLs'>More Info</a>"
+	},
+	{
+		image:"images/catImages/item_3.jpg",
+		name:"Polo",
+		adtnlChrg:3.5,
+		linkAttr_design:"designPolo",
+		linkAttr_quote:"quotePolo",
+		linkAttr_info:"infoPolo"
+	},
+	{
+		image:"images/catImages/item_4.jpg",
+		name:"Hoodie",
+		adtnlChrg:5,
+		linkAttr_design:"designHoodie",
+		linkAttr_quote:"quoteHoodie",
+		linkAttr_info:"<a href='catalog.html' name='infoLs'>More Info</a>"
+	},
+	{
+		image:"images/catImages/item_5.jpg",
+		name:"Hats",
+		adtnlChrg:0,
+		linkAttr_design:"designHat",
+		linkAttr_quote:"quoteHat",
+		linkAttr_info:"<a href='catalog.html' name='infoLs'>More Info</a>"
+	}
+];
+
+				
 
 
 				// class='designThisBtn' name='designShirt'

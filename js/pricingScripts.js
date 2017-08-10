@@ -15,7 +15,7 @@ let numberOfColors;
 let numberOfItems=0;
 let itemTotal;
 let totalItemCost;
-let itemType="ss";
+let itemType="";
 let addCost = 0;
 let itemAdtlCost=0;
 let itemProdCost=0;
@@ -46,7 +46,10 @@ const roundCurrency = cost => cost = cost.toFixed(2);
 //initialize selectedShirt on modal window
 // document.getElementById("selectedShirt").innerHTML = "Short Sleeve Shirts";
 
-
+$(".styleBtn").click(function(){
+	itemType = $("#cvShirtType").text();
+	console.log(itemType);
+});
 
 
 
@@ -60,11 +63,20 @@ function getNumberOfItems(){
 	// 	document.getElementById("total").innerHTML = "";
 	// 	document.getElementById("itemTotal").innerHTML = "";
 	// }
-	if(numberOfItems >10000 || numberOfItems<=0){
+	if(numberOfItems >10000 || numberOfItems<1){
 		$("#itemTotal").removeClass("bg-success");
 		$("#total").removeClass("bg-success");
 		$("#info").addClass("warningBox");
 		$("#info").html("Please enter a number between 0 &amp; 10000");
+		$("#total").html("");
+		$("#itemTotal").html("");
+		numberOfItems = 0;
+	}
+	else if(numberOfItems % 1 !== 0){
+		$("#itemTotal").removeClass("bg-success");
+		$("#total").removeClass("bg-success");
+		$("#info").addClass("warningBox");
+		$("#info").html("We can't sell a percentage of a shirt");
 		$("#total").html("");
 		$("#itemTotal").html("");
 		numberOfItems = 0;
@@ -122,23 +134,25 @@ function getNumberOfItems(){
 
 }
 
-// cvShirtType=["T-Shirt",
-// 				"Long Sleeve",
-// 				"Tank Top",
-// 				"Polo Shirt",
-// 				"Hoodie",
-// 				"Hats"];
+getNumberOfItems();
+
+cvShirtType=["T-Shirt",
+				"Long Sleeve",
+				"Tank Top",
+				"Polo Shirt",
+				"Hoodie",
+				"Hats"];
 
 function setTotals(){
 	//selectedShirts
 
 	getItemProdCost();
-	itemTotal=(roundCurrency(shirtData.c1[numberOfItems]+itemAdtlCost+itemProdCost));
+	itemTotal=(roundCurrency(itemCostData.c1[numberOfItems]+itemAdtlCost+itemProdCost));
 
 
 	$("#itemTotal").addClass("bg-success").html(itemTotal);
 	$("#total").addClass("bg-success");
-	$("#total").html("$" + roundCurrency((shirtData.c1[numberOfItems]+itemAdtlCost+itemProdCost) * $("#numItemsOpts").val()));
+	$("#total").html("$" + roundCurrency((itemCostData.c1[numberOfItems]+itemAdtlCost+itemProdCost) * $("#numItemsOpts").val()));
 }
 
 function getItemProdCost(){
@@ -155,57 +169,102 @@ function getItemProdCost(){
 }
 
 
+//start catviewer
 
+numberOfItems = Object.keys(itemInfo).length;
+	let itemNumber=0;
 
+	var shirtSrcString = "images/catImages/item_" + itemNumber + ".jpg";
 
+	function preloadImages(){
+		let preloaderString = "";
+		for(let i=0; i<numberOfItems;i++){
+			preloaderString+="<img aria-hidden='true' src='images/catImages/item_" + i + ".jpg'>";
+		}
+		$("#preloader").html(preloaderString);
+	}
+	preloadImages();
+	function displayInfo(){
+		$("#cvShirtType").html(itemInfo[itemNumber].name);
+		$("#shirtDesc").html(shirtDesc[itemNumber]);
+	}
 
-// $("#shirtType").change(function(){
-// 	switch($("#shirtType").val()){
-// 		case "ss":
-// 			shirtType = "ss";
-// 			addCost = 0;
-// 			$("#selectedShirt").text("Short Sleeve Shirts");
-// 			break;
+	function updateLinks(){
+		$("#designLink").attr('name',itemInfo[itemNumber].linkAttr_design);
+		$("#infoLink").html(itemInfo[itemNumber].linkAttr_info)
+		$(".designThisBtn").on("click", function sendProductVar(){
+			var product = "#" + $(this).attr("name");
+			sessionStorage.setItem("sendProduct",product);
+		});
+	}
 
-// 		case "ls":
-// 			shirtType = "ls";
-// 			addCost = 2.5;
-// 			$("#selectedShirt").text("Long Sleeve Shirts");
-// 			break;
-// 		case "tt":
-// 			shirtType = "tt";
-// 			addCost = 0;
-// 			$("#selectedShirt").text("Tank Top");
-// 			break;
+	displayInfo();
 
-// 		case "po":
-// 			shirtType = "po";
-// 			addCost = 3.5;
-// 			$("#selectedShirt").text("Polo Shirts");
-// 			break;
+	function nextShirt(){
+		if(itemNumber>=numberOfItems-1){
+			itemNumber = 0;
+			shirtSrcString = itemInfo[itemNumber].image;
+		}
+		else{
+			itemNumber++;
+			shirtSrcString = itemInfo[itemNumber].image;
+		}
+		$(".catViewerImg").animate({opacity: 0,left:"+=150px"},200, function(){
+			$(".catViewerImg").attr("src", shirtSrcString);
+			$(".catViewerImg").animate({left:"-=300px"},1);
+			$(".catViewerImg").animate({opacity:1,left:"+=150px"},200);
+			displayInfo();
+			updateLinks();
+		});
+		
+	}
 
-// 		case "ho":
-// 			shirtType = "ho";
-// 			addCost = 5;
-// 			$("#selectedShirt").text("Hoodies");
-// 			break;
+	function prevShirt(){
+		if(itemNumber<=0){
+			itemNumber = numberOfItems-1;
+			shirtSrcString = itemInfo[itemNumber].image;
 
-// 		case "ht":
-// 			shirtType = "ht";
-// 			addCost = 1.5;
-// 			$("#selectedShirt").text("Hats");
-// 			break;
+		}
+		else{
+			itemNumber--;
+			shirtSrcString = itemInfo[itemNumber].image;
+		}
+		$(".catViewerImg").animate({opacity: 0,left:"-=150px"},200, function(){
+			$(".catViewerImg").attr("src", shirtSrcString);
+			$(".catViewerImg").animate({left:"+=300px"},1);
+			$(".catViewerImg").animate({opacity:1,left:"-=150px"},200);
+			displayInfo();
+			updateLinks();
+		});
 
-// 		default:
-// 			shirtType = "ss";
-// 			addCost = 0;
-// 			$("#selectedShirt").text("Short Sleeve Shirts");
-// 			break;
-// 	}
-// 	//console.log("shirtType = " + shirtType + " / addCost = " + addCost);
-// 	$("#priceChart").children().remove();
-// 	createPriceTable();
-// });
+	}
+
+	$("#catViewerPrev, #catViewerNext").hover(function(){
+		$(this).css({"color": "#d84727","cursor": "pointer"});
+	},
+	function(){
+		$(this).css("color","#2292a4");
+	});
+
+	$("#catViewerPrev").click(function(){
+		prevShirt();
+	});
+
+	$("#catViewerPrev").hover(function(){
+		$("#");
+	});
+
+	$("#catViewerNext").click(function(){
+		nextShirt();
+	});
+
+	$("#testBtn").click(function(){
+		$("#testLink").attr("href",shirtLinks[itemNumber]);
+		console.log($("#testLink").attr("href"));
+	});
+
+//end catviewer
+
 
 $("#numItemsOpts").change(function(){
 	setTotals();
