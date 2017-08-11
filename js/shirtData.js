@@ -86,10 +86,7 @@ const itemInfo = [
 	}
 ];
 
-				
 
-
-				// class='designThisBtn' name='designShirt'
 
 const shirtLinks =["shortSleeve.html",
 				 "longSleeve.html",
@@ -102,20 +99,3 @@ const shirtLinks =["shortSleeve.html",
 
 
 
-		// case "po":
-		// 	shirtType = "po";
-		// 	addCost = 3.5;
-		// 	$("#selectedShirt").text("Polo Shirts");
-		// 	break;
-
-		// case "ho":
-		// 	shirtType = "ho";
-		// 	addCost = 5;
-		// 	$("#selectedShirt").text("Hoodies");
-		// 	break;
-
-		// case "ht":
-		// 	shirtType = "ht";
-		// 	addCost = 1.5;
-		// 	$("#selectedShirt").text("Hats");
-		// 	break;

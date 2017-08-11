@@ -11,8 +11,12 @@
 // let shirtType="ss";
 // let addCost = 0;
 
+//VARIABLES*************************
 let numberOfColors;
-let numberOfItems=0;
+let numberOfItems;
+let itemNumGroup=0;
+let itemNumber=0;
+let numberOfStyles=Object.keys(itemInfo).length;
 let itemTotal;
 let totalItemCost;
 let itemType="";
@@ -20,49 +24,17 @@ let addCost = 0;
 let itemAdtlCost=0;
 let itemProdCost=0;
 
+
+//FUNCTIONS*************************
+
+
 const roundCurrency = cost => cost = cost.toFixed(2);
 
-// function createPriceTable(){
-// 	const headerLength = Object.keys(shirtData).length;
-// 	const dataLength = shirtData.c1.length;
-// 	let tableHeaders="<tr><th>&nbsp;</th><th colspan='"+(headerLength-1)+"'>Number of Colors</th></tr><tr><th class='text-center'>Number of Shirts</th>";
-// 	let tableData="";
-// 	let tableComplete="";
-// 	for(e=0;e<headerLength;e++){
-// 		tableHeaders+= "<th class='text-center headerRowColor'>"+(e+1)+"</th>"
-// 	}
-// 	tableHeaders +="</tr>"
-// 	for(i=0;i<dataLength;i++){
-// 		tableData+="<td class='headerColumnColor text-center'><strong>"+shirtNumbers[i]+"</strong></td>";
-// 		tableData+="<td>$"+roundCurrency(shirtData.c1[i]+addCost)+"</td>";
-// 		tableData+="<td>$"+roundCurrency(shirtData.c2[i]+addCost)+"</td>";
-// 		tableData+="<td>$"+roundCurrency(shirtData.c3[i]+addCost)+"</td>";
-// 		tableData+="<td>$"+roundCurrency(shirtData.c4[i]+addCost)+"</td>";
-// 		tableData+="<td>$"+roundCurrency(shirtData.c5[i]+addCost)+"</td><tr>";
-// 	}
-// 	$("#priceChart").append(tableHeaders + tableData);
-// }
 
-//initialize selectedShirt on modal window
-// document.getElementById("selectedShirt").innerHTML = "Short Sleeve Shirts";
-
-$(".styleBtn").click(function(){
-	itemType = $("#cvShirtType").text();
-	console.log(itemType);
-});
-
-
-
+//start getNumberOfItems()
 function getNumberOfItems(){
 	numberOfItems = $("#numItemsOpts").val();
-	// if(isNaN(numberOfItems)){
-	// 	$("#itemTotal").removeClass("bg-success");
-	// 	$("#total").removeClass("bg-success");
-	// 	$("#info").addClass("warningBox");
-	// 	document.getElementById("info").innerHTML = "Please enter a valid number";
-	// 	document.getElementById("total").innerHTML = "";
-	// 	document.getElementById("itemTotal").innerHTML = "";
-	// }
+
 	if(numberOfItems >10000 || numberOfItems<1){
 		$("#itemTotal").removeClass("bg-success");
 		$("#total").removeClass("bg-success");
@@ -71,6 +43,7 @@ function getNumberOfItems(){
 		$("#total").html("");
 		$("#itemTotal").html("");
 		numberOfItems = 0;
+		itemNumGroup = 0;
 	}
 	else if(numberOfItems % 1 !== 0){
 		$("#itemTotal").removeClass("bg-success");
@@ -80,6 +53,7 @@ function getNumberOfItems(){
 		$("#total").html("");
 		$("#itemTotal").html("");
 		numberOfItems = 0;
+		itemNumGroup = 0;
 	}
 	else{
 		$("#info").removeClass("warningBox");
@@ -87,74 +61,67 @@ function getNumberOfItems(){
 		$("#itemTotal").addClass("bg-success");
 		$("#total").addClass("bg-success");
 		if(numberOfItems<=5){
-			numberOfItems= 0;
+			itemNumGroup= 0;
 		}
 		else if(numberOfItems<=10){
-			numberOfItems= 1;
+			itemNumGroup= 1;
 		}
 		else if(numberOfItems<=15){
-			numberOfItems= 2;
+			itemNumGroup= 2;
 		}
 		else if(numberOfItems<=20){
-			numberOfItems= 3;
+			itemNumGroup= 3;
 		}
 		else if(numberOfItems<=40){
-			numberOfItems= 4;
+			itemNumGroup= 4;
 		}
 		else if(numberOfItems<=60){
-			numberOfItems= 5;
+			itemNumGroup= 5;
 		}
 		else if(numberOfItems<=80){
-			numberOfItems= 6;
+			itemNumGroup= 6;
 		}
 		else if(numberOfItems<=100){
-			numberOfItems= 7;
+			itemNumGroup= 7;
 		}
 		else if(numberOfItems<=140){
-			numberOfItems= 8;
+			itemNumGroup= 8;
 		}
 		else if(numberOfItems<=200){
-			numberOfItems= 9;
+			itemNumGroup= 9;
 		}
 		else if(numberOfItems<=300){
-			numberOfItems= 10;
+			itemNumGroup= 10;
 		}
 		else if(numberOfItems<=400){
-			numberOfItems= 11;
+			itemNumGroup= 11;
 		}
 		else if(numberOfItems<=500){
-			numberOfItems= 12;
+			itemNumGroup= 12;
 		}
 		else{
-			numberOfItems= 13;
+			itemNumGroup= 13;
 		}
 		
 		setTotals();
 	}
 
 }
+//end getNumberOfItems()
 
-getNumberOfItems();
-
-cvShirtType=["T-Shirt",
-				"Long Sleeve",
-				"Tank Top",
-				"Polo Shirt",
-				"Hoodie",
-				"Hats"];
-
+//start setTotals()
 function setTotals(){
-	//selectedShirts
-
 	getItemProdCost();
-	itemTotal=(roundCurrency(itemCostData.c1[numberOfItems]+itemAdtlCost+itemProdCost));
-
-
+	itemAdtlCost = itemInfo[itemNumber].adtnlChrg;
+	itemTotal=(roundCurrency(itemCostData.c1[itemNumGroup]+itemAdtlCost+itemProdCost));
+	
 	$("#itemTotal").addClass("bg-success").html(itemTotal);
 	$("#total").addClass("bg-success");
-	$("#total").html("$" + roundCurrency((itemCostData.c1[numberOfItems]+itemAdtlCost+itemProdCost) * $("#numItemsOpts").val()));
+	$("#total").html("$" + roundCurrency((itemCostData.c1[itemNumGroup]+itemAdtlCost+itemProdCost) * $("#numItemsOpts").val()));
 }
+//end setTotals()
 
+//start getItemProdCost()
 function getItemProdCost(){
 	let $methods = $("#prodMethodOpts").val();
 	if($methods === "scr"){
@@ -167,18 +134,36 @@ function getItemProdCost(){
 		itemProdCost = 2.5;
 	}
 }
+//end getItemProdCost()
+
+
+//EVENTS/CALLS*************************
+
+$(".styleBtn").click(function(){
+	itemType = $("#cvShirtType").text();
+});
+
+getNumberOfItems();
+
+
+
+
+
+
+
+
 
 
 //start catviewer
 
-numberOfItems = Object.keys(itemInfo).length;
-	let itemNumber=0;
+
+	
 
 	var shirtSrcString = "images/catImages/item_" + itemNumber + ".jpg";
 
 	function preloadImages(){
 		let preloaderString = "";
-		for(let i=0; i<numberOfItems;i++){
+		for(let i=0; i<numberOfStyles;i++){
 			preloaderString+="<img aria-hidden='true' src='images/catImages/item_" + i + ".jpg'>";
 		}
 		$("#preloader").html(preloaderString);
@@ -201,7 +186,7 @@ numberOfItems = Object.keys(itemInfo).length;
 	displayInfo();
 
 	function nextShirt(){
-		if(itemNumber>=numberOfItems-1){
+		if(itemNumber>=numberOfStyles-1){
 			itemNumber = 0;
 			shirtSrcString = itemInfo[itemNumber].image;
 		}
@@ -213,15 +198,16 @@ numberOfItems = Object.keys(itemInfo).length;
 			$(".catViewerImg").attr("src", shirtSrcString);
 			$(".catViewerImg").animate({left:"-=300px"},1);
 			$(".catViewerImg").animate({opacity:1,left:"+=150px"},200);
+			setTotals();
 			displayInfo();
 			updateLinks();
 		});
-		
+
 	}
 
 	function prevShirt(){
 		if(itemNumber<=0){
-			itemNumber = numberOfItems-1;
+			itemNumber = numberOfStyles-1;
 			shirtSrcString = itemInfo[itemNumber].image;
 
 		}
@@ -233,6 +219,8 @@ numberOfItems = Object.keys(itemInfo).length;
 			$(".catViewerImg").attr("src", shirtSrcString);
 			$(".catViewerImg").animate({left:"+=300px"},1);
 			$(".catViewerImg").animate({opacity:1,left:"-=150px"},200);
+			itemAdtlCost = itemInfo[itemNumber].adtnlChrg;
+			setTotals();
 			displayInfo();
 			updateLinks();
 		});
@@ -267,7 +255,7 @@ numberOfItems = Object.keys(itemInfo).length;
 
 
 $("#numItemsOpts").change(function(){
-	setTotals();
+	getNumberOfItems();
 });
 
 $("#numItemsOpts").keyup(function(){

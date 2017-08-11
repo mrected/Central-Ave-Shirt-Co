@@ -67,10 +67,10 @@ var numberOfShirts = Object.keys(itemInfo).length;
 
 	$("#catViewerPrev, #catViewerNext").hover(function(){
 		$(this).css({"color": "#d84727","cursor": "pointer"});
-	},
-	function(){
+	},function(){
 		$(this).css("color","#2292a4");
 	});
+	
 
 	$("#catViewerPrev").click(function(){
 		prevShirt();
@@ -84,10 +84,7 @@ var numberOfShirts = Object.keys(itemInfo).length;
 		nextShirt();
 	});
 
-	$("#testBtn").click(function(){
-		$("#testLink").attr("href",shirtLinks[shirtNumber]);
-		console.log($("#testLink").attr("href"));
-	});
+
 
 
 
