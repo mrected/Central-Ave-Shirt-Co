@@ -10,6 +10,9 @@ Off White:  #f4f4f4 | RGB  244,244,244
 body{
 	font-family: 'Roboto' sans-serif;
 }
+/**{
+	background-color: rgba(0,0,0,.1);
+}*/
 
 /*utilities*/
 
@@ -332,42 +335,26 @@ p{
 
 #catViewerPrev, #catViewerNext{
 	color:#2292a4;
+	position: absolute;
+	width:2rem;
+
+}
+#catViewerPrev .fa, #catViewerNext .fa{
+	padding:10rem 0 11rem;
+}
+
+#catViewerNext{
+	right:3.25rem;
 }
 
 #catViewerBtnDiv{
 	position: absolute;
 	z-index: 10;
 	/*padding-right: 7%;*/
-	top:40%;
-	width:90%;
-	padding-right: .25rem;
-	padding-left: .25rem;
+
+	width:100%;
 }
 
-
-
-/*#catViewerPrev, #catViewerNext{
-	display: inline-block;
-	background-color: #042a2b;
-	font-size: 2rem;
-	color: #2292a4;
-	height:15rem;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	padding: 0 1rem;
-	width:3rem;
-}
-
-#catViewerPrev{
-	float:left;
-	border-radius: 2rem 0 0 2rem;
-}
-
-#catViewerNext{
-	float:right;
-	border-radius: 0 2rem 2rem 0;
-}*/
 
 #catViewerMain{
 	display: inline-block;
@@ -408,6 +395,48 @@ p{
 /*.thumbnail{
 	height: 62rem;
 }*/
+
+input, select{
+	/*padding:10px 10px 10px 5px;*/
+	display:block;
+	border:none;
+	background-color: rgba(216,71,39,1);
+	font:1em 'Caveat Brush', cursive;
+	color:#f4f4f4;
+}
+
+select{
+	text-align-last:center;
+}
+
+.form-control{
+	font-size: 2rem;
+	height: 4rem;
+}
+
+.infoTooltip{
+	font-size: 1.25rem;
+}
+
+.costText{
+	font:2rem 'Caveat Brush', cursive;
+	color:#2292a4;
+}
+
+.costLabelText{
+	font: 1.25rem 'Anton', sans-serif;
+}
+
+.fa-3x{
+	font-size: 2rem;
+}
+
+.totalBox{
+	border: .1rem solid #ccc;
+	background-color: #fff;
+}
+
+
 
 #methodsSection{
 	background-color: #042a2b;
@@ -548,6 +577,23 @@ p{
 
 	.navNoBanner{
 		height:7.5rem;
+	}
+
+	.fa-3x{
+		font-size: 4rem;
+		margin-top: 1rem;
+	}
+
+	.costLabelText{
+		font-size: 2rem;
+	}
+
+	.costText{
+		font-size: 3rem;
+	}
+
+	.infoTooltip{
+		font-size: 2rem;
 	}
 
 }

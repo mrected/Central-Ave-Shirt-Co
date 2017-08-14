@@ -25,7 +25,7 @@ git pull https://github.com/mrected/Central-Ave-Shirt-Co.git
 
         <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.css">
         <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link href="https://fonts.googleapis.com/css?family=Anton|Zilla+Slab:300,400,700|Roboto:100,400,400i,700" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Anton|Zilla+Slab:300,400,700|Roboto:100,400,400i,700|Caveat+Brush" rel="stylesheet">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
         <link rel="stylesheet" type="text/css" href="css/style.css">
 
@@ -106,67 +106,66 @@ git pull https://github.com/mrected/Central-Ave-Shirt-Co.git
 
           <section id="productsSection"> 
             <div class="container">
-          
-                <h1 class="text-uppercase text-center">Pricing<br><small>What's all this gonna cost</small></h1>
-                  <div class="row">
+              <h1 class="text-uppercase text-center">Pricing<br><small>What's all this gonna cost</small></h1>
+              <div class="row">
+                <div class="col-sm-4 col-sm-offset-2 col-xs-6 col-xs-offset-0 homeColumns">
+                  <div class="thumbnail">
+                    <div class="caption">
+                      <h3 class="text-center thumbnailTitle orangeUl">Choose a style</h3>
+                      <div id="catViewerMain">
 
-                    <div class="col-sm-4 col-sm-offset-2 col-xs-8 col-xs-offset-2">
-                      <div class="thumbnail">
-                        <div class="caption">
-                          <h3 class="text-center thumbnailTitle orangeUl">Choose a style</h3>
-                          <div id="catViewerMain">
-                            
-                            <div id="catViewerBtnDiv" class="center-block">
-
-                              <div class="catViewerBtnPrevDiv getParentWidth">
-                                <a id="catViewerPrev" class="xlDefault pull-right"><i class="styleBtn fa fa-angle-double-left fa-4x" aria-hidden="true" alt="Previous Style"></i></a>
-                              </div>
-
-                              <div class="catViewerBtnNextDiv">
-                                <a id="catViewerNext" class="xlDefault pull-left"><i class="styleBtn fa fa-angle-double-right fa-4x" aria-hidden="true" alt="Previous Style"></i></a>
-                              </div>
-
-                            </div>
-                            
-                            <a href="whiteT.html" id="shirtImgLink"><img src='images/catImages/item_0.jpg' class='img-responsive catViewerImg'></a>
-
+                        <div id="catViewerBtnDiv" class="center-block">
+                          <div class="catViewerBtnPrevDiv">
+                            <a id="catViewerPrev" class="xlDefault pull-right"><i class="styleBtn fa fa-angle-left fa-4x" aria-hidden="true" alt="Previous Style"></i></a>
                           </div>
-                          
+
+                          <div class="catViewerBtnNextDiv">
+                            <a id="catViewerNext" class="xlDefault pull-left"><i class="styleBtn fa fa-angle-right fa-4x" aria-hidden="true" alt="Previous Style"></i></a>
+                          </div>
+
                         </div>
+                            
+                        <a href="whiteT.html" id="shirtImgLink"><img src='images/catImages/item_0.jpg' class='img-responsive catViewerImg'></a>
 
                       </div>
-                    </div>
-
-
-                  <div class="col-sm-4  col-sm-offset-0 col-xs-8 col-xs-offset-2">
-                    <div class="styleDetails">
                       <p class="text-center productStyleTitle"><span id="cvShirtType"></span></p>
-                      <p class="text-center"><strong><a id="designLink" class='designThisBtn' href='designer/designer.html' name='designShirt'>Design This</a></strong> | <strong><a id="infoLink" href='catalog.html' name='infoLs'>More Info</a></strong></p><br>
-                      <label><strong>Number of Items</strong></label>
-                      <br>
-                      <input type="number" name="numItems" id="numItemsOpts" min="1" max="10000" value="1">
-                      <p class="bg-warning" id="info"></p>
-                      <br>
-                      <label><strong>Production Method</strong></label>
-                      <p>Digital Printing adds $4.50/item &amp; Embroidery adds $2.50/item</p>
-                      <select name="prodMethod" id="prodMethodOpts">
-                        <option value="scr">Screen Printed</option>
-                        <option value="dtg">Digital Full Color</option>
-                        <option value="emb">Embroidered</option>
-                      </select>
-                      <br>
-                      <br>
-                      <label><strong>Cost per Item</strong></label>
-                      <span id="itemTotal"></span>
-                      <br>
-                      <label><strong>Total</strong></label>
-                      <span id="total"></span>
 
+                    </div>
+                    <p class="text-center"><strong><a id="designLink" class='designThisBtn' href='designer/designer.html' name='designShirt'>Design This</a></strong> | <strong><a id="infoLink" href='catalog.html' name='infoLs'>More Info</a></strong></p>
                   </div>
+
+                </div>
+
+
+
+                <div class="col-sm-4  col-sm-offset-0 col-xs-6 col-xs-offset-0 homeColumns">
+                  <div>
+                    
+                    <h3 class="text-center thumbnailTitle">How Many?</h3>
+                    
+                    <input class="text-center form-control" type="number" name="numItems" id="numItemsOpts" min="1" max="10000" value="1">
+                    <p class="bg-warning" id="info"></p>
+                    <h3 class="text-center thumbnailTitle">Production Method <i class="ltBlueTxt infoTooltip fa fa-info-circle" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="Digital Printing adds $4.50/item Embroidery adds $2.50/item"></i></h3>
+                    <select name="prodMethod" id="prodMethodOpts" class="form-control">
+                      <option value="scr">Screen Printed</option>
+                      <option value="dtg">Digital Full Color</option>
+                      <option value="emb">Embroidered</option>
+                    </select>
+
+                    <p class="text-center"><i class="fa fa-arrow-down fa-3x" aria-hidden="true"></i></p>
+                    <div class="text-center totalBox roundedBorderLight">
+                      <label class="costLabelText Ul"><strong>Cost per Item: </strong></label>
+                      <span id="itemTotalTxt" class="costText roundedBorderLight"></span>
+                      <br>
+                      <label class="costLabelText"><strong>Total: </strong></label>
+                      <span id="total" class="costText roundedBorderLight"></span>
+                    </div>
+                  </div>
+                </div>
 
                     
 
-                  </div>
+
 
                   </div>
                   <!-- <div class="row">
@@ -253,6 +252,11 @@ git pull https://github.com/mrected/Central-Ave-Shirt-Co.git
             </div>
           </div>
         </div>  
+
+        <div id="preloader" class="preloader">
+        </div>
+
+        <div id="bannerPreloader" class=preloader>
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>

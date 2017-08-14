@@ -13,7 +13,7 @@ var numberOfShirts = Object.keys(itemInfo).length;
 	preloadImages();
 	function displayInfo(){
 		$("#cvShirtType").html(cvShirtType[shirtNumber]);
-		$("#shirtDesc").html(shirtDesc[shirtNumber]);
+		$("#shirtDescTxt").html(shirtDesc[shirtNumber]);
 	}
 
 	function updateLinks(){

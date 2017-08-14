@@ -42,7 +42,7 @@ const itemInfo = [
 		adtnlChrg:0,
 		linkAttr_design:"designShirt",
 		linkAttr_quote:"quoteShirt",
-		linkAttr_info:"infoShirt"
+		linkAttr_info:"<a href='catalog.html' name='infoShirt'>More Info</a>"
 	},
 	{
 		image:"images/catImages/item_1.jpg",
@@ -58,7 +58,7 @@ const itemInfo = [
 		adtnlChrg:0,
 		linkAttr_design:"designTank",
 		linkAttr_quote:"quoteTank",
-		linkAttr_info:"<a href='catalog.html' name='infoLs'>More Info</a>"
+		linkAttr_info:"<a href='catalog.html' name='infoTank'>More Info</a>"
 	},
 	{
 		image:"images/catImages/item_3.jpg",
@@ -66,7 +66,7 @@ const itemInfo = [
 		adtnlChrg:3.5,
 		linkAttr_design:"designPolo",
 		linkAttr_quote:"quotePolo",
-		linkAttr_info:"infoPolo"
+		linkAttr_info:"<a href='catalog.html' name='infoPolo'>More Info</a>"
 	},
 	{
 		image:"images/catImages/item_4.jpg",
@@ -74,7 +74,7 @@ const itemInfo = [
 		adtnlChrg:5,
 		linkAttr_design:"designHoodie",
 		linkAttr_quote:"quoteHoodie",
-		linkAttr_info:"<a href='catalog.html' name='infoLs'>More Info</a>"
+		linkAttr_info:"<a href='catalog.html' name='infoHoodie'>More Info</a>"
 	},
 	{
 		image:"images/catImages/item_5.jpg",
@@ -82,7 +82,7 @@ const itemInfo = [
 		adtnlChrg:0,
 		linkAttr_design:"designHat",
 		linkAttr_quote:"quoteHat",
-		linkAttr_info:"<a href='catalog.html' name='infoLs'>More Info</a>"
+		linkAttr_info:"<a href='catalog.html' name='infoHat'>More Info</a>"
 	}
 ];
 

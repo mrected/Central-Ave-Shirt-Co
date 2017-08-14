@@ -4,7 +4,6 @@
 //add an else if statement to createPriceTable
 //add an option to shirtprices.html
 
-// let numberOfColors;
 // let numberOfItems=0;
 // let shirtCost;
 // let totalShirtCost;
@@ -12,7 +11,6 @@
 // let addCost = 0;
 
 //VARIABLES*************************
-let numberOfColors;
 let numberOfItems;
 let itemNumGroup=0;
 let itemNumber=0;
@@ -36,30 +34,30 @@ function getNumberOfItems(){
 	numberOfItems = $("#numItemsOpts").val();
 
 	if(numberOfItems >10000 || numberOfItems<1){
-		$("#itemTotal").removeClass("bg-success");
-		$("#total").removeClass("bg-success");
+		// $("#itemTotal").removeClass("bg-success");
+		// $("#total").removeClass("bg-success");
 		$("#info").addClass("warningBox");
 		$("#info").html("Please enter a number between 0 &amp; 10000");
 		$("#total").html("");
-		$("#itemTotal").html("");
+		$("#itemTotalTxt").html("");
 		numberOfItems = 0;
 		itemNumGroup = 0;
 	}
 	else if(numberOfItems % 1 !== 0){
-		$("#itemTotal").removeClass("bg-success");
-		$("#total").removeClass("bg-success");
+		// $("#itemTotal").removeClass("bg-success");
+		// $("#total").removeClass("bg-success");
 		$("#info").addClass("warningBox");
 		$("#info").html("We can't sell a percentage of a shirt");
 		$("#total").html("");
-		$("#itemTotal").html("");
+		$("#itemTotalTxt").html("");
 		numberOfItems = 0;
 		itemNumGroup = 0;
 	}
 	else{
 		$("#info").removeClass("warningBox");
 		$("#info").html("");
-		$("#itemTotal").addClass("bg-success");
-		$("#total").addClass("bg-success");
+		// $("#itemTotal").addClass("bg-success");
+		// $("#total").addClass("bg-success");
 		if(numberOfItems<=5){
 			itemNumGroup= 0;
 		}
@@ -115,8 +113,8 @@ function setTotals(){
 	itemAdtlCost = itemInfo[itemNumber].adtnlChrg;
 	itemTotal=(roundCurrency(itemCostData.c1[itemNumGroup]+itemAdtlCost+itemProdCost));
 	
-	$("#itemTotal").addClass("bg-success").html(itemTotal);
-	$("#total").addClass("bg-success");
+	$("#itemTotalTxt").html("$" + itemTotal);
+	// $("#total").addClass("bg-success");
 	$("#total").html("$" + roundCurrency((itemCostData.c1[itemNumGroup]+itemAdtlCost+itemProdCost) * $("#numItemsOpts").val()));
 }
 //end setTotals()
@@ -276,7 +274,6 @@ $("#prodMethodOpts").change(function(){
 
 $("#numShirts").change(function(){
 	if($("#numShirts").val()!=0){
-		numberOfColors = $("#numColors").val();
 		getNumberOfItems();
 		$("#priceChart").children().remove();
 		createPriceTable();
@@ -285,7 +282,6 @@ $("#numShirts").change(function(){
 
 $("#shirtType").change(function(){
 	if($("#numShirts").val()!=0){
-		numberOfColors = $("#numColors").val();
 		getNumberOfItems();
 		$("#priceChart").children().remove();
 		createPriceTable();
@@ -294,7 +290,6 @@ $("#shirtType").change(function(){
 
 
 $("#submit").click(function(){
-	numberOfColors = $("#numColors").val();
 	getNumberOfItems();
 	$("#priceChart").children().remove();
 	// createPriceTable();
