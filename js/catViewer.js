@@ -1,3 +1,5 @@
+let itemNumber=0;
+
 var numberOfShirts = Object.keys(itemInfo).length;
 	var shirtNumber=0;
 
@@ -12,7 +14,7 @@ var numberOfShirts = Object.keys(itemInfo).length;
 	}
 	preloadImages();
 	function displayInfo(){
-		$("#cvShirtType").html(cvShirtType[shirtNumber]);
+		$("#cvShirtType").html(itemInfo[itemNumber].name);
 		$("#shirtDescTxt").html(shirtDesc[shirtNumber]);
 	}
 

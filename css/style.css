@@ -276,7 +276,7 @@ p{
 /*catviewer styles*/
 
 .productStyleTitle{
-	font: 700 1rem/2rem 'Zilla Slab', serif;
+	font: 300 2rem/2rem 'Zilla Slab', serif;
 	color:#f4f4f4;
 	background-color: #d84727;
 	padding:.5rem;
@@ -327,6 +327,10 @@ p{
 	overflow: hidden;
 }
 
+#costCalculatorDiv{
+	padding:0 .5rem;
+}
+
 #catViewer{
     display: inline-block;
     text-align: center;
@@ -340,7 +344,7 @@ p{
 
 }
 #catViewerPrev .fa, #catViewerNext .fa{
-	padding:10rem 0 11rem;
+	padding:5rem 0 11rem;
 }
 
 #catViewerNext{
@@ -369,6 +373,29 @@ p{
 	/*background-color: #d9e1f3;*/
 }
 
+
+/*Color squares*/
+#colorSquare-navy{
+	color:#283675;
+}
+#colorSquare-gold{
+	color:#d59211;
+}
+#colorSquare-teal{
+	color:#04A8B0;
+}
+#colorSquare-red{
+	color:#990000;
+}
+#colorSquare-black{
+	color:#000;
+}
+#colorSquare-white{
+	color:#999;
+   -webkit-text-fill-color: white; /* Will override color (regardless of order) */
+   -webkit-text-stroke-width: 1px;
+   -webkit-text-stroke-color: #999;
+}
 
 
 
@@ -410,7 +437,7 @@ select{
 }
 
 .form-control{
-	font-size: 2rem;
+	font-size: 1.5rem;
 	height: 4rem;
 }
 
@@ -510,6 +537,14 @@ select{
 		line-height: 1.75rem;
 		font-weight: 100;
 	}
+
+	.form-control{
+		font-size: 2rem;
+	}
+
+	#catViewerPrev .fa, #catViewerNext .fa{
+		padding:7rem 0 11rem;
+	}
 	
 	
 
@@ -595,6 +630,12 @@ select{
 	.infoTooltip{
 		font-size: 2rem;
 	}
+
+	#catViewerPrev .fa, #catViewerNext .fa{
+		padding:10rem 0 11rem;
+	}
+
+
 
 }
 

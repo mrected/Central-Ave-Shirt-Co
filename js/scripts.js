@@ -1,7 +1,9 @@
 //Utilities
-$(document).ready(function(){
 
 
+
+////works now that we're not waiting on document.ready()
+	
 
 	//cancels default action
 	$(".xlDefault").click(function(e){
@@ -9,11 +11,11 @@ $(document).ready(function(){
 	});
 
 	//gets width of parent div, sets width of child div
-	$(window).resize(function(){
-		$(this).width($(".getParentWidth").parent().width());
-	});
+	// $(window).resize(function(){
+	// 	$(this).width($(".getParentWidth").parent().width());
+	// });
 
-
+	
 
 	//Enable tooltips
 	$(function () {
@@ -26,12 +28,13 @@ $(document).ready(function(){
 	  $('[data-toggle="popover"]').popover();
 	});
 
-
+	//Rounds currency 
+	const roundCurrency = cost => cost = cost.toFixed(2);
 	
 
 	//Opening and closing navbar
 	var navOpenState;
-
+$(document).ready(function(){
 	function openNav(){
 		navOpenState = true;
 		if(navOpenState===true){
@@ -39,8 +42,10 @@ $(document).ready(function(){
 			$("#rightNavSection").stop().animate({left:"6.125rem"},{duration:200});
 			$("#topNavSection").animate({height: "7.5rem"},{duration:300, complete: function(){
 				$("#smallLogo").fadeIn("fast");
+				pickBannerImg();
 			}});
-			pickBannerImg();
+
+			
 		}
 	}
 
@@ -56,9 +61,6 @@ $(document).ready(function(){
 		}
 	}
 
-	
-		
-		
 
 		$(window).scroll(function(){
 		clearTimeout($.data(this, 'scrollTimer'));
@@ -71,8 +73,7 @@ $(document).ready(function(){
 			}
 		},50));
 
-	});
-
+});
 
 
 
@@ -109,9 +110,9 @@ $(document).ready(function(){
 			// alert(currentImg + " " + bannerImage);
 	}
 
-	$(document).ready(function(){
+
 		pickBannerImg();
-	});
+
 
 
 	function getDesignerBtnLink(){

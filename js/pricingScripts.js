@@ -26,7 +26,6 @@ let itemProdCost=0;
 //FUNCTIONS*************************
 
 
-const roundCurrency = cost => cost = cost.toFixed(2);
 
 
 //start getNumberOfItems()

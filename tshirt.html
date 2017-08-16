@@ -106,31 +106,12 @@ git pull https://github.com/mrected/Central-Ave-Shirt-Co.git
 
           <section id="productsSection"> 
             <div class="container">
-              <h1 class="text-uppercase text-center">Pricing<br><small>What's all this gonna cost</small></h1>
+              <h1 class="text-uppercase text-center">T-Shirt</h1>
               <div class="row">
-                <div class="col-sm-4 col-sm-offset-2 col-xs-6 col-xs-offset-0 homeColumns">
+                <div class="col-sm-4 col-xs-6 homeColumns">
                   <div class="thumbnail">
-                    <div class="caption">
-                      <h3 class="text-center thumbnailTitle orangeUl">Choose a style</h3>
-                      <div id="catViewerMain">
-
-                        <div id="catViewerBtnDiv" class="center-block">
-                          <div class="catViewerBtnPrevDiv">
-                            <a id="catViewerPrev" class="xlDefault pull-right"><i class="styleBtn fa fa-angle-left fa-4x" aria-hidden="true" alt="Previous Style"></i></a>
-                          </div>
-
-                          <div class="catViewerBtnNextDiv">
-                            <a id="catViewerNext" class="xlDefault pull-left"><i class="styleBtn fa fa-angle-right fa-4x" aria-hidden="true" alt="Previous Style"></i></a>
-                          </div>
-
-                        </div>
-                            
-                        <a href="#" class="xlDefault" id="shirtImgLink"><img src='images/catImages/item_0.jpg' class='img-responsive catViewerImg'></a>
-
-                      </div>
-                      <p class="text-center roundedBorderLight productStyleTitle"><span id="cvShirtType"></span></p>
-
-                    </div>
+                    <img src='images/catImages/item_0.jpg' class='img-responsive catViewerImg'>
+                    
                     <p class="text-center"><strong><a id="designLink" class='designThisBtn' href='designer/designer.html' name='designShirt'>Design This</a></strong> | <strong><a id="infoLink" href='catalog.html' name='infoLs'>More Info</a></strong></p>
                   </div>
 
@@ -138,31 +119,59 @@ git pull https://github.com/mrected/Central-Ave-Shirt-Co.git
 
 
 
-                <div class="col-sm-4  col-sm-offset-0 col-xs-6 col-xs-offset-0 homeColumns">
-                  <div id="costCalculatorDiv">
-                    
-                    <h3 class="text-center thumbnailTitle">How Many?</h3>
-                    
-                    <input class="text-center form-control" type="number" name="numItems" id="numItemsOpts" min="1" max="10000" placeholder="Up to 10,000">
-                    <p class="bg-warning" id="info"></p>
-                    <h3 class="text-center thumbnailTitle">Production Method <i class="ltBlueTxt infoTooltip fa fa-info-circle" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="Digital Printing adds $4.50/item Embroidery adds $2.50/item"></i></h3>
-                    <select name="prodMethod" id="prodMethodOpts" class="form-control">
-                      <option value="scr">Screen Printed</option>
-                      <option value="dtg">Digital Full Color</option>
-                      <option value="emb">Embroidered</option>
-                    </select>
+                <div class="col-sm-8 col-xs-6 homeColumns">
 
-                    <p class="text-center"><i class="fa fa-arrow-down fa-3x" aria-hidden="true"></i></p>
-                    <div class="text-center totalBox roundedBorderLight">
-                      <label class="costLabelText Ul"><strong>Cost per Item: </strong></label>
-                      <span id="itemTotalTxt" class="costText roundedBorderLight"></span>
-                      <br>
-                      <label class="costLabelText"><strong>Total: </strong></label>
-                      <span id="total" class="costText roundedBorderLight"></span>
+                <div>
+
+                  <!-- Nav tabs -->
+                  <ul class="nav nav-tabs" role="tablist">
+                    <li role="presentation"><a href="#infoTab" aria-controls="info" role="tab" data-toggle="tab">Info</a></li>
+                    <li role="presentation"><a href="#priceTab" aria-controls="price" role="tab" data-toggle="tab">Price</a></li>
+                    <li role="presentation"><a href="#linksTab" aria-controls="links" role="tab" data-toggle="tab">Links</a></li>
+                  </ul>
+
+                  <!-- Tab panes -->
+                  <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane fade active" id="infoTab">
+                      <h4 class="text-uppercase">About this T-Shirt</h4>
+                      <p>Defined slub cotton adds more dimension to this everyday tee.</p>
+                      <p>Currently shown in Navy</p>
+                      <h4 class="text-uppercase"> Available Sizes</h4>
+                      <p>XS - 4X</p>
+                      <h4 class="text-uppercase"> Available Colors</h4>
+                      <div id="colorBar">
+                        <i id="colorSquare-navy" class="fa fa-square fa-4x" aria-hidden="true"></i>
+                        <i id="colorSquare-gold" class="fa fa-square fa-4x" aria-hidden="true"></i>
+                        <i id="colorSquare-teal" class="fa fa-square fa-4x" aria-hidden="true"></i>
+                        <i id="colorSquare-red" class="fa fa-square fa-4x" aria-hidden="true"></i>
+                        <i id="colorSquare-black" class="fa fa-square fa-4x" aria-hidden="true"></i>
+                        <i id="colorSquare-white" class="fa fa-square fa-4x" aria-hidden="true"></i>
+                      </div> 
                     </div>
+                    <div role="tabpanel" class="tab-pane fade" id="priceTab">
 
+                     <div id="priceChartModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                        <div>                   
+                          <h4>Full Price Chart</h4>
+                        </div>
+                          
+                        <div>                          
+                          <table class="table table-hover table-responsive text-center" id="priceChart"></table>
+                        </div>
+                      </div>
+                    </div>
+                      
+                    </div>
+                    <div role="tabpanel" class="tab-pane fade" id="linksTab">
+                      
+                    </div>
                   </div>
+
                 </div>
+                  
+                 
+
+              </div>
 
                 <div class="row">
                   <div class="col-xs-10 col-xs-offset-1">
@@ -267,11 +276,9 @@ git pull https://github.com/mrected/Central-Ave-Shirt-Co.git
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
         <script type="text/javascript" src="js/shirtData.js"></script>
         <script type="text/javascript" src="js/scripts.js"></script>
-        <script type="text/javascript" src="js/pricingScripts.js"></script>
-        
+        <script type="text/javascript" src="js/catalogScripts.js"></script>
         
 
     </body>

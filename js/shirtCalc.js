@@ -9,31 +9,33 @@ var numberOfShirts=0;
 var shirtCost;
 var totalShirtCost;
 var shirtType="ss";
-var addCost = 0;
+let itemToShow = 4;
+const addCost = itemInfo[itemToShow].adtnlChrg;
 
-function createPriceTable(){
-	var headerLength = Object.keys(shirtData).length;
-	var dataLength = shirtData.c1.length;
-	var tableHeaders="<tr><th>&nbsp;</th><th colspan='"+(headerLength-1)+"'>Number of Colors</th></tr><tr><th class='text-center'>Number of Shirts</th>";
-	var tableData="";
-	var tableComplete="";
-	for(e=0;e<headerLength;e++){
-		tableHeaders+= "<th class='text-center headerRowColor'>"+(e+1)+"</th>"
-	}
-	tableHeaders +="</tr>"
-	for(i=0;i<dataLength;i++){
-		tableData+="<td class='headerColumnColor text-center'><strong>"+shirtNumbers[i]+"</strong></td>";
-		tableData+="<td>$"+roundCurrency(shirtData.c1[i]+addCost)+"</td>";
-		tableData+="<td>$"+roundCurrency(shirtData.c2[i]+addCost)+"</td>";
-		tableData+="<td>$"+roundCurrency(shirtData.c3[i]+addCost)+"</td>";
-		tableData+="<td>$"+roundCurrency(shirtData.c4[i]+addCost)+"</td>";
-		tableData+="<td>$"+roundCurrency(shirtData.c5[i]+addCost)+"</td><tr>";
-	}
-	$("#priceChart").append(tableHeaders + tableData);
-}
+// function createPriceTable(){
+// 	const headerLength = Object.keys(itemCostData).length;
+// 	const dataLength = itemCostData.c1.length;
+// 	let tableHeaders="<tr><th>&nbsp;</th><th colspan='"+(headerLength-1)+"'>Number of Colors</th></tr><tr><th class='text-center'>Number of Shirts</th>";
+// 	let tableData="";
+// 	let tableComplete="";
+// 	for(let i=0;i<headerLength;i++){
+// 		tableHeaders+= "<th class='text-center headerRowColor'>"+(i+1)+"</th>"
+// 	}
+// 	tableHeaders +="</tr>"
+// 	for(let i=0;i<dataLength;i++){
+// 		tableData+="<td class='headerColumnColor text-center'><strong>"+shirtNumbers[i]+"</strong></td>";
+// 		tableData+="<td>$"+roundCurrency(itemCostData.c1[i]+addCost)+"</td>";
+// 		tableData+="<td>$"+roundCurrency(itemCostData.c2[i]+addCost)+"</td>";
+// 		tableData+="<td>$"+roundCurrency(itemCostData.c3[i]+addCost)+"</td>";
+// 		tableData+="<td>$"+roundCurrency(itemCostData.c4[i]+addCost)+"</td>";
+// 		tableData+="<td>$"+roundCurrency(itemCostData.c5[i]+addCost)+"</td><tr>";
+// 	}
+// 	$("#selectedItem").html(itemInfo[itemToShow].name);
+// 	$("#priceChart").append(tableHeaders + tableData);
+// }
 
 //initialize selectedShirt on modal window
-document.getElementById("selectedShirt").innerHTML = "Short Sleeve Shirts";
+// document.getElementById("selectedShirt").innerHTML = "Short Sleeve Shirts";
 
 function getNumberOfShirts(){
 	numberOfShirts = $("#numShirts").val();
@@ -133,11 +135,6 @@ function setCost(){
 	document.getElementById("costTotal").innerHTML = "$" + totalShirtCost;
 	$("#priceChart").children().remove();
 	createPriceTable();
-}
-
-function roundCurrency(cost){
-	cost = cost.toFixed(2);
-	return cost;
 }
 
 
