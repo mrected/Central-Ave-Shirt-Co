@@ -143,14 +143,6 @@ $(".styleBtn").click(function(){
 getNumberOfItems();
 
 
-
-
-
-
-
-
-
-
 //start catviewer
 
 

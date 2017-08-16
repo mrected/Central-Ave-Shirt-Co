@@ -10,11 +10,6 @@
 		e.preventDefault();
 	});
 
-	//gets width of parent div, sets width of child div
-	// $(window).resize(function(){
-	// 	$(this).width($(".getParentWidth").parent().width());
-	// });
-
 	
 
 	//Enable tooltips

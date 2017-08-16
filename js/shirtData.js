@@ -42,7 +42,17 @@ const itemInfo = [
 		adtnlChrg:0,
 		linkAttr_design:"designShirt",
 		linkAttr_quote:"quoteShirt",
-		linkAttr_info:"<a href='catalog.html' name='infoShirt'>More Info</a>"
+		linkAttr_info:"<a href='catalog.html' name='infoShirt'>More Info</a>",
+		colors:{
+			royal:'#283675',
+			gold:'#d59211',
+			teal:'#00a8b0',
+			red:'#990000',
+			black:'#000',
+			white:'#fff'
+		},
+		desc:"Defined slub cotton adds more dimension to this everyday tee.",
+		sizes:"xs-4x"
 	},
 	{
 		image:"images/catImages/item_1.jpg",
@@ -50,7 +60,16 @@ const itemInfo = [
 		adtnlChrg:2.5,
 		linkAttr_design:"designLs",
 		linkAttr_quote:"quoteLs",
-		linkAttr_info:"<a href='catalog.html' name='infoLs'>More Info</a>"
+		linkAttr_info:"<a href='catalog.html' name='infoLs'>More Info</a>",
+		colors:{
+			grey:'#7f7f7f',
+			royal:'#283675',
+			red:'#990000',
+			black:'#000',
+			white:'#fff'
+		},
+		desc:"It's just like a t-shirt, but with more sleeve.",
+		sizes:"xs-4x"
 	},
 	{
 		image:"images/catImages/item_2.jpg",
@@ -58,7 +77,16 @@ const itemInfo = [
 		adtnlChrg:0,
 		linkAttr_design:"designTank",
 		linkAttr_quote:"quoteTank",
-		linkAttr_info:"<a href='catalog.html' name='infoTank'>More Info</a>"
+		linkAttr_info:"<a href='catalog.html' name='infoTank'>More Info</a>",
+		colors:{
+			pink:'#ff7fa4',
+			royal:'#283675',
+			red:'#990000',
+			black:'#000',
+			white:'#fff'
+		},
+		desc:"Looks nothing like a tank.",
+		sizes:"xs-2x"
 	},
 	{
 		image:"images/catImages/item_3.jpg",
@@ -66,7 +94,16 @@ const itemInfo = [
 		adtnlChrg:3.5,
 		linkAttr_design:"designPolo",
 		linkAttr_quote:"quotePolo",
-		linkAttr_info:"<a href='catalog.html' name='infoPolo'>More Info</a>"
+		linkAttr_info:"<a href='catalog.html' name='infoPolo'>More Info</a>",
+		colors:{
+			coastalBlue:'#096db7',
+			royal:'#283675',
+			red:'#990000',
+			black:'#000',
+			white:'#fff'
+		},
+		desc:"Don't play polo without one.",
+		sizes:"xs-3x"
 	},
 	{
 		image:"images/catImages/item_4.jpg",
@@ -74,15 +111,32 @@ const itemInfo = [
 		adtnlChrg:5,
 		linkAttr_design:"designHoodie",
 		linkAttr_quote:"quoteHoodie",
-		linkAttr_info:"<a href='catalog.html' name='infoHoodie'>More Info</a>"
+		linkAttr_info:"<a href='catalog.html' name='infoHoodie'>More Info</a>",
+		colors:{
+			lightRed:'#a62626',
+			royal:'#283675',
+			red:'#990000',
+			black:'#000',
+			white:'#fff'
+		},
+		desc:"Like a sweater with a hood on it.",
+		sizes:"sm-4x"
 	},
 	{
 		image:"images/catImages/item_5.jpg",
-		name:"Hats",
+		name:"Hat",
 		adtnlChrg:0,
 		linkAttr_design:"designHat",
 		linkAttr_quote:"quoteHat",
-		linkAttr_info:"<a href='catalog.html' name='infoHat'>More Info</a>"
+		linkAttr_info:"<a href='catalog.html' name='infoHat'>More Info</a>",
+		colors:{
+			royal:'#283675',
+			red:'#990000',
+			black:'#000',
+			white:'#fff'
+		},
+		desc:"Goes on your head.",
+		sizes:"sm-md, md-xl"
 	}
 ];
 

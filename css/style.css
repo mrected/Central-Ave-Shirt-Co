@@ -375,28 +375,11 @@ p{
 
 
 /*Color squares*/
-#colorSquare-navy{
-	color:#283675;
+#colorBar{
+	background-color: #ccc;
+	display: inline-block;
+	padding: 0 .5rem;
 }
-#colorSquare-gold{
-	color:#d59211;
-}
-#colorSquare-teal{
-	color:#04A8B0;
-}
-#colorSquare-red{
-	color:#990000;
-}
-#colorSquare-black{
-	color:#000;
-}
-#colorSquare-white{
-	color:#999;
-   -webkit-text-fill-color: white; /* Will override color (regardless of order) */
-   -webkit-text-stroke-width: 1px;
-   -webkit-text-stroke-color: #999;
-}
-
 
 
 /*#catViewer a{
@@ -504,6 +487,11 @@ select{
 
 .apparelHomeTxt{
 	font: 300 1.5rem 'Zilla Slab', serif;
+}
+
+.priceTableStyle{
+	font-size: 1rem;
+	width:35rem;
 }
 
 /*footer styles*/

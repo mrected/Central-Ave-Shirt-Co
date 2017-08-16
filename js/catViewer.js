@@ -1,13 +1,10 @@
 let itemNumber=0;
-
-var numberOfShirts = Object.keys(itemInfo).length;
-	var shirtNumber=0;
-
-	var shirtSrcString = "images/catImages/item_" + shirtNumber + ".jpg";
+const numberOfItems = Object.keys(itemInfo).length;
+let shirtSrcString = "images/catImages/item_" + itemNumber + ".jpg";
 
 	function preloadImages(){
 		let preloaderString = "";
-		for(let i=0; i<numberOfShirts;i++){
+		for(let i=0; i<numberOfItems;i++){
 			preloaderString+="<img aria-hidden='true' src='images/catImages/item_" + i + ".jpg'>";
 		}
 		$("#preloader").html(preloaderString);
@@ -15,13 +12,13 @@ var numberOfShirts = Object.keys(itemInfo).length;
 	preloadImages();
 	function displayInfo(){
 		$("#cvShirtType").html(itemInfo[itemNumber].name);
-		$("#shirtDescTxt").html(shirtDesc[shirtNumber]);
+		$("#shirtDescTxt").html(shirtDesc[itemNumber]);
 	}
 
 	function updateLinks(){
-		$("#shirtImgLink, #shirtImgBtn").attr("href",shirtLinks[shirtNumber]);
+		$("#shirtImgLink, #shirtImgBtn").attr("href",shirtLinks[itemNumber]);
 		$(".designThisBtn").on("click", function sendProductVar(){
-			var product = "#" + $(this).attr("name");
+			let product = "#" + $(this).attr("name");
 			sessionStorage.setItem("sendProduct",product);
 		});
 	}
@@ -29,13 +26,13 @@ var numberOfShirts = Object.keys(itemInfo).length;
 	displayInfo();
 
 	function nextShirt(){
-		if(shirtNumber>=numberOfShirts-1){
-			shirtNumber = 0;
-			shirtSrcString = "images/catImages/item_" + shirtNumber + ".jpg";
+		if(itemNumber>=numberOfItems-1){
+			itemNumber = 0;
+			shirtSrcString = "images/catImages/item_" + itemNumber + ".jpg";
 		}
 		else{
-			shirtNumber++;
-			shirtSrcString = "images/catImages/item_" + shirtNumber + ".jpg";
+			itemNumber++;
+			shirtSrcString = "images/catImages/item_" + itemNumber + ".jpg";
 		}
 		$(".catViewerImg").animate({opacity: 0,left:"+=150px"},200, function(){
 			$(".catViewerImg").attr("src", shirtSrcString);
@@ -48,14 +45,14 @@ var numberOfShirts = Object.keys(itemInfo).length;
 	}
 
 	function prevShirt(){
-		if(shirtNumber<=0){
-			shirtNumber = numberOfShirts-1;
-			shirtSrcString = "images/catImages/item_" + shirtNumber + ".jpg";
+		if(itemNumber<=0){
+			itemNumber = numberOfItems-1;
+			shirtSrcString = "images/catImages/item_" + itemNumber + ".jpg";
 
 		}
 		else{
-			shirtNumber--;
-			shirtSrcString = "images/catImages/item_" + shirtNumber + ".jpg";
+			itemNumber--;
+			shirtSrcString = "images/catImages/item_" + itemNumber + ".jpg";
 		}
 		$(".catViewerImg").animate({opacity: 0,left:"-=150px"},200, function(){
 			$(".catViewerImg").attr("src", shirtSrcString);
