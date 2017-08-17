@@ -106,71 +106,82 @@ git pull https://github.com/mrected/Central-Ave-Shirt-Co.git
 
           <section id="productsSection"> 
             <div class="container">
-              <h1 id="selectedItem" class="text-uppercase text-center"></h1>
+              <div id="productName">
+                <h1 class="text-uppercase text-center"><span id="selectedItem"></span></h1>
+              </div>
               <div class="row">
-                <div class="col-sm-4 col-xs-6 homeColumns">
+                <div class="col-md-4 col-sm-6 homeColumns">
                   <div class="thumbnail">
                     <img id="itemImage" src='images/catImages/item_0.jpg' class='img-responsive catViewerImg'>
-                    
-                    <p class="text-center"><strong><a id="designLink" class='designThisBtn' href='designer/designer.html' name='designShirt'>Design This</a></strong> | <strong><a id="infoLink" href='catalog.html' name='infoLs'>More Info</a></strong></p>
                   </div>
-
+                  <a href="catalog.html"><i class="fa fa-caret-left" aria-hidden="true"></i> back to catalog</a>
                 </div>
 
 
 
-                <div class="col-sm-8 col-xs-6 homeColumns">
+                <div class="col-md-8 col-sm-6 homeColumns">
 
-                <div>
+                <div class="tab roundedBorderLight">
+                  <button class="tablinks" id="defaultOpen" onclick="catTab(event, 'info')">Info</button>
+                  <button class="tablinks" onclick="catTab(event, 'pricing')">Pricing</button>
+                  <button class="tablinks" onclick="catTab(event, 'links')">Links</button>
+                </div>
 
+                <div id="info" class="tabcontent">
+                  <h5 class="text-uppercase">About this <span id="itemName"></span></h5>
+                  <p id="itemDesc"></p>
+                  <h5 class="text-uppercase"> Available Sizes - <strong><span id="itemSizes"></span></strong></h5>
+                  <p id="itemSizes" class="text-uppercase"></p>
+                  <h5 class="text-uppercase"> Available Colors</h5>
+                  <div id="colorBar" class="roundedBorderLight"></div> 
+                </div>
+
+                <div id="pricing" class="tabcontent">
+                  <div class="table-responsive">                          
+                    <table class="table table-hover table-condensed text-center priceTableStyle" id="priceChart"></table>
+                  </div>
+                  <div>
+                    <p>These prices are based on the base price for each production method. <a alt="link to contact page" href="contact.html"><strong>Contact us</strong></a> to get a more accurate quote on your order.</p>
+                  </div>
+                </div>
+
+                <div id="links" class="tabcontent">
+                  <dl>
+                    <dt><a id="designLink" class='designThisBtn' href='designer/designer.html' name='#'>Send to Designer <i class="fa fa-caret-right" aria-hidden="true"></i></a></dt>
+                    <dd>Add a custom design to this item</dd>
+                    <dt><a id="vendorLink" href='#' target="_blank">More Styles <i class="fa fa-caret-right" aria-hidden="true"></i></a><dt>
+                    <dd>Visit our supplier to find more styles</dd>
+                  </dl>
+                </div>
+
+
+
+
+                
+                <!-- SET ITEM IMAGE AND INFO IN 2 DIFFERENT SECTIONS OF THE GRID SO THEY STACK-->
+                <!-- MAKE COLOR BOXES SCALE IN MEDIA QUERIES-->
+                <!-- REMOVE OR FIX LINK ON CATVIEWER IMAGES-->
+                <!-- ADD LINKS TO HELINGER SITE FOR INFO ON MORE STYLES-->
                   <!-- Nav tabs -->
-                  <ul class="nav nav-tabs" role="tablist">
-                    <li role="presentation"><a href="#infoTab" aria-controls="info" role="tab" data-toggle="tab">Info</a></li>
-                    <li role="presentation"><a href="#priceTab" aria-controls="price" role="tab" data-toggle="tab">Price</a></li>
-                    <li role="presentation"><a href="#linksTab" aria-controls="links" role="tab" data-toggle="tab">Links</a></li>
-                  </ul>
+
 
                   <!-- Tab panes -->
-                  <div class="tab-content">
-                    <div role="tabpanel" class="tab-pane fade active in" id="infoTab">
-                      <h4 class="text-uppercase">About this <span id="itemName"></span></h4>
-                      <p id="itemDesc"></p>
-                      <h4 class="text-uppercase"> Available Sizes</h4>
-                      <p id="itemSizes" class="text-uppercase"></p>
-                      <h4 class="text-uppercase"> Available Colors</h4>
-                      <div id="colorBar" class="roundedBorderLight">
-                        
-                      </div> 
-                    </div>
-                    <div role="tabpanel" class="tab-pane fade" id="priceTab">
 
-                     <div id="priceChartModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-                                                
-                        <div class="table-responsive">                          
-                          <table class="table table-hover table-condensed text-center priceTableStyle" id="priceChart"></table>
-                        </div>
-                        <div>
-                          <p>These prices are based on the base price for each production method. For example, screen print costs are based on 1 color art. Additional colors will cause the price to increase. The prices shown here are only to get a general idea of pricing per number of items selected. Feel free to <a alt="link to contact page" href="contact.html">contact us</a> to get a more accurate quote on your order. </p>
-                        </div>
-                      </div>
 
-                    </div>
+
+
                       
-                    <div role="tabpanel" class="tab-pane fade" id="linksTab">
-                      <p>links</p>
-                    </div>
-                  </div>
 
-                </div>
+
                   
                  
 
-              </div>
+              </div><!--END row-->
             
 
 
 
-                  </div>
+            </div>
                   
           </section>
 
@@ -200,6 +211,7 @@ git pull https://github.com/mrected/Central-Ave-Shirt-Co.git
         <div id="bannerPreloader" class=preloader>
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
         <script type="text/javascript">
           let itemToShow = 3;

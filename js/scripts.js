@@ -1,9 +1,13 @@
 //Utilities
 
 
-
-////works now that we're not waiting on document.ready()
+//enables links in tabs
+$(document).ready(function(){
+	$('.tabbable .tab-pane a').unbind();
+});
 	
+	//makes links in tabs work
+	$('.tabbable .tab-pane a').unbind();
 
 	//cancels default action
 	$(".xlDefault").click(function(e){

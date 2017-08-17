@@ -38,11 +38,15 @@ const shirtDesc =[`Starts at $${itemCostData.c1[0]} <br><a href='designer/design
 const itemInfo = [
 	{
 		image:"images/catImages/item_0.jpg",
+		base:"designer/images/designerImages/tshirt-base.png",
+		highlights:"designer/images/designerImages/tshirt-highlights.png",
+		shadows:"designer/images/designerImages/tshirt-shadows.png",
 		name:"T-Shirt",
 		adtnlChrg:0,
 		linkAttr_design:"designShirt",
 		linkAttr_quote:"quoteShirt",
 		linkAttr_info:"<a href='catalog.html' name='infoShirt'>More Info</a>",
+		linkAttr_vendor:"http://www.helinger.com/ProductResults/?SearchTerms=t-shirt",
 		colors:{
 			royal:'#283675',
 			gold:'#d59211',
@@ -56,11 +60,15 @@ const itemInfo = [
 	},
 	{
 		image:"images/catImages/item_1.jpg",
+		base:"designer/images/designerImages/ls-base.png",
+		highlights:"designer/images/designerImages/ls-highlights.png",
+		shadows:"designer/images/designerImages/ls-shadows.png",
 		name:"Long Sleeve",
 		adtnlChrg:2.5,
 		linkAttr_design:"designLs",
 		linkAttr_quote:"quoteLs",
 		linkAttr_info:"<a href='catalog.html' name='infoLs'>More Info</a>",
+		linkAttr_vendor:"http://www.helinger.com/ProductResults/?SearchTerms=long%20sleeve",
 		colors:{
 			grey:'#7f7f7f',
 			royal:'#283675',
@@ -73,11 +81,15 @@ const itemInfo = [
 	},
 	{
 		image:"images/catImages/item_2.jpg",
+		base:"designer/images/designerImages/tank-base.png",
+		highlights:"designer/images/designerImages/tank-highlights.png",
+		shadows:"designer/images/designerImages/tank-shadows.png",
 		name:"Tank Top",
 		adtnlChrg:0,
 		linkAttr_design:"designTank",
 		linkAttr_quote:"quoteTank",
 		linkAttr_info:"<a href='catalog.html' name='infoTank'>More Info</a>",
+		linkAttr_vendor:"http://www.helinger.com/ProductResults/?SearchTerms=tank%20top",
 		colors:{
 			pink:'#ff7fa4',
 			royal:'#283675',
@@ -90,11 +102,15 @@ const itemInfo = [
 	},
 	{
 		image:"images/catImages/item_3.jpg",
+		base:"designer/images/designerImages/polo-base.png",
+		highlights:"designer/images/designerImages/polo-highlights.png",
+		shadows:"designer/images/designerImages/polo-shadows.png",
 		name:"Polo",
 		adtnlChrg:3.5,
 		linkAttr_design:"designPolo",
 		linkAttr_quote:"quotePolo",
 		linkAttr_info:"<a href='catalog.html' name='infoPolo'>More Info</a>",
+		linkAttr_vendor:"http://www.helinger.com/ProductResults/?SearchTerms=polo",
 		colors:{
 			coastalBlue:'#096db7',
 			royal:'#283675',
@@ -107,11 +123,15 @@ const itemInfo = [
 	},
 	{
 		image:"images/catImages/item_4.jpg",
+		base:"designer/images/designerImages/hoodie-base.png",
+		highlights:"designer/images/designerImages/hoodie-highlights.png",
+		shadows:"designer/images/designerImages/hoodie-shadows.png",
 		name:"Hoodie",
 		adtnlChrg:5,
 		linkAttr_design:"designHoodie",
 		linkAttr_quote:"quoteHoodie",
 		linkAttr_info:"<a href='catalog.html' name='infoHoodie'>More Info</a>",
+		linkAttr_vendor:"http://www.helinger.com/ProductResults/?SearchTerms=hoodie",
 		colors:{
 			lightRed:'#a62626',
 			royal:'#283675',
@@ -124,11 +144,15 @@ const itemInfo = [
 	},
 	{
 		image:"images/catImages/item_5.jpg",
+		base:"designer/images/designerImages/hat-base.png",
+		highlights:"designer/images/designerImages/hat-highlights.png",
+		shadows:"designer/images/designerImages/hat-shadows.png",
 		name:"Hat",
-		adtnlChrg:0,
+		adtnlChrg:-6,
 		linkAttr_design:"designHat",
 		linkAttr_quote:"quoteHat",
 		linkAttr_info:"<a href='catalog.html' name='infoHat'>More Info</a>",
+		linkAttr_vendor:"http://www.helinger.com/ProductResults/?SearchTerms=hats",
 		colors:{
 			royal:'#283675',
 			red:'#990000',

@@ -26,6 +26,11 @@ function setInfo(){
 	$("#itemName").html(itemInfo[itemToShow].name);
 	$("#itemDesc").html(itemInfo[itemToShow].desc);
 	$("#itemSizes").html(itemInfo[itemToShow].sizes);
+	$("#vendorLink").attr('href',itemInfo[itemToShow].linkAttr_vendor);
+	$("#designLink").attr('name',itemInfo[itemToShow].linkAttr_design);
+	$("#imgBase").attr("src",itemInfo[itemToShow].base);
+	$("#imgShadows").attr("src",itemInfo[itemToShow].shadows);
+	$("#imgHighlights").attr("src",itemInfo[itemToShow].highlights);
 }
 
 function createPriceTable(){
@@ -50,6 +55,39 @@ function createPriceTable(){
 	$("#priceChart").append(tableHeaders + tableData);
 	$("#itemImage").attr('src',itemInfo[itemToShow].image);
 }
+
+function catTab(evt, tabName) {
+    // Declare all variables
+    let i;
+    let tabcontent;
+    let tablinks;
+
+    // Get all elements with class="tabcontent" and hide them
+    tabcontent = $(".tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+
+    // Get all elements with class="tablinks" and remove the class "active"
+    tablinks = $(".tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+
+    // Show the current tab, and add an "active" class to the button that opened the tab
+    document.getElementById(tabName).style.display = "block";
+    evt.currentTarget.className += " active";
+
+}
+
+$(".designThisBtn").on("click", function sendProductVar(){
+			var product = "#" + $(this).attr("name");
+			sessionStorage.setItem("sendProduct",product);
+		});
+
+document.getElementById("defaultOpen").click();
+
+
 
 //EVENTS/CALLS*************************
 createPriceTable();
