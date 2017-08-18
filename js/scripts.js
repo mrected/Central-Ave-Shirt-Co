@@ -1,5 +1,8 @@
 //Utilities
 
+function backLink(){
+	window.history.back();
+}
 
 //enables links in tabs
 $(document).ready(function(){
@@ -29,7 +32,14 @@ $(document).ready(function(){
 
 	//Rounds currency 
 	const roundCurrency = cost => cost = cost.toFixed(2);
+
+	//sends to designer based on name attr
+	$(".designThisBtn").on("click", sendProductVar);
 	
+	function sendProductVar(){
+		let product = "#" + $(this).attr("name");
+		sessionStorage.setItem("sendProduct",product);
+	}
 
 	//Opening and closing navbar
 	var navOpenState;

@@ -47,9 +47,9 @@ function createPriceTable(){
 	tableHeaders +="</tr>"
 	for(let i=0;i<dataLength;i++){
 		tableData+="<td class='text-center'><strong>"+shirtNumbers[i]+"</strong></td>";
-		tableData+="<td>$"+roundCurrency(itemCostData.c1[0]+addCost+prodMethod.scr)+"</td>";
-		tableData+="<td>$"+roundCurrency(itemCostData.c1[0]+addCost+prodMethod.dtg)+"</td>";
-		tableData+="<td>$"+roundCurrency(itemCostData.c1[0]+addCost+prodMethod.emb)+"</td><tr>";
+		tableData+="<td>$"+roundCurrency(itemCostData.c1[i]+addCost+prodMethod.scr)+"</td>";
+		tableData+="<td>$"+roundCurrency(itemCostData.c1[i]+addCost+prodMethod.dtg)+"</td>";
+		tableData+="<td>$"+roundCurrency(itemCostData.c1[i]+addCost+prodMethod.emb)+"</td><tr>";
 	}
 	$("#selectedItem").html(itemInfo[itemToShow].name);
 	$("#priceChart").append(tableHeaders + tableData);
@@ -80,32 +80,29 @@ function catTab(evt, tabName) {
 
 }
 
-$(".designThisBtn").on("click", function sendProductVar(){
-			var product = "#" + $(this).attr("name");
-			sessionStorage.setItem("sendProduct",product);
-		});
 
-document.getElementById("defaultOpen").click();
+
+$(window).resize(setThumbnailHeight);
+
+function setThumbnailHeight(){
+	let itemLayers_H = $("#imgBase").height()+20;
+	$("#itemLayersDiv").height(itemLayers_H);
+}
 
 
 
 //EVENTS/CALLS*************************
+document.getElementById("defaultOpen").click();
 createPriceTable();
 setInfo();
 setColorBar();
 
-//enable tabs
-$('#infoTab a').click(function (e) {
-  e.preventDefault()
-  $(this).tab('show')
+
+$("document").ready(function(){
+	setTimeout(function(){
+		setThumbnailHeight();
+	},10);
 });
 
-$('#priceTab a').click(function (e) {
-  e.preventDefault()
-  $(this).tab('show')
-});
 
-$('#linksTab a').click(function (e) {
-  e.preventDefault()
-  $(this).tab('show')
-});
+

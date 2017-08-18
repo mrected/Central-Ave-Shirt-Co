@@ -35,6 +35,9 @@ const shirtDesc =[`Starts at $${itemCostData.c1[0]} <br><a href='designer/design
 				`Starts at $${(itemCostData.c1[0]+5).toFixed(2)}  <br><a href='designer/designer.html' class='designThisBtn' name='designHoodie'>Design this</a> | <a href='#'>Quote this</a> | <a href='#'>More info</a>`,
 				`Starts at $${(itemCostData.c1[0]+1.50).toFixed(2)}  <br><a href='designer/designer.html' class='designThisBtn' name='designHat'>Design this</a> | <a href='#'>Quote this</a> | <a href='#'>More info</a>`]
 
+
+
+
 const itemInfo = [
 	{
 		image:"images/catImages/item_0.jpg",
@@ -44,8 +47,8 @@ const itemInfo = [
 		name:"T-Shirt",
 		adtnlChrg:0,
 		linkAttr_design:"designShirt",
-		linkAttr_quote:"quoteShirt",
-		linkAttr_info:"<a href='catalog.html' name='infoShirt'>More Info</a>",
+		linkAttr_quote:"<a href='",
+		linkAttr_info:"<a href='tshirt.html'>More Info</a>",
 		linkAttr_vendor:"http://www.helinger.com/ProductResults/?SearchTerms=t-shirt",
 		colors:{
 			royal:'#283675',
@@ -55,7 +58,7 @@ const itemInfo = [
 			black:'#000',
 			white:'#fff'
 		},
-		desc:"Defined slub cotton adds more dimension to this everyday tee.",
+		desc:"Pretty straight-forward, it's a t-shirt. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
 		sizes:"xs-4x"
 	},
 	{
@@ -67,7 +70,7 @@ const itemInfo = [
 		adtnlChrg:2.5,
 		linkAttr_design:"designLs",
 		linkAttr_quote:"quoteLs",
-		linkAttr_info:"<a href='catalog.html' name='infoLs'>More Info</a>",
+		linkAttr_info:"<a href='longsleeve.html'>More Info</a>",
 		linkAttr_vendor:"http://www.helinger.com/ProductResults/?SearchTerms=long%20sleeve",
 		colors:{
 			grey:'#7f7f7f',
@@ -76,7 +79,7 @@ const itemInfo = [
 			black:'#000',
 			white:'#fff'
 		},
-		desc:"It's just like a t-shirt, but with more sleeve.",
+		desc:"It's just like a t-shirt, but with more sleeve. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
 		sizes:"xs-4x"
 	},
 	{
@@ -88,7 +91,7 @@ const itemInfo = [
 		adtnlChrg:0,
 		linkAttr_design:"designTank",
 		linkAttr_quote:"quoteTank",
-		linkAttr_info:"<a href='catalog.html' name='infoTank'>More Info</a>",
+		linkAttr_info:"<a href='tank.html'>More Info</a>",
 		linkAttr_vendor:"http://www.helinger.com/ProductResults/?SearchTerms=tank%20top",
 		colors:{
 			pink:'#ff7fa4',
@@ -97,7 +100,7 @@ const itemInfo = [
 			black:'#000',
 			white:'#fff'
 		},
-		desc:"Looks nothing like a tank.",
+		desc:"Looks nothing like a tank. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
 		sizes:"xs-2x"
 	},
 	{
@@ -109,7 +112,7 @@ const itemInfo = [
 		adtnlChrg:3.5,
 		linkAttr_design:"designPolo",
 		linkAttr_quote:"quotePolo",
-		linkAttr_info:"<a href='catalog.html' name='infoPolo'>More Info</a>",
+		linkAttr_info:"<a href='polo.html'>More Info</a>",
 		linkAttr_vendor:"http://www.helinger.com/ProductResults/?SearchTerms=polo",
 		colors:{
 			coastalBlue:'#096db7',
@@ -118,7 +121,7 @@ const itemInfo = [
 			black:'#000',
 			white:'#fff'
 		},
-		desc:"Don't play polo without one.",
+		desc:"Don't play polo without one. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
 		sizes:"xs-3x"
 	},
 	{
@@ -130,7 +133,7 @@ const itemInfo = [
 		adtnlChrg:5,
 		linkAttr_design:"designHoodie",
 		linkAttr_quote:"quoteHoodie",
-		linkAttr_info:"<a href='catalog.html' name='infoHoodie'>More Info</a>",
+		linkAttr_info:"<a href='hoodie.html'>More Info</a>",
 		linkAttr_vendor:"http://www.helinger.com/ProductResults/?SearchTerms=hoodie",
 		colors:{
 			lightRed:'#a62626',
@@ -139,7 +142,7 @@ const itemInfo = [
 			black:'#000',
 			white:'#fff'
 		},
-		desc:"Like a sweater with a hood on it.",
+		desc:"Like a sweater with a hood on it. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
 		sizes:"sm-4x"
 	},
 	{
@@ -148,10 +151,10 @@ const itemInfo = [
 		highlights:"designer/images/designerImages/hat-highlights.png",
 		shadows:"designer/images/designerImages/hat-shadows.png",
 		name:"Hat",
-		adtnlChrg:-6,
+		adtnlChrg:-1.75,
 		linkAttr_design:"designHat",
 		linkAttr_quote:"quoteHat",
-		linkAttr_info:"<a href='catalog.html' name='infoHat'>More Info</a>",
+		linkAttr_info:"<a href='hat.html'>More Info</a>",
 		linkAttr_vendor:"http://www.helinger.com/ProductResults/?SearchTerms=hats",
 		colors:{
 			royal:'#283675',
@@ -159,7 +162,7 @@ const itemInfo = [
 			black:'#000',
 			white:'#fff'
 		},
-		desc:"Goes on your head.",
+		desc:"Goes on your head. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
 		sizes:"sm-md, md-xl"
 	}
 ];
@@ -168,8 +171,8 @@ const itemInfo = [
 
 const shirtLinks =["shortSleeve.html",
 				 "longSleeve.html",
-				 "tankTop.html",
-				 "poloShirt.html",
+				 "tank.html",
+				 "polo.html",
 				 "hoodie.html",
 				 "hats"];
 

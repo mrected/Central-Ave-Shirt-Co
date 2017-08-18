@@ -258,9 +258,11 @@ p{
 	padding-left: .25rem;
 }
 
-.thumbnail{
+.itemLayersDiv{
 	overflow: hidden;
 	border: 0;
+	position: relative;
+	height: 37rem;
 }
 
 .thumbnailTitle{
@@ -381,6 +383,11 @@ p{
 	padding: 0 .5rem;
 }
 
+.tabcontent{
+	min-height: 50rem;
+	background-color: #fff;
+}
+
 
 /*#catViewer a{
 	margin:1rem;
@@ -494,25 +501,24 @@ select{
 	padding: 2rem;
 }
 
-#imgBase{
+.itemLayers{
+	position: absolute;
+	left:50%;
+	top:1rem;
+	transform: translateX(-50%);
+	
+}
+
+#imgBaseDiv{
 	z-index: 2;
-	position: absolute;
-	left:0;
-	top:50rem;
 }
 
-#imgHighlights{
+#imgHighlightsDiv{
 	z-index: 3;
-	position: absolute;
-	left:0;
-	top:50rem;
 }
 
-#imgShadows{
+#imgShadowsDiv{
 	z-index: 4;
-	position: absolute;
-	left:0;
-	top:50rem;
 }
 
 
@@ -650,6 +656,10 @@ div.tab button.active {
 		line-height: 2rem;
 		font: 1.5rem 'Anton', sans-serif;
 		letter-spacing: .25rem;
+	}
+
+	.itemLayersDiv{
+		height: 20rem;
 	}
 
 	.thumbnailTitle{

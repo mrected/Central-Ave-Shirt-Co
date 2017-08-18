@@ -15,12 +15,12 @@ let shirtSrcString = "images/catImages/item_" + itemNumber + ".jpg";
 		$("#shirtDescTxt").html(shirtDesc[itemNumber]);
 	}
 
+	
+
 	function updateLinks(){
 		$("#shirtImgLink, #shirtImgBtn").attr("href",shirtLinks[itemNumber]);
-		$(".designThisBtn").on("click", function sendProductVar(){
-			let product = "#" + $(this).attr("name");
-			sessionStorage.setItem("sendProduct",product);
-		});
+		$(".designThisBtn").on("click", sendProductVar);
+		$(".priceThisBtn").on("click", sendProductVar);
 	}
 
 	displayInfo();
