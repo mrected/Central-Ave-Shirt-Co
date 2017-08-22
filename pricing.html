@@ -98,11 +98,6 @@ git pull https://github.com/mrected/Central-Ave-Shirt-Co.git
       </div>
       <!--END NAV BLOCK-->
 
-      <!--START TOP IMAGE/LOGO BLOCK-->
-      <div id="logoDivCatalog" class="logoDiv center-block">
-        <img src="images/cascLogo1.svg" id="mainLogo" class="img-responsive center-block"><br>
-      </div>
-      <!--END TOP IMAGE/LOGO BLOCK-->
 
           <section id="productsSection"> 
             <div class="container">
@@ -125,13 +120,13 @@ git pull https://github.com/mrected/Central-Ave-Shirt-Co.git
 
                         </div>
                             
-                        <a href="#" class="xlDefault" id="shirtImgLink"><img src='images/catImages/item_0.jpg' class='img-responsive catViewerImg'></a>
+                        <a href="#" class="xlDefault" id="itemImgLink"><img src='images/catImages/item_0.jpg' class='img-responsive catViewerImg'></a>
 
                       </div>
-                      <p class="text-center roundedBorderLight productStyleTitle"><span id="cvShirtType"></span></p>
+                      <p class="text-center roundedBorderLight productStyleTitle"><span id="itemType"></span></p>
 
                     </div>
-                    <p class="text-center"><strong><a id="designLink" class='designThisBtn' href='designer/designer.html' name='designShirt'>Design This</a></strong> | <strong><a id="infoLink" href='catalog.html' name='infoLs'>More Info</a></strong></p>
+                    <p class="text-center"><strong><a id="designLink" class='designThisBtn' href='designer/designer.html' name='designShirt'>Design This</a></strong> | <strong><a id="infoLink" href="">More Info</a></strong></p>
                   </div>
 
                 </div>
@@ -165,8 +160,15 @@ git pull https://github.com/mrected/Central-Ave-Shirt-Co.git
                 </div>
 
                 <div class="row">
-                  <div class="col-xs-10 col-xs-offset-1">
-                    <p>These prices are based on the base price for each production method. <a alt="link to contact page" href="contact.html"><strong>Contact us</strong></a> to get a more accurate quote on your order.</p>
+                  <div class="col-xs-8 col-xs-offset-2">
+                     <div id="pricing">
+                        <div class="table-responsive">                          
+                          <table class="table table-hover table-condensed text-center priceTableStyle" id="priceChart"></table>
+                        </div>
+                        <p>These prices are based on the base price for each production method. <a alt="link to contact page" href="contact.html"><strong>Contact us</strong></a> to get a more accurate quote on your order.</p>
+                      </div>
+
+                    
                   </div>
                 </div>
 
@@ -268,7 +270,7 @@ git pull https://github.com/mrected/Central-Ave-Shirt-Co.git
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
-        <script type="text/javascript" src="js/shirtData.js"></script>
+        <script type="text/javascript" src="js/itemData.js"></script>
         <script type="text/javascript" src="js/scripts.js"></script>
         <script type="text/javascript" src="js/pricingScripts.js"></script>
         

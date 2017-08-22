@@ -16,6 +16,9 @@ body{
 
 /*utilities*/
 
+.xlDefault{
+	cursor:default;
+}
 
 .preloader{
 	position: absolute;
@@ -532,7 +535,19 @@ select{
 }
 .priceTableStyle{
 	font-size: 1rem;
+	padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+    background-color: #fff;
+}
 
+.mainTableHeader{
+	background-color: #042a2b;
+	color: #f4f4f4;
+}
+
+.secondaryTableHeader{
+	background-color: rgba(4,42,43,.1);
 }
 
 dl{
@@ -579,9 +594,7 @@ div.tab button.active {
 /* Style the tab content */
 .tabcontent {
     display: none;
-    padding: 6px 12px;
-    border: 1px solid #ccc;
-    border-top: none;
+    
 
 }
 

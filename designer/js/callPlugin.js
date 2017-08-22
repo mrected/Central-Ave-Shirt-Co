@@ -2,7 +2,7 @@ $(document).ready(function(){
 
 	//sets main item on Product Designer from Home
 	// alert(sessionStorage.getItem("sendProduct"));
-	var setProduct = sessionStorage.getItem("sendProduct");
+	let setProduct = sessionStorage.getItem("sendProduct");
 	$("#designShirt").before($(setProduct));
 	sessionStorage.removeItem("sendProduct");
 	// setProduct=("#designShirt");

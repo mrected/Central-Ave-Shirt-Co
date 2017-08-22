@@ -1,6 +1,10 @@
+//VARIABLES*************************
+
 let itemNumber=0;
 const numberOfItems = Object.keys(itemInfo).length;
-let shirtSrcString = "images/catImages/item_" + itemNumber + ".jpg";
+let itemSrcString = "images/catImages/item_" + itemNumber + ".jpg";
+
+//FUNCTIONS*************************
 
 	function preloadImages(){
 		let preloaderString = "";
@@ -9,33 +13,30 @@ let shirtSrcString = "images/catImages/item_" + itemNumber + ".jpg";
 		}
 		$("#preloader").html(preloaderString);
 	}
-	preloadImages();
-	function displayInfo(){
-		$("#cvShirtType").html(itemInfo[itemNumber].name);
-		$("#shirtDescTxt").html(shirtDesc[itemNumber]);
-	}
 
-	
+	function displayInfo(){
+		$("#itemType").html(itemInfo[itemNumber].name);
+		$("#itemDescTxt").html(shirtDesc[itemNumber]);
+		$("#startCostTxt").html("$" + roundCurrency(itemCostData.c1[13] + itemInfo[itemNumber].adtnlChrg));
+	}
 
 	function updateLinks(){
-		$("#shirtImgLink, #shirtImgBtn").attr("href",shirtLinks[itemNumber]);
+		$("#designLink").attr('name',itemInfo[itemNumber].linkAttr_design);
+		$("#infoLink").attr('href',itemInfo[itemNumber].linkAttr_info);
 		$(".designThisBtn").on("click", sendProductVar);
-		$(".priceThisBtn").on("click", sendProductVar);
 	}
 
-	displayInfo();
-
-	function nextShirt(){
+	function nextItem(){
 		if(itemNumber>=numberOfItems-1){
 			itemNumber = 0;
-			shirtSrcString = "images/catImages/item_" + itemNumber + ".jpg";
+			itemSrcString = "images/catImages/item_" + itemNumber + ".jpg";
 		}
 		else{
 			itemNumber++;
-			shirtSrcString = "images/catImages/item_" + itemNumber + ".jpg";
+			itemSrcString = "images/catImages/item_" + itemNumber + ".jpg";
 		}
 		$(".catViewerImg").animate({opacity: 0,left:"+=150px"},200, function(){
-			$(".catViewerImg").attr("src", shirtSrcString);
+			$(".catViewerImg").attr("src", itemSrcString);
 			$(".catViewerImg").animate({left:"-=300px"},1);
 			$(".catViewerImg").animate({opacity:1,left:"+=150px"},200);
 			displayInfo();
@@ -44,18 +45,18 @@ let shirtSrcString = "images/catImages/item_" + itemNumber + ".jpg";
 		
 	}
 
-	function prevShirt(){
+	function prevItem(){
 		if(itemNumber<=0){
 			itemNumber = numberOfItems-1;
-			shirtSrcString = "images/catImages/item_" + itemNumber + ".jpg";
+			itemSrcString = "images/catImages/item_" + itemNumber + ".jpg";
 
 		}
 		else{
 			itemNumber--;
-			shirtSrcString = "images/catImages/item_" + itemNumber + ".jpg";
+			itemSrcString = "images/catImages/item_" + itemNumber + ".jpg";
 		}
 		$(".catViewerImg").animate({opacity: 0,left:"-=150px"},200, function(){
-			$(".catViewerImg").attr("src", shirtSrcString);
+			$(".catViewerImg").attr("src", itemSrcString);
 			$(".catViewerImg").animate({left:"+=300px"},1);
 			$(".catViewerImg").animate({opacity:1,left:"-=150px"},200);
 			displayInfo();
@@ -63,6 +64,10 @@ let shirtSrcString = "images/catImages/item_" + itemNumber + ".jpg";
 		});
 
 	}
+//EVENTS/CALLS*************************
+	preloadImages();
+	displayInfo();
+	updateLinks();
 
 	$("#catViewerPrev, #catViewerNext").hover(function(){
 		$(this).css({"color": "#d84727","cursor": "pointer"});
@@ -72,7 +77,7 @@ let shirtSrcString = "images/catImages/item_" + itemNumber + ".jpg";
 	
 
 	$("#catViewerPrev").click(function(){
-		prevShirt();
+		prevItem();
 	});
 
 	$("#catViewerPrev").hover(function(){
@@ -80,7 +85,7 @@ let shirtSrcString = "images/catImages/item_" + itemNumber + ".jpg";
 	});
 
 	$("#catViewerNext").click(function(){
-		nextShirt();
+		nextItem();
 	});
 
 

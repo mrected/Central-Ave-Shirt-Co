@@ -3,12 +3,9 @@
 //add a case to shirtType
 //add an else if statement to createPriceTable
 //add an option to shirtprices.html
-
-// let numberOfItems=0;
-// let shirtCost;
-// let totalShirtCost;
-// let shirtType="ss";
-// let addCost = 0;
+let setItemNumber = sessionStorage.getItem("sendProduct");
+	console.log(setItemNumber)
+	sessionStorage.removeItem("sendProduct");
 
 //VARIABLES*************************
 let numberOfItems;
@@ -16,25 +13,27 @@ let itemNumGroup=0;
 let itemNumber=0;
 let numberOfStyles=Object.keys(itemInfo).length;
 let itemTotal;
-let totalItemCost;
-let itemType="";
-let addCost = 0;
 let itemAdtlCost=0;
 let itemProdCost=0;
+let itemSrcString = "images/catImages/item_" + itemNumber + ".jpg";
+let addCost=0;
+const prodMethod = {
+	'scr':0,
+	'dtg':4.5,
+	'emb':2.5
+}
+
+
 
 
 //FUNCTIONS*************************
 
 
-
-
-//start getNumberOfItems()
 function getNumberOfItems(){
 	numberOfItems = $("#numItemsOpts").val();
 
 	if(numberOfItems >10000 || numberOfItems<1){
-		// $("#itemTotal").removeClass("bg-success");
-		// $("#total").removeClass("bg-success");
+
 		$("#info").addClass("warningBox");
 		$("#info").html("Please enter a number between 0 &amp; 10000");
 		$("#total").html("");
@@ -43,8 +42,7 @@ function getNumberOfItems(){
 		itemNumGroup = 0;
 	}
 	else if(numberOfItems % 1 !== 0){
-		// $("#itemTotal").removeClass("bg-success");
-		// $("#total").removeClass("bg-success");
+
 		$("#info").addClass("warningBox");
 		$("#info").html("We can't sell a percentage of a shirt");
 		$("#total").html("");
@@ -55,8 +53,7 @@ function getNumberOfItems(){
 	else{
 		$("#info").removeClass("warningBox");
 		$("#info").html("");
-		// $("#itemTotal").addClass("bg-success");
-		// $("#total").addClass("bg-success");
+
 		if(numberOfItems<=5){
 			itemNumGroup= 0;
 		}
@@ -104,21 +101,16 @@ function getNumberOfItems(){
 	}
 
 }
-//end getNumberOfItems()
 
-//start setTotals()
 function setTotals(){
 	getItemProdCost();
 	itemAdtlCost = itemInfo[itemNumber].adtnlChrg;
 	itemTotal=(roundCurrency(itemCostData.c1[itemNumGroup]+itemAdtlCost+itemProdCost));
 	
 	$("#itemTotalTxt").html("$" + itemTotal);
-	// $("#total").addClass("bg-success");
 	$("#total").html("$" + roundCurrency((itemCostData.c1[itemNumGroup]+itemAdtlCost+itemProdCost) * $("#numItemsOpts").val()));
 }
-//end setTotals()
 
-//start getItemProdCost()
 function getItemProdCost(){
 	let $methods = $("#prodMethodOpts").val();
 	if($methods === "scr"){
@@ -131,116 +123,129 @@ function getItemProdCost(){
 		itemProdCost = 2.5;
 	}
 }
-//end getItemProdCost()
+
+function createPriceTable(){
+	let headerLength = Object.keys(itemCostData).length;
+	let dataLength = itemCostData.c1.length;
+	let tableHeaders="<thead><tr class='mainTableHeader'><th class='text-center'>Quantity</th><th colspan='1'>&nbsp;</th><th class='text-center'>Production Method</th><th>&nbsp;</th></tr>";
+	let tableData="";
+	let tableComplete="";
+	addCost = itemInfo[itemNumber].adtnlChrg
+	
+	tableHeaders+= "<tr class='secondaryTableHeader'><th>&nbsp;</th><th class='text-center headerRowColor'>Screen Print</th>";
+	tableHeaders+= "<th class='text-center headerRowColor'>Digital Full Color</th>";
+	tableHeaders+= "<th class='text-center headerRowColor'>Embroidery</th>";
+	
+	tableHeaders +="</tr></thead>"
+	for(let i=0;i<dataLength;i++){
+		tableData+="<tbody><tr><td class='text-center'><strong>"+shirtNumbers[i]+"</strong></td>";
+		tableData+="<td>$"+roundCurrency(itemCostData.c1[i]+addCost+prodMethod.scr)+"</td>";
+		tableData+="<td>$"+roundCurrency(itemCostData.c1[i]+addCost+prodMethod.dtg)+"</td>";
+		tableData+="<td>$"+roundCurrency(itemCostData.c1[i]+addCost+prodMethod.emb)+"</td><tr></tbody>";
+	}
+	$("#priceChart").children().remove();
+	$("#priceChart").append(tableHeaders + tableData);
+}
+
+//viewer
+function preloadImages(){
+	let preloaderString = "";
+	for(let i=0; i<numberOfStyles;i++){
+		preloaderString+="<img aria-hidden='true' src='images/catImages/item_" + i + ".jpg'>";
+	}
+	$("#preloader").html(preloaderString);
+}
+
+function displayName(){
+	$("#itemType").html(itemInfo[itemNumber].name);
+}
+
+function updateLinks(){
+	$("#designLink").attr('name',itemInfo[itemNumber].linkAttr_design);
+	$("#infoLink").attr('href',itemInfo[itemNumber].linkAttr_info);
+	$(".designThisBtn").on("click", function sendProductVar(){
+		let product = "#" + $(this).attr("name");
+		sessionStorage.setItem("sendProduct",product);
+	});
+
+}
+
+function nextItem(){
+	if(itemNumber>=numberOfStyles-1){
+		itemNumber = 0;
+		itemSrcString = itemInfo[itemNumber].image;
+	}
+	else{
+		itemNumber++;
+		itemSrcString = itemInfo[itemNumber].image;
+	}
+	$(".catViewerImg").animate({opacity: 0,left:"+=150px"},200, function(){
+		$(".catViewerImg").attr("src", itemSrcString);
+		$(".catViewerImg").animate({left:"-=300px"},1);
+		$(".catViewerImg").animate({opacity:1,left:"+=150px"},200);
+		setTotals();
+		displayName();
+		updateLinks();
+	});
+
+}
+
+function prevItem(){
+	if(itemNumber<=0){
+		itemNumber = numberOfStyles-1;
+		itemSrcString = itemInfo[itemNumber].image;
+
+	}
+	else{
+		itemNumber--;
+		itemSrcString = itemInfo[itemNumber].image;
+	}
+	$(".catViewerImg").animate({opacity: 0,left:"-=150px"},200, function(){
+		$(".catViewerImg").attr("src", itemSrcString);
+		$(".catViewerImg").animate({left:"+=300px"},1);
+		$(".catViewerImg").animate({opacity:1,left:"-=150px"},200);
+		itemAdtlCost = itemInfo[itemNumber].adtnlChrg;
+		setTotals();
+		displayName();
+	});
+
+}
+
+$("#catViewerPrev, #catViewerNext").hover(function(){
+	$(this).css({"color": "#d84727","cursor": "pointer"});
+},function(){
+	$(this).css("color","#2292a4");
+});
+
+$("#catViewerPrev").click(function(){
+	prevItem();
+	createPriceTable();
+});
+
+$("#catViewerPrev").hover(function(){
+	$("#");
+});
+
+$("#catViewerNext").click(function(){
+	nextItem();
+	createPriceTable();
+});
+//end viewer
+
+
+
 
 
 //EVENTS/CALLS*************************
-
-$(".styleBtn").click(function(){
-	itemType = $("#cvShirtType").text();
-});
-
 getNumberOfItems();
+preloadImages();
+displayName();
+updateLinks();
+setTotals();
+displayName();
+createPriceTable();
 
-
-//start catviewer
-
-
-	
-
-	var shirtSrcString = "images/catImages/item_" + itemNumber + ".jpg";
-
-	function preloadImages(){
-		let preloaderString = "";
-		for(let i=0; i<numberOfStyles;i++){
-			preloaderString+="<img aria-hidden='true' src='images/catImages/item_" + i + ".jpg'>";
-		}
-		$("#preloader").html(preloaderString);
-	}
-	preloadImages();
-	function displayInfo(){
-		$("#cvShirtType").html(itemInfo[itemNumber].name);
-		$("#shirtDesc").html(shirtDesc[itemNumber]);
-	}
-
-	function updateLinks(){
-		$("#designLink").attr('name',itemInfo[itemNumber].linkAttr_design);
-		$("#infoLink").html(itemInfo[itemNumber].linkAttr_info)
-		$(".designThisBtn").on("click", function sendProductVar(){
-			var product = "#" + $(this).attr("name");
-			sessionStorage.setItem("sendProduct",product);
-		});
-	}
-
-	displayInfo();
-
-	function nextShirt(){
-		if(itemNumber>=numberOfStyles-1){
-			itemNumber = 0;
-			shirtSrcString = itemInfo[itemNumber].image;
-		}
-		else{
-			itemNumber++;
-			shirtSrcString = itemInfo[itemNumber].image;
-		}
-		$(".catViewerImg").animate({opacity: 0,left:"+=150px"},200, function(){
-			$(".catViewerImg").attr("src", shirtSrcString);
-			$(".catViewerImg").animate({left:"-=300px"},1);
-			$(".catViewerImg").animate({opacity:1,left:"+=150px"},200);
-			setTotals();
-			displayInfo();
-			updateLinks();
-		});
-
-	}
-
-	function prevShirt(){
-		if(itemNumber<=0){
-			itemNumber = numberOfStyles-1;
-			shirtSrcString = itemInfo[itemNumber].image;
-
-		}
-		else{
-			itemNumber--;
-			shirtSrcString = itemInfo[itemNumber].image;
-		}
-		$(".catViewerImg").animate({opacity: 0,left:"-=150px"},200, function(){
-			$(".catViewerImg").attr("src", shirtSrcString);
-			$(".catViewerImg").animate({left:"+=300px"},1);
-			$(".catViewerImg").animate({opacity:1,left:"-=150px"},200);
-			itemAdtlCost = itemInfo[itemNumber].adtnlChrg;
-			setTotals();
-			displayInfo();
-			updateLinks();
-		});
-
-	}
-
-	$("#catViewerPrev, #catViewerNext").hover(function(){
-		$(this).css({"color": "#d84727","cursor": "pointer"});
-	},
-	function(){
-		$(this).css("color","#2292a4");
-	});
-
-	$("#catViewerPrev").click(function(){
-		prevShirt();
-	});
-
-	$("#catViewerPrev").hover(function(){
-		$("#");
-	});
-
-	$("#catViewerNext").click(function(){
-		nextShirt();
-	});
-
-	$("#testBtn").click(function(){
-		$("#testLink").attr("href",shirtLinks[itemNumber]);
-		console.log($("#testLink").attr("href"));
-	});
-
-//end catviewer
+$(".catViewerImg").attr("src", itemSrcString);
 
 
 $("#numItemsOpts").change(function(){
@@ -261,31 +266,8 @@ $("#prodMethodOpts").change(function(){
 });
 
 
-
-
-$("#numShirts").change(function(){
-	if($("#numShirts").val()!=0){
-		getNumberOfItems();
-		$("#priceChart").children().remove();
-		createPriceTable();
-	}
-});
-
-$("#shirtType").change(function(){
-	if($("#numShirts").val()!=0){
-		getNumberOfItems();
-		$("#priceChart").children().remove();
-		createPriceTable();
-	}
-});
-
-
 $("#submit").click(function(){
 	getNumberOfItems();
 	$("#priceChart").children().remove();
-	// createPriceTable();
 });
 
-// createPriceTable();
-
-//functions

@@ -116,31 +116,25 @@ git pull https://github.com/mrected/Central-Ave-Shirt-Co.git
                   <div class="caption">
                     <h3 class="text-center thumbnailTitle orangeUl">Choose a style</h3>
                     <div id="catViewerMain">
-                      
-                      <div id="catViewerBtnDiv">
+
+                      <div id="catViewerBtnDiv" class="center-block">
+                        <div class="catViewerBtnPrevDiv">
+                          <a id="catViewerPrev" class="xlDefault pull-right"><i class="styleBtn fa fa-angle-left fa-4x" aria-hidden="true" alt="Previous Style"></i></a>
+                        </div>
 
                         <div class="catViewerBtnNextDiv">
-                          <a id="catViewerNext" class="xlDefault pull-left"><i class="fa fa-angle-right fa-4x" aria-hidden="true" alt="Previous Style"></i></a>
+                          <a id="catViewerNext" class="xlDefault pull-left"><i class="styleBtn fa fa-angle-right fa-4x" aria-hidden="true" alt="Previous Style"></i></a>
                         </div>
-
-                        <div class="catViewerBtnPrevDiv">
-                          <a id="catViewerPrev" class="xlDefault"><i class="fa fa-angle-left fa-4x" aria-hidden="true" alt="Previous Style"></i></a>
-                        </div>
-
-                        
 
                       </div>
-                      
-                      <a href="tshirt.html" id="shirtImgLink"><img src='images/catImages/item_0.jpg' class='img-responsive catViewerImg'></a>
+                          
+                      <a href="#" class="xlDefault" id="itemImgLink"><img src='images/catImages/item_0.jpg' class='img-responsive catViewerImg'></a>
 
                     </div>
-                    
-                    <div class="styleDetails">
-                      <p class="text-center productStyleTitle"><span id="cvShirtType"></span></p>
-                      <p class="text-center"><strong><span id="shirtDescTxt"></span></strong></p>
-                    </div>
+                    <p class="text-center roundedBorderLight productStyleTitle"><span id="itemType"></span></p>
 
                   </div>
+                  <p class="text-center">As low as <strong><span id="startCostTxt"></span></strong><br><strong><a id="designLink" class='designThisBtn' href='designer/designer.html' name='designShirt'>Design This</a></strong> | <strong><a id="infoLink" href="">More Info</a></strong></p>
                 </div>
               </div>
               <!--END CHOOSE YOUR STYLE-->
@@ -297,7 +291,7 @@ git pull https://github.com/mrected/Central-Ave-Shirt-Co.git
           const rotateBanner=true;
         </script> -->
         <script type="text/javascript" src="js/scripts.js"></script>
-        <script type="text/javascript" src="js/shirtData.js"></script>
+        <script type="text/javascript" src="js/itemData.js"></script>
         
         <script type="text/javascript" src="js/catViewer.js"></script>
         
