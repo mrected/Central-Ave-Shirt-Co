@@ -56,6 +56,7 @@ function sendProductVar(){
 	sessionStorage.setItem("sendProduct",product);
 }
 $(".designThisBtn").on("click", sendProductVar);
+$(".priceThisBtn").on("click", sendProductVar);
 
 //End Utilities
 

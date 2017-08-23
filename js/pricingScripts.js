@@ -3,9 +3,9 @@
 //add a case to shirtType
 //add an else if statement to createPriceTable
 //add an option to shirtprices.html
-let setItemNumber = sessionStorage.getItem("sendProduct");
-	console.log(setItemNumber)
-	sessionStorage.removeItem("sendProduct");
+
+
+
 
 //VARIABLES*************************
 let numberOfItems;
@@ -15,6 +15,7 @@ let numberOfStyles=Object.keys(itemInfo).length;
 let itemTotal;
 let itemAdtlCost=0;
 let itemProdCost=0;
+isSetItemNumber();
 let itemSrcString = "images/catImages/item_" + itemNumber + ".jpg";
 let addCost=0;
 const prodMethod = {
@@ -25,8 +26,19 @@ const prodMethod = {
 
 
 
-
 //FUNCTIONS*************************
+
+function isSetItemNumber(){
+	
+	if(typeof(sessionStorage.getItem("sendProduct"))==='string'){
+		
+		itemNumber = sessionStorage.getItem("sendProduct").substr(1);
+		sessionStorage.removeItem("sendProduct");
+	}
+	else{
+		itemNumber = 0;
+	}
+}
 
 
 function getNumberOfItems(){
@@ -160,13 +172,15 @@ function displayName(){
 	$("#itemType").html(itemInfo[itemNumber].name);
 }
 
+function sendProductVar(){
+		let product = "#" + $(this).attr("name");
+		sessionStorage.setItem("sendProduct",product);
+	};
+
 function updateLinks(){
 	$("#designLink").attr('name',itemInfo[itemNumber].linkAttr_design);
 	$("#infoLink").attr('href',itemInfo[itemNumber].linkAttr_info);
-	$(".designThisBtn").on("click", function sendProductVar(){
-		let product = "#" + $(this).attr("name");
-		sessionStorage.setItem("sendProduct",product);
-	});
+	$(".designThisBtn .priceThisBtn").on("click", sendProductVar);
 
 }
 
@@ -237,6 +251,7 @@ $("#catViewerNext").click(function(){
 
 
 //EVENTS/CALLS*************************
+
 getNumberOfItems();
 preloadImages();
 displayName();
