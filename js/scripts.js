@@ -51,12 +51,20 @@ $(function () {
 });
 
 //sends to designer based on name attr
-function sendProductVar(){
+
+function sendProductDesign(){
 	let product = "#" + $(this).attr("name");
-	sessionStorage.setItem("sendProduct",product);
+	sessionStorage.setItem("sendProductDesign",product);
 }
-$(".designThisBtn").on("click", sendProductVar);
-$(".priceThisBtn").on("click", sendProductVar);
+
+function sendProductPrice(){
+	let product = "#" + $(this).attr("name");
+	sessionStorage.setItem("sendProductPrice",product);
+}
+
+$(".designThisBtn").on("click", sendProductDesign);
+
+$(".priceThisBtn").on("click", sendProductPrice);
 
 //End Utilities
 

@@ -23,7 +23,7 @@ let itemSrcString = "images/catImages/item_" + itemNumber + ".jpg";
 	function updateLinks(){
 		$("#designLink").attr('name',itemInfo[itemNumber].linkAttr_design);
 		$("#infoLink").attr('href',itemInfo[itemNumber].linkAttr_info);
-		$(".designThisBtn").on("click", sendProductVar);
+		$(".designThisBtn").on("click", sendProductDesign);
 	}
 
 	function nextItem(){
@@ -89,15 +89,3 @@ let itemSrcString = "images/catImages/item_" + itemNumber + ".jpg";
 	});
 
 
-
-
-
-
-
-		//gets product name and transfers to designer page to arrange divs
-
-	// $(".designThisBtn").click(function sendProductVar(){
-	// 	var product = "#" + $(this).attr("name");
-	// 	alert(product);
-	// 	sessionStorage.setItem("sendProduct",product);
-	// });

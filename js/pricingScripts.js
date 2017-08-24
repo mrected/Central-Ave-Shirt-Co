@@ -30,10 +30,10 @@ const prodMethod = {
 
 function isSetItemNumber(){
 	
-	if(typeof(sessionStorage.getItem("sendProduct"))==='string'){
+	if(typeof(sessionStorage.getItem("sendProductPrice"))==='string'){
 		
-		itemNumber = sessionStorage.getItem("sendProduct").substr(1);
-		sessionStorage.removeItem("sendProduct");
+		itemNumber = sessionStorage.getItem("sendProductPrice").substr(1);
+		sessionStorage.removeItem("sendProductPrice");
 	}
 	else{
 		itemNumber = 0;
@@ -172,15 +172,15 @@ function displayName(){
 	$("#itemType").html(itemInfo[itemNumber].name);
 }
 
-function sendProductVar(){
-		let product = "#" + $(this).attr("name");
-		sessionStorage.setItem("sendProduct",product);
-	};
+// function sendProductVar(){
+// 		let product = "#" + $(this).attr("name");
+// 		sessionStorage.setItem("sendProduct",product);
+// 	};
 
 function updateLinks(){
 	$("#designLink").attr('name',itemInfo[itemNumber].linkAttr_design);
 	$("#infoLink").attr('href',itemInfo[itemNumber].linkAttr_info);
-	$(".designThisBtn .priceThisBtn").on("click", sendProductVar);
+	// $(".designThisBtn .priceThisBtn").on("click", sendProductVar);
 
 }
 

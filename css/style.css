@@ -50,6 +50,9 @@ body{
 #mainBody{
 	min-height: 100vh;
 }
+#mainBody-staticNav{
+	padding-top:8rem;
+}
 
 .roundedBorderHeavy{
 	border-radius: 2rem;
@@ -190,6 +193,26 @@ body{
 .navNoBanner{
 	height:initial;
 }
+
+#leftNavSection-static{
+	position:relative;
+	left:-6.125rem;
+}
+
+#rightNavSection-static{
+	position:relative;
+	left:6.125rem;
+}
+
+#topNavSection-static{
+	height:7.5rem;
+}
+
+#smallLogo-static{
+	display: inline-block;
+	width:8rem;
+}
+
 
 .logoDiv{
 	background-color: #042a2b;

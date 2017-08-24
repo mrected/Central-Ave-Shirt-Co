@@ -2,9 +2,9 @@ $(document).ready(function(){
 
 	//sets main item on Product Designer from Home
 	// alert(sessionStorage.getItem("sendProduct"));
-	let setProduct = sessionStorage.getItem("sendProduct");
+	let setProduct = sessionStorage.getItem("sendProductDesign");
 	$("#designShirt").before($(setProduct));
-	sessionStorage.removeItem("sendProduct");
+	sessionStorage.removeItem("sendProductDesign");
 	// setProduct=("#designShirt");
 	//starts plugin
 
