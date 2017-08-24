@@ -150,7 +150,7 @@ function createPriceTable(){
 	
 	tableHeaders +="</tr></thead>"
 	for(let i=0;i<dataLength;i++){
-		tableData+="<tbody><tr><td class='text-center'><strong>"+shirtNumbers[i]+"</strong></td>";
+		tableData+="<tbody><tr><td class='text-center'><strong>"+itemNumbers[i]+"</strong></td>";
 		tableData+="<td>$"+roundCurrency(itemCostData.c1[i]+addCost+prodMethod.scr)+"</td>";
 		tableData+="<td>$"+roundCurrency(itemCostData.c1[i]+addCost+prodMethod.dtg)+"</td>";
 		tableData+="<td>$"+roundCurrency(itemCostData.c1[i]+addCost+prodMethod.emb)+"</td><tr></tbody>";
@@ -278,6 +278,7 @@ $("#numItemsOpts").mouseup(function(){
 
 $("#prodMethodOpts").change(function(){
 	getNumberOfItems();
+	setTotals();
 });
 
 

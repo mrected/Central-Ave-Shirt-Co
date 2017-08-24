@@ -1,5 +1,3 @@
-// for get a quote
-
 const itemCostData = {
 
 	c1:[18,11.5,9,7.75,5.98,5.25,4.98,4.7,4.4,4.1,3.75,3.55,3.43,3.15],
@@ -10,33 +8,20 @@ const itemCostData = {
 
 }
 
-const shirtNumbers = ["1-5","6-10","11-15","16-20","21-40","41-60","61-80","81-100","101-140","141-200","201-300","301-400","401-500","500+"];
-
-// for catagory viewer
-
-const shirtsArray = ["images/catImages/item_0.jpg",
-				   "images/catImages/item_1.jpg",
-				   "images/catImages/item_2.jpg",
-				   "images/catImages/item_3.jpg",
-				   "images/catImages/item_4.jpg",
-				   "images/catImages/item_5.jpg"];//REMOVED FROM PRICING SCRIPTS, SCRIPTS
-
-const cvItemType=["T-Shirt",
-				"Long Sleeve",
-				"Tank Top",
-				"Polo Shirt",
-				"Hoodie",
-				"Hats"];
-
-const shirtDesc =[`Starts at $${itemCostData.c1[0]} <br><a href='designer/designer.html' class='designThisBtn' name='designShirt'>Design this</a> | <a href='#'>Quote this</a> | <a href='#'>More info</a>`,
-				`Starts at $${(itemCostData.c1[0]+2.50).toFixed(2)} <br><a href='designer/designer.html' class='designThisBtn' name='designLs'>Design this</a> | <a href='#'>Quote this</a> | <a href='#'>More info</a>`,
-				`Starts at $${itemCostData.c1[0]} <br><a href='designer/designer.html' class='designThisBtn' name='designTank'>Design this</a> | <a href='#'>Quote this</a> | <a href='#'>More info</a>`,
-				`Starts at $${(itemCostData.c1[0]+3.50).toFixed(2)}  <br><a href='designer/designer.html' class='designThisBtn' name='designPolo'>Design this</a> | <a href='#'>Quote this</a> | <a href='#'>More info</a>`,
-				`Starts at $${(itemCostData.c1[0]+5).toFixed(2)}  <br><a href='designer/designer.html' class='designThisBtn' name='designHoodie'>Design this</a> | <a href='#'>Quote this</a> | <a href='#'>More info</a>`,
-				`Starts at $${(itemCostData.c1[0]+1.50).toFixed(2)}  <br><a href='designer/designer.html' class='designThisBtn' name='designHat'>Design this</a> | <a href='#'>Quote this</a> | <a href='#'>More info</a>`]
-
-
-
+const itemNumbers = ["1-5",
+					"6-10",
+					"11-15",
+					"16-20",
+					"21-40",
+					"41-60",
+					"61-80",
+					"81-100",
+					"101-140",
+					"141-200",
+					"201-300",
+					"301-400",
+					"401-500",
+					"500+"];
 
 const itemInfo = [
 	{
@@ -166,17 +151,3 @@ const itemInfo = [
 		sizes:"sm-md, md-xl"
 	}
 ];
-
-
-
-const shirtLinks =["shortSleeve.html",
-				 "longSleeve.html",
-				 "tank.html",
-				 "polo.html",
-				 "hoodie.html",
-				 "hats"];
-
-
-
-
-

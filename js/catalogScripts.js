@@ -46,7 +46,7 @@ function createPriceTable(){
 	
 	tableHeaders +="</tr>"
 	for(let i=0;i<dataLength;i++){
-		tableData+="<td class='text-center'><strong>"+shirtNumbers[i]+"</strong></td>";
+		tableData+="<td class='text-center'><strong>"+itemNumbers[i]+"</strong></td>";
 		tableData+="<td>$"+roundCurrency(itemCostData.c1[i]+addCost+prodMethod.scr)+"</td>";
 		tableData+="<td>$"+roundCurrency(itemCostData.c1[i]+addCost+prodMethod.dtg)+"</td>";
 		tableData+="<td>$"+roundCurrency(itemCostData.c1[i]+addCost+prodMethod.emb)+"</td><tr>";

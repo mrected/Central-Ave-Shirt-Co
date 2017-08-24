@@ -16,7 +16,6 @@ let itemSrcString = "images/catImages/item_" + itemNumber + ".jpg";
 
 	function displayInfo(){
 		$("#itemType").html(itemInfo[itemNumber].name);
-		$("#itemDescTxt").html(shirtDesc[itemNumber]);
 		$("#startCostTxt").html("$" + roundCurrency(itemCostData.c1[13] + itemInfo[itemNumber].adtnlChrg));
 	}
 
