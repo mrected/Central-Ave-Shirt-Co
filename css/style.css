@@ -404,9 +404,24 @@ p{
 
 /*Color squares*/
 #colorBar{
-	background-color: #ccc;
 	display: inline-block;
 	padding: 0 .5rem;
+	border:solid .15rem #000;
+	width:60%;
+}
+
+.colorTitleLabel{
+	font: 400 1rem 'Roboto', sans-serif;
+	text-align: center;
+}
+
+.productThumbnail img{
+	width:5rem;
+	margin-bottom: -1rem;
+}
+
+.productThumbnail, .colorTitleLabel{
+	display: inline-block;
 }
 
 .tabcontent{

@@ -1,8 +1,12 @@
 
 //VARIABLES*************************
 let addCost = itemInfo[itemToShow].adtnlChrg;
-const colorArray = Object.values(itemInfo[itemToShow].colors);
+const colorArray = Object.values(itemInfo[itemToShow].productImages.items);
+const showThumbnailsArray = Object.values(itemInfo[itemToShow].productImages.item_thumbnails);
+const colorTitlesArray = Object.keys(itemInfo[itemToShow].productImages.items);
 const numberOfColors=colorArray.length;
+const showItem = colorArray[Math.floor(Math.random()*numberOfColors)];
+
 const prodMethod = {
 	'scr':0,
 	'dtg':4.5,
@@ -17,7 +21,8 @@ const prodMethod = {
 function setColorBar(){
 	let colorBarString = ``;
 	for(let i=0;i<numberOfColors;i++){
-		colorBarString += `<i style='color:${colorArray[i]};' class='fa fa-square fa-4x' aria-hidden='true'></i> `;
+		colorBarString += `<div class="productThumbnail"><img src="${showThumbnailsArray[i]}" alt=""><br><p class="colorTitleLabel">${colorTitlesArray[i]}</p></div>`;
+		
 	}
 	$("#colorBar").html(colorBarString);
 }
@@ -28,9 +33,7 @@ function setInfo(){
 	$("#itemSizes").html(itemInfo[itemToShow].sizes);
 	$("#vendorLink").attr('href',itemInfo[itemToShow].linkAttr_vendor);
 	$("#designLink").attr('name',itemInfo[itemToShow].linkAttr_design);
-	$("#imgBase").attr("src",itemInfo[itemToShow].base);
-	$("#imgShadows").attr("src",itemInfo[itemToShow].shadows);
-	$("#imgHighlights").attr("src",itemInfo[itemToShow].highlights);
+	$("#itemImage").attr("src",showItem);
 }
 
 function createPriceTable(){
@@ -82,12 +85,12 @@ function catTab(evt, tabName) {
 
 
 
-$(window).resize(setThumbnailHeight);
+// $(window).resize(setThumbnailHeight);
 
-function setThumbnailHeight(){
-	let itemLayers_H = $("#imgBase").height()+20;
-	$("#itemLayersDiv").height(itemLayers_H);
-}
+// function setThumbnailHeight(){
+// 	let itemLayers_H = $("#imgBase").height()+20;
+// 	$("#itemLayersDiv").height(itemLayers_H);
+// }
 
 
 
@@ -98,11 +101,11 @@ setInfo();
 setColorBar();
 
 
-$("document").ready(function(){
-	setTimeout(function(){
-		setThumbnailHeight();
-	},10);
-});
+// $("document").ready(function(){
+// 	setTimeout(function(){
+// 		setThumbnailHeight();
+// 	},10);
+// });
 
 
 
