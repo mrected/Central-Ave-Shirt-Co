@@ -46,7 +46,7 @@ const itemInfo = [
 				red:'images/productImages/tshirt/tshirt-red.png',
 				royal:'images/productImages/tshirt/tshirt-royal.png',
 				sapphire:'images/productImages/tshirt/tshirt-sapphire.png',
-				yellowGold:'images/productImages/tshirt/tshirt-yellowGold.png',
+				yellow_gold:'images/productImages/tshirt/tshirt-yellowGold.png',
 			},
 			item_thumbnails:{
 				black:'images/productImages/tshirt/tshirt-black-th.png',
@@ -58,7 +58,7 @@ const itemInfo = [
 				red:'images/productImages/tshirt/tshirt-red-th.png',
 				royal:'images/productImages/tshirt/tshirt-royal-th.png',
 				sapphire:'images/productImages/tshirt/tshirt-sapphire-th.png',
-				['yellow gold']:'images/productImages/tshirt/tshirt-yellowGold-th.png'
+				yellow_gold:'images/productImages/tshirt/tshirt-yellowGold-th.png'
 			}
 
 		},
@@ -84,13 +84,13 @@ const itemInfo = [
 				glacier:'images/productImages/ls/ls-glacier.png',
 				merlot:'images/productImages/ls/ls-merlot.png',
 				mist:'images/productImages/ls/ls-mist.png',
-				['neon pink']:'images/productImages/ls/ls-neonpink.png',
+				neon_pink:'images/productImages/ls/ls-neonpink.png',
 				peacock:'images/productImages/ls/ls-peacock.png',
 				pewter:'images/productImages/ls/ls-pewter.png',
 				poppy:'images/productImages/ls/ls-poppy.png',
 				redrock:'images/productImages/ls/ls-redrock.png',
 				safari:'images/productImages/ls/ls-safari.png',
-				['tidal wave']:'images/productImages/ls/ls-tidalwave.png',
+				tidal_wave:'images/productImages/ls/ls-tidalwave.png',
 				white:'images/productImages/ls/ls-white.png'				
 			},
 			item_thumbnails:{
@@ -100,13 +100,13 @@ const itemInfo = [
 				glacier:'images/productImages/ls/ls-glacier-th.png',
 				merlot:'images/productImages/ls/ls-merlot-th.png',
 				mist:'images/productImages/ls/ls-mist-th.png',
-				['neon pink']:'images/productImages/ls/ls-neonpink-th.png',
+				neon_pink:'images/productImages/ls/ls-neonpink-th.png',
 				peacock:'images/productImages/ls/ls-peacock-th.png',
 				pewter:'images/productImages/ls/ls-pewter-th.png',
 				poppy:'images/productImages/ls/ls-poppy-th.png',
 				redrock:'images/productImages/ls/ls-redrock-th.png',
 				safari:'images/productImages/ls/ls-safari-th.png',
-				['tidal wave']:'images/productImages/ls/ls-tidalwave-th.png',
+				tidal_wave:'images/productImages/ls/ls-tidalwave-th.png',
 				white:'images/productImages/ls/ls-white-th.png'
 			}
 
@@ -127,27 +127,27 @@ const itemInfo = [
 		linkAttr_vendor:"http://www.helinger.com/ProductResults/?SearchTerms=tank%20top",
 		productImages:{
 			items:{
-				['athletic heather']:'images/productImages/tank/tank-athletichthr.png',
+				athletic_heather:'images/productImages/tank/tank-athletichthr.png',
 				charcoal:'images/productImages/tank/tank-charcoal.png',
 				black:'images/productImages/tank/tank-jetblack.png',
 				navy:'images/productImages/tank/tank-navy.png',
-				['neon blue']:'images/productImages/tank/tank-neonblue.png',
-				['neon green']:'images/productImages/tank/tank-neongreen.png',
-				['neon pink']:'images/productImages/tank/tank-neonpink.png',
-				['neon yellow']:'images/productImages/tank/tank-neonyellow.png',
+				neon_blue:'images/productImages/tank/tank-neonblue.png',
+				neon_green:'images/productImages/tank/tank-neongreen.png',
+				neon_pink:'images/productImages/tank/tank-neonpink.png',
+				neon_yellow:'images/productImages/tank/tank-neonyellow.png',
 				red:'images/productImages/tank/tank-red.png',
 				royal:'images/productImages/tank/tank-royal.png',
 				white:'images/productImages/tank/tank-white.png'				
 			},
 			item_thumbnails:{
-				['athletic heather']:'images/productImages/tank/tank-athletichthr-th.png',
+				athletic_heather:'images/productImages/tank/tank-athletichthr-th.png',
 				charcoal:'images/productImages/tank/tank-charcoal-th.png',
 				black:'images/productImages/tank/tank-jetblack-th.png',
 				navy:'images/productImages/tank/tank-navy-th.png',
-				['neon blue']:'images/productImages/tank/tank-neonblue-th.png',
-				['neon green']:'images/productImages/tank/tank-neongreen-th.png',
-				['neon pink']:'images/productImages/tank/tank-neonpink-th.png',
-				['neon yellow']:'images/productImages/tank/tank-neonyellow-th.png',
+				neon_blue:'images/productImages/tank/tank-neonblue-th.png',
+				neon_green:'images/productImages/tank/tank-neongreen-th.png',
+				neon_pink:'images/productImages/tank/tank-neonpink-th.png',
+				neon_yellow:'images/productImages/tank/tank-neonyellow-th.png',
 				red:'images/productImages/tank/tank-red-th.png',
 				royal:'images/productImages/tank/tank-royal-th.png',
 				white:'images/productImages/tank/tank-white-th.png'	
@@ -170,15 +170,15 @@ const itemInfo = [
 		linkAttr_vendor:"http://www.helinger.com/ProductResults/?SearchTerms=polo",
 		productImages:{
 			items:{
-				['aquatic blue']:'images/productImages/polo/polo-aquaticblue.png',
+				aquatic_blue:'images/productImages/polo/polo-aquaticblue.png',
 				maroon:'images/productImages/polo/polo-athmaroon.png',
 				charcoal:'images/productImages/polo/polo-charcoal.png',
-				['dark green']:'images/productImages/polo/polo-darkgreen.png',
+				dark_green:'images/productImages/polo/polo-darkgreen.png',
 				navy:'images/productImages/polo/polo-deepnavy.png',
 				gold:'images/productImages/polo/polo-gold.png',
 				black:'images/productImages/polo/polo-jetblack.png',
 				green:'images/productImages/polo/polo-kelly.png',
-				['light blue']:'images/productImages/polo/polo-lightblue.png',
+				light_blue:'images/productImages/polo/polo-lightblue.png',
 				lime:'images/productImages/polo/polo-lime.png',
 				grey:'images/productImages/polo/polo-mediumgrey.png',
 				purple:'images/productImages/polo/polo-purple.png',
@@ -187,15 +187,15 @@ const itemInfo = [
 				white:'images/productImages/polo/polo-white.png'				
 			},
 			item_thumbnails:{
-				['aquatic blue']:'images/productImages/polo/polo-aquaticblue-th.png',
+				aquatic_blue:'images/productImages/polo/polo-aquaticblue-th.png',
 				maroon:'images/productImages/polo/polo-athmaroon-th.png',
 				charcoal:'images/productImages/polo/polo-charcoal-th.png',
-				['dark green']:'images/productImages/polo/polo-darkgreen-th.png',
+				dark_green:'images/productImages/polo/polo-darkgreen-th.png',
 				navy:'images/productImages/polo/polo-deepnavy-th.png',
 				gold:'images/productImages/polo/polo-gold-th.png',
 				black:'images/productImages/polo/polo-jetblack-th.png',
 				green:'images/productImages/polo/polo-kelly-th.png',
-				['light blue']:'images/productImages/polo/polo-lightblue-th.png',
+				light_blue:'images/productImages/polo/polo-lightblue-th.png',
 				lime:'images/productImages/polo/polo-lime-th.png',
 				grey:'images/productImages/polo/polo-mediumgrey-th.png',
 				purple:'images/productImages/polo/polo-purple-th.png',
@@ -221,11 +221,11 @@ const itemInfo = [
 		linkAttr_vendor:"http://www.helinger.com/ProductResults/?SearchTerms=hoodie",
 		productImages:{
 			items:{
-				['athletic heather']:'images/productImages/hoodie/hoodie-athletichthr.png',
+				athletic_heather:'images/productImages/hoodie/hoodie-athletichthr.png',
 				red:'images/productImages/hoodie/hoodie-brightred.png',
 				charcoal:'images/productImages/hoodie/hoodie-charcoal.png',
-				['dark hthr grey']:'images/productImages/hoodie/hoodie-darkhthrgrey.png',
-				['forest green']:'images/productImages/hoodie/hoodie-forestgreen.png',
+				heather_grey:'images/productImages/hoodie/hoodie-darkhthrgrey.png',
+				forest_green:'images/productImages/hoodie/hoodie-forestgreen.png',
 				garnet:'images/productImages/hoodie/hoodie-garnet.png',
 				black:'images/productImages/hoodie/hoodie-jetblack.png',
 				sapphire:'images/productImages/hoodie/hoodie-sapphire.png',
@@ -236,11 +236,11 @@ const itemInfo = [
 				white:'images/productImages/hoodie/hoodie-white.png'			
 			},
 			item_thumbnails:{
-				['athletic heather']:'images/productImages/hoodie/hoodie-athletichthr-th.png',
+				athletic_heather:'images/productImages/hoodie/hoodie-athletichthr-th.png',
 				red:'images/productImages/hoodie/hoodie-brightred-th.png',
 				charcoal:'images/productImages/hoodie/hoodie-charcoal-th.png',
-				['dark hthr grey']:'images/productImages/hoodie/hoodie-darkhthrgrey-th.png',
-				['forest green']:'images/productImages/hoodie/hoodie-forestgreen-th.png',
+				heather_grey:'images/productImages/hoodie/hoodie-darkhthrgrey-th.png',
+				forest_green:'images/productImages/hoodie/hoodie-forestgreen-th.png',
 				garnet:'images/productImages/hoodie/hoodie-garnet-th.png',
 				black:'images/productImages/hoodie/hoodie-jetblack-th.png',
 				sapphire:'images/productImages/hoodie/hoodie-sapphire-th.png',
@@ -269,7 +269,7 @@ const itemInfo = [
 		productImages:{
 			items:{
 				black:'images/productImages/hat/hat-black.png',
-				['dark navy']:'images/productImages/hat/hat-darknavy.png',
+				dark_navy:'images/productImages/hat/hat-darknavy.png',
 				grey:'images/productImages/hat/hat-grey.png',
 				khaki:'images/productImages/hat/hat-khaki.png',
 				navy:'images/productImages/hat/hat-navy.png',
@@ -278,7 +278,7 @@ const itemInfo = [
 			},
 			item_thumbnails:{
 				black:'images/productImages/hat/hat-black-th.png',
-				['dark navy']:'images/productImages/hat/hat-darknavy-th.png',
+				dark_navy:'images/productImages/hat/hat-darknavy-th.png',
 				grey:'images/productImages/hat/hat-grey-th.png',
 				khaki:'images/productImages/hat/hat-khaki-th.png',
 				navy:'images/productImages/hat/hat-navy-th.png',

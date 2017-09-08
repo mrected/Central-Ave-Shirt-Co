@@ -26,7 +26,24 @@ function backLink(){
 }
 
 //Rounds currency 
-const roundCurrency = cost => cost = cost.toFixed(2);
+// const roundCurrency = cost => cost = cost.toFixed(2);
+
+function roundCurrency(cost){
+	return cost.toFixed(2);
+}
+
+
+
+//fixes jumpy scroll over fixed backround in ie11
+if(navigator.userAgent.match(/Trident\/7\./)) { // if IE
+        $('body').on("mousewheel", function () {
+            event.preventDefault(); 
+
+            let wheelDelta = event.wheelDelta;
+            let currentScrollPosition = window.pageYOffset;
+            window.scrollTo(0, currentScrollPosition - wheelDelta);
+        });
+}
 
 //enables links in tabs
 $(document).ready(function(){

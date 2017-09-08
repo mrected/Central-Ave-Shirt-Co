@@ -18,11 +18,15 @@ const prodMethod = {
 
 
 //FUNCTIONS*************************
+function replaceBackSlash(title){
+	return title.replace('_',' ');
+}
+
 function setColorBar(){
-	let colorBarString = ``;
+	let colorBarString = "";
 	for(let i=0;i<numberOfColors;i++){
-		colorBarString += `<div class="productThumbnail"><img src="${showThumbnailsArray[i]}" alt=""><br><p class="colorTitleLabel">${colorTitlesArray[i]}</p></div>`;
-		
+		let colorTitle = replaceBackSlash(colorTitlesArray[i]);
+		colorBarString += `<div class="productThumbnail"><img src="${showThumbnailsArray[i]}" alt=""><br><p class="colorTitleLabel">${colorTitle}</p></div>`;
 	}
 	$("#colorBar").html(colorBarString);
 }
