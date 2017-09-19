@@ -6,6 +6,7 @@ const showThumbnailsArray = Object.values(itemInfo[itemToShow].productImages.ite
 const colorTitlesArray = Object.keys(itemInfo[itemToShow].productImages.items);
 const numberOfColors=colorArray.length;
 const showItem = colorArray[Math.floor(Math.random()*numberOfColors)];
+let itemColor="";
 
 const prodMethod = {
 	'scr':0,
@@ -26,9 +27,19 @@ function setColorBar(){
 	let colorBarString = "";
 	for(let i=0;i<numberOfColors;i++){
 		let colorTitle = replaceBackSlash(colorTitlesArray[i]);
-		colorBarString += `<div class="productThumbnail"><img src="${showThumbnailsArray[i]}" alt=""><br><p class="colorTitleLabel">${colorTitle}</p></div>`;
+		colorBarString += `<a class="xlDefault" alt="changes item color to ${colorTitle}"><div class="productThumbnail" title="${colorTitlesArray[i]}"><img src="${showThumbnailsArray[i]}" alt="${colorTitle} ${itemInfo[itemToShow].name}"><br><p class="colorTitleLabel">${colorTitle}</p></div></a>`;
+		if(i%5===0 && i>1){
+			colorBarString+=`<br>`;
+		}
 	}
 	$("#colorBar").html(colorBarString);
+	$('.productThumbnail').click(function(){
+		itemColor = $(this).attr('title');
+		$("#itemImage").attr({
+			src: itemInfo[itemToShow].productImages.items[itemColor],
+			alt: itemColor + " " + itemInfo[itemToShow].name
+		})
+	});
 }
 
 function setInfo(){
@@ -38,6 +49,7 @@ function setInfo(){
 	$("#vendorLink").attr('href',itemInfo[itemToShow].linkAttr_vendor);
 	$("#designLink").attr('name',itemInfo[itemToShow].linkAttr_design);
 	$("#itemImage").attr("src",showItem);
+
 }
 
 function createPriceTable(){
@@ -62,6 +74,8 @@ function createPriceTable(){
 	$("#priceChart").append(tableHeaders + tableData);
 	$("#itemImage").attr('src',itemInfo[itemToShow].image);
 }
+
+
 
 function catTab(evt, tabName) {
     // Declare all variables

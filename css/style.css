@@ -406,18 +406,28 @@ p{
 #colorBar{
 	display: inline-block;
 	padding: 0 .5rem;
-	border:solid .15rem #000;
-	width:60%;
+	/*border:solid .15rem #000;*/
+	width:80%;
 }
 
 .colorTitleLabel{
 	font: 400 1rem 'Roboto', sans-serif;
 	text-align: center;
+	width:100%;
+	background-color: rgba(34,146,164,.3);
+	padding: 0 .15rem .15rem;
+	margin-top: 1rem;
+	border-radius: .5rem;
+	border:solid .15rem #fff;
+	color:#042a2b;
 }
 
 .productThumbnail img{
 	width:5rem;
-	margin-bottom: -1rem;
+	margin-bottom: -3.25rem;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .productThumbnail, .colorTitleLabel{

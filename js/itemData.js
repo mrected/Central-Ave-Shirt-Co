@@ -37,7 +37,7 @@ const itemInfo = [
 		linkAttr_vendor:"http://www.helinger.com/ProductResults/?SearchTerms=t-shirt",
 		productImages:{
 			items:{
-				black:'images/productImages/tshirt/tshirt-black-th.png',
+				black:'images/productImages/tshirt/tshirt-black.png',
 				charcoal:'images/productImages/tshirt/tshirt-charcoal.png',
 				green:'images/productImages/tshirt/tshirt-green.png',
 				maroon:'images/productImages/tshirt/tshirt-maroon.png',
