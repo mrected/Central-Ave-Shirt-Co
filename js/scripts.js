@@ -1,5 +1,6 @@
 //VARIABLES*************************
-
+let currentImg="";
+let bannerImage="";
 let navOpenState = false;
 const bannerArray = ["Banner-cheetah.jpg",
 						"Banner-dogWalker.jpg",
@@ -89,11 +90,11 @@ $(".priceThisBtn").on("click", sendProductPrice);
 
 function openNav(){
 	if(navOpenState===false){
+		pickBannerImg();
 		$("#leftNavSection").stop().animate({left:"-6.125rem"},{duration:200});
 		$("#rightNavSection").stop().animate({left:"6.125rem"},{duration:200});
 		$("#topNavSection").animate({height: "7.5rem"},{duration:300, complete: function(){
 			$("#smallLogo").fadeIn("fast");
-			pickBannerImg();
 			}
 		});
 	}
@@ -128,10 +129,18 @@ $(window).scroll(function(){
 
 function pickBannerImg(){
 	let getRandNum = Math.floor(Math.random()*(bannerArray.length));
-		let currentImg = $("#logoDivMain").css('background-image')
-		let bannerImage="images/bannerImages/" + bannerArray[getRandNum];
+	currentImg = $("#logoDivMain").css('background-image')
+	bannerImage="images/bannerImages/" + bannerArray[getRandNum];
+	bannerDuplicateCheck();
+}
+
+function bannerDuplicateCheck(){
+	if(currentImg.search(bannerImage)===-1){
 		$("#logoDivMain").css('background-image', 'url('+ bannerImage + ')');
-		// alert(currentImg + " " + bannerImage);
+	}
+	else{
+		pickBannerImg();
+	}
 }
 
 function getDesignerBtnLink(){
