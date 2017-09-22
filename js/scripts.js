@@ -91,6 +91,7 @@ $(".priceThisBtn").on("click", sendProductPrice);
 function openNav(){
 	if(navOpenState===false){
 		pickBannerImg();
+
 		$("#leftNavSection").stop().animate({left:"-6.125rem"},{duration:200});
 		$("#rightNavSection").stop().animate({left:"6.125rem"},{duration:200});
 		$("#topNavSection").animate({height: "7.5rem"},{duration:300, complete: function(){
@@ -102,7 +103,7 @@ function openNav(){
 
 function closeNav(){
 	if(navOpenState===true){
-		$("#smallLogo").stop().fadeOut("fast", function(){
+		$("#smallLogo, #smallLogo-static").stop().fadeOut("fast", function(){
 			$("#topNavSection").animate({height: "5.45rem"},{duration:300});
 			$("#leftNavSection").animate({left:0},{duration:200});
 			$("#rightNavSection").animate({left:0},{duration:200});
@@ -114,8 +115,12 @@ function closeNav(){
 $(window).scroll(function(){
 	clearTimeout($.data(this, 'scrollTimer'));
 	$.data(this, 'scrollTimer', setTimeout(function(){
-		if($(window).scrollTop()>500){
+		if($(window).scrollTop()>500 && $(window).width()>=768){
 			openNav();
+			navOpenState = true;
+		}
+		else if($(window).scrollTop()>200 && $(window).width()<768){
+			$("#smallLogo-static").fadeIn("fast");
 			navOpenState = true;
 		}
 		else if($(window).scrollTop()<350){

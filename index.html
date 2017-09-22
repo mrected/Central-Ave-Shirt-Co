@@ -36,8 +36,8 @@ git pull https://github.com/mrected/Central-Ave-Shirt-Co.git
       <div id="navBlock">
         
         <div id="contactBar" class="contactBarOpen">
-            <a class="phoneEmailLinks" href="tel:727-327-3333"><i class="fa fa-phone" aria-hidden="true"></i> 727-327-3333</a>&nbsp;&nbsp;&nbsp;&nbsp;
-            <a class="phoneEmailLinks" href="mailto:artdept@helinger.com"><i class="fa fa-envelope-o" aria-hidden="true"></i> info</a>
+            <a class="phoneEmailLinks pull-left" href="tel:727-327-3333"><i class="fa fa-phone" aria-hidden="true"></i> 727-327-3333</a>
+            <a class="phoneEmailLinks pull-right" href="mailto:artdept@helinger.com"><i class="fa fa-envelope-o" aria-hidden="true"></i> info</a>
         </div>
           
         <nav class="navbar navbar-default">
@@ -51,7 +51,7 @@ git pull https://github.com/mrected/Central-Ave-Shirt-Co.git
                 <span class="icon-bar"></span>
               </button>
             </div>
-              
+              <a class="navbar-brand" href="index.html"><img src="images/cascLogoSmall.svg" id="smallLogo-static" class="mobileLogo img-responsive"></a>
             <div class="collapse navbar-collapse" id="navbar-collapse">
 
               <div id="topNavSection-xs" class=" visible-xs">
@@ -98,7 +98,7 @@ git pull https://github.com/mrected/Central-Ave-Shirt-Co.git
 
       <!--START TOP IMAGE/LOGO BLOCK-->
       <div id="logoDivMain" class="logoDiv">
-        <a href="#" class="blockLink"><img src="images/cascLogo1.svg" id="mainLogo" class="img-responsive center-block"></a><br>
+        <img src="images/cascLogo1.svg" id="mainLogo" class="img-responsive center-block"><br>
       </div>
       <!--END TOP IMAGE/LOGO BLOCK-->
 
@@ -134,7 +134,7 @@ git pull https://github.com/mrected/Central-Ave-Shirt-Co.git
                     <p class="text-center homeBoxTitle"><span id="itemType"></span></p>
 
                   
-                  <p class="text-center homeInfoBox">As low as <strong><span id="startCostTxt"></span></strong></p>
+                  <p class="text-center homeInfoBox">As low as <span class="lineBreak"><br></span><strong><span id="startCostTxt"></span></strong>!</p>
                     <div class="btn-group btn-group-justified homeBoxBtns" role="group" aria-label="...">
                       <a id="designLink" class='designThisBtn btn btn-default btn-xs' href='designer/designer.html' name='designShirt'><strong>Design This</strong></a>
                       <a id="infoLink" class="btn btn-default btn-xs" href=""><strong>More Info</strong></a>
@@ -153,9 +153,11 @@ git pull https://github.com/mrected/Central-Ave-Shirt-Co.git
                   
                     <a href="pricing.html" ><img class="img-responsive" src="images/dollaDollaBillYall.png" alt="George Washington in a t shirt"></a>
                     <div class="homeBox">
-                        <p class="text-center homeBoxTitle">Pricing</p>
-                        <p class="text-center homeInfoBox">Competitive pricing at 1 item or 10,000! </p>
-                        <a href="pricing.html" class="btn btn-primary btn-block btn-xs" alt="Pricing"><strong>Price list</strong></a>
+                      <p class="text-center homeBoxTitle">Pricing</p>
+                      <p class="text-center homeInfoBox">Competitive pricing at 1 or 10,000! </p>
+                      <div class="btn-group btn-group-justified homeBoxBtns" role="group" aria-label="...">
+                        <a href="pricing.html" class="btn btn-default btn-block btn-xs" alt="Pricing"><strong>Price list</strong></a>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -169,8 +171,11 @@ git pull https://github.com/mrected/Central-Ave-Shirt-Co.git
                     <h3 class="text-center thumbnailTitle orangeUl">Design it</h3>
                     <a href="designer/designer.html"><img class="img-responsive" src="images/designModels.png" alt="image of 2 people in t-shirts"></a>
                     <div class="homeBox">
-                        <p class="text-center roundedBorderLight homeBoxTitle">Have an idea or need an idea?</p>
-                        <p class="text-center homeInfoBox">Check out our <a href="designer/designer.html">design lab</a>.<br> Upload your own art or make your own.</p>
+                        <p class="text-center homeBoxTitle">Have an idea or need an idea?</p>
+                        <p class="text-center homeInfoBox">Upload your own art <span class="lineBreak"><br></span>or make your own</p>
+                        <div class="btn-group btn-group-justified homeBoxBtns" role="group" aria-label="...">
+                          <a id="designLink" class='designThisBtn btn btn-default btn-xs' href='designer/designer.html' name='designShirt'><strong>Design Lab</strong></a>
+                        </div>
                     </div>
                   </div>
                 </div>
