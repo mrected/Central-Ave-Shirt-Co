@@ -103,7 +103,7 @@ function openNav(){
 
 function closeNav(){
 	if(navOpenState===true){
-		$("#smallLogo, #smallLogo-static").stop().fadeOut("fast", function(){
+		$("#smallLogo, .mobileLogo").stop().fadeOut("fast", function(){
 			$("#topNavSection").animate({height: "5.45rem"},{duration:300});
 			$("#leftNavSection").animate({left:0},{duration:200});
 			$("#rightNavSection").animate({left:0},{duration:200});
@@ -120,7 +120,7 @@ $(window).scroll(function(){
 			navOpenState = true;
 		}
 		else if($(window).scrollTop()>200 && $(window).width()<768){
-			$("#smallLogo-static").fadeIn("fast");
+			$(".mobileLogo").fadeIn("fast");
 			navOpenState = true;
 		}
 		else if($(window).scrollTop()<350){
@@ -133,10 +133,12 @@ $(window).scroll(function(){
 
 
 function pickBannerImg(){
-	let getRandNum = Math.floor(Math.random()*(bannerArray.length));
-	currentImg = $("#logoDivMain").css('background-image')
-	bannerImage="images/bannerImages/" + bannerArray[getRandNum];
-	bannerDuplicateCheck();
+	if(document.getElementById("logoDivMain")){
+		let getRandNum = Math.floor(Math.random()*(bannerArray.length));
+		currentImg = $("#logoDivMain").css('background-image')
+		bannerImage="images/bannerImages/" + bannerArray[getRandNum];
+		bannerDuplicateCheck();
+	}
 }
 
 function bannerDuplicateCheck(){
@@ -155,14 +157,10 @@ function getDesignerBtnLink(){
 
 //EVENTS/CALLS*************************
 
-pickBannerImg();
 
-	
-
-	
-	
-	
-
+if(document.getElementById("logoDivMain")){
+	pickBannerImg();
+}
 
 
 

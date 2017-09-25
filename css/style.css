@@ -209,12 +209,10 @@ body{
 }
 
 #smallLogo-static{
-	display: inline-block;
+	display: none;
 	width:8rem;
 }
-.mobileLogo{
-	display: none;
-}
+
 
 .logoDiv{
 	background-color: #042a2b;
@@ -595,6 +593,10 @@ select{
     background-color: #fff;
 }
 
+#pricing{
+	margin-top: 6rem;
+}
+
 .mainTableHeader{
 	background-color: #042a2b;
 	color: #f4f4f4;
@@ -729,6 +731,10 @@ div.tab button.active {
 		box-shadow: 0 .5rem 1rem rgba(4,42,43,.8);
 		height:60rem;
 	}
+
+	#smallLogo-static{
+		display: inline-block;
+	}
 	.navLinks{
 		padding: 0 1rem;
 		line-height: 2rem;
@@ -747,6 +753,7 @@ div.tab button.active {
 	.navbar-nav li{
 		padding: 0 1rem;
 	}
+
 	#socialDropdown{
 		display: initial;
 		padding-right: 3rem;
