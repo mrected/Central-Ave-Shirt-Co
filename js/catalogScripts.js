@@ -28,7 +28,7 @@ function setColorBar(){
 	for(let i=0;i<numberOfColors;i++){
 		let colorTitle = replaceBackSlash(colorTitlesArray[i]);
 		colorBarString += `<a class="xlDefault" alt="changes item color to ${colorTitle}"><div class="productThumbnail" title="${colorTitlesArray[i]}"><img src="${showThumbnailsArray[i]}" alt="${colorTitle} ${itemInfo[itemToShow].name}"><br><p class="colorTitleLabel">${colorTitle}</p></div></a>`;
-		if(i%5===0 && i>1){
+		if(i===3 || i===7 || i===11 || i===15){
 			colorBarString+=`<br>`;
 		}
 	}
