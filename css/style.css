@@ -7,7 +7,15 @@ Tan:      	#e8d6cb | RGB  232,214,203
 Off White:  #f4f4f4 | RGB  244,244,244
 ***********/
 
+html{
+	height:100%;
+}
+
 body{
+	position: relative;
+	padding-bottom: 50rem;
+	margin:0;
+	min-height: 100%;
 	font-family: 'Roboto' sans-serif;
 }
 /**{
@@ -130,7 +138,7 @@ body{
 
 #navbarToggleBtn, #navbarToggleBtn a:visited{
 	background-color: rgba(4,42,43,.85);
-	margin-right: 2rem;
+	margin-right: 4rem;
 }
 
 
@@ -496,7 +504,7 @@ select{
 }
 
 .itemType-pricing{
-	font:3em 'Caveat Brush', cursive;
+	font:2em 'Caveat Brush', cursive;
 }
 
 
@@ -606,7 +614,7 @@ select{
 
 
 .pricingBoxBtns .btn-default{
-	font-size: 1.5rem;
+	font-size: 1rem;
 }
 
 .pricingBoxBtns .btn-default:active, .pricingBoxBtns .btn-default:visited, .pricingBoxBtns .btn-default{
@@ -683,6 +691,10 @@ div.tab button.active {
 /*footer styles*/
 
 #footerDiv{
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	left: 0;
 	margin-top: 10rem;
 	padding-top: 4rem;
 	background-color: #042a2b;
@@ -699,6 +711,10 @@ div.tab button.active {
 	list-style: none;
 }
 
+.footerLink{
+	font-size: 1.25rem;
+}
+
 .footerLink, .footerLink:active, .footerLink:visited {
 	color:rgba(244,244,244,.7);
 }
@@ -708,10 +724,15 @@ div.tab button.active {
 	text-decoration: none;
 }
 
-.footerLink
+
 
 
 @media (min-width: 365px){
+
+	.pricingBoxBtns .btn-default{
+		font-size: 1.25rem;
+	}
+
 	.homeInfoBox{
 		font-size: 1.25rem;
 	}
@@ -721,6 +742,10 @@ div.tab button.active {
 }
 
 @media (min-width: 575px){
+
+	.pricingBoxBtns .btn-default{
+		font-size: 1.5rem;
+	}
 
 	.hideSmallScreens{
 		display: initial;
@@ -750,7 +775,11 @@ div.tab button.active {
 	#catViewerPrev .fa, #catViewerNext .fa{
 		padding:7rem 0 11rem;
 	}
-	
+
+	.itemType-pricing{
+		font-size: 3em;
+	}
+		
 	
 	
 
