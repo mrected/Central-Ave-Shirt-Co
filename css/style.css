@@ -13,7 +13,7 @@ html{
 
 body{
 	position: relative;
-	padding-bottom: 50rem;
+	padding-bottom: 55rem;
 	margin:0;
 	min-height: 100%;
 	font-family: 'Roboto' sans-serif;
@@ -699,7 +699,7 @@ div.tab button.active {
 	padding-top: 4rem;
 	background-color: #042a2b;
 	color: #f4f4f4;
-	height: 50rem;
+	height: 55rem;
 
 }
 
@@ -713,6 +713,10 @@ div.tab button.active {
 
 .footerLink{
 	font-size: 1.25rem;
+}
+
+.footerLink-sm{
+	font-size: 1rem;
 }
 
 .footerLink, .footerLink:active, .footerLink:visited {
@@ -778,6 +782,14 @@ div.tab button.active {
 
 	.itemType-pricing{
 		font-size: 3em;
+	}
+
+	.footerLink{
+		font-size: 1.75rem;
+	}
+
+	.footerLink-sm{
+		font-size: 1.25rem;
 	}
 		
 	
