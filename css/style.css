@@ -435,6 +435,33 @@ p{
 	color:#042a2b;
 }
 
+.aboutItem{
+	background-color: rgba(4,42,43,.8);
+	color: #f4f4f4;
+	padding:.5rem 0 .5rem 1rem;
+	font:1.5em 'Caveat Brush', cursive;
+}
+
+.itemDetails{
+	font:1.5em 'Caveat Brush', cursive;
+	color:#042a2b;
+	border-bottom: solid .1rem #042a2b;
+	padding-left: 1rem;
+}
+
+.itemContent{
+	font: 300 1.5rem 'Zilla Slab', serif;
+	color:#042a2b;
+	padding: 0 1rem;
+}
+
+.tablinks{
+	font: 400 1.5rem 'Zilla Slab', serif;
+	z-index: 1000;
+}
+
+
+
 .productThumbnail img{
 	width:5rem;
 	margin-bottom: -3.25rem;
