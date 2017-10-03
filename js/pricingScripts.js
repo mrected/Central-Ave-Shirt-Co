@@ -221,6 +221,7 @@ function prevItem(){
 		itemAdtlCost = itemInfo[itemNumber].adtnlChrg;
 		setTotals();
 		displayName();
+		updateLinks();
 	});
 
 }

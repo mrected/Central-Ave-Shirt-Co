@@ -7,6 +7,7 @@ const colorTitlesArray = Object.keys(itemInfo[itemToShow].productImages.items);
 const numberOfColors=colorArray.length;
 const showItem = colorArray[Math.floor(Math.random()*numberOfColors)];
 let itemColor="";
+const currentItem = itemInfo[itemToShow].title;
 
 const prodMethod = {
 	'scr':0,
@@ -28,11 +29,11 @@ function setColorBar(){
 	for(let i=0;i<numberOfColors;i++){
 		let colorTitle = replaceBackSlash(colorTitlesArray[i]);
 		colorBarString += `<a class="xlDefault" alt="changes item color to ${colorTitle}"><div class="productThumbnail" title="${colorTitlesArray[i]}"><img src="${showThumbnailsArray[i]}" alt="${colorTitle} ${itemInfo[itemToShow].name}"><br><p class="colorTitleLabel">${colorTitle}</p></div></a>`;
-		if(i===3 || i===7 || i===11 || i===15){
-			colorBarString+=`<br>`;
-		}
+		// if(i===3 || i===7 || i===11 || i===15){
+		// 	colorBarString+=`<br>`;
+		// }
 	}
-	$("#colorBar").html(colorBarString);
+	$(".colorBar").html(colorBarString);
 	$('.productThumbnail').click(function(){
 		itemColor = $(this).attr('title');
 		$("#itemImage").attr({
@@ -76,30 +77,16 @@ function createPriceTable(){
 }
 
 
+function setOtherItemsBtn(){
+	let otherItemsStr = ``;
+	for(let i=0;i<itemInfo.length;i++){
+		if(itemInfo[i].title!==currentItem)
+			otherItemsStr += `<li id="${itemInfo[i].title + 'Li'}"><a href="${itemInfo[i].linkAttr_info}">${itemInfo[i].name}</a></li>`
+	}
 
-function catTab(evt, tabName) {
-    // Declare all variables
-    let i;
-    let tabcontent;
-    let tablinks;
-
-    // Get all elements with class="tabcontent" and hide them
-    tabcontent = $(".tabcontent");
-    for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
-    }
-
-    // Get all elements with class="tablinks" and remove the class "active"
-    tablinks = $(".tablinks");
-    for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace(" active", "");
-    }
-
-    // Show the current tab, and add an "active" class to the button that opened the tab
-    document.getElementById(tabName).style.display = "block";
-    evt.currentTarget.className += " active";
-
+	$("#otherItems").append(otherItemsStr);
 }
+
 
 
 
@@ -113,10 +100,12 @@ function catTab(evt, tabName) {
 
 
 //EVENTS/CALLS*************************
-document.getElementById("defaultOpen").click();
+$('.dropdown-toggle').dropdown();
+// document.getElementById("defaultOpen").click();
 createPriceTable();
 setInfo();
 setColorBar();
+setOtherItemsBtn();
 
 
 // $("document").ready(function(){

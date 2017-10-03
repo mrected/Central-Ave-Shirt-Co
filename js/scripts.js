@@ -162,6 +162,7 @@ if(document.getElementById("logoDivMain")){
 	pickBannerImg();
 }
 
+$('.dropdown-toggle').dropdown();
 
 
 

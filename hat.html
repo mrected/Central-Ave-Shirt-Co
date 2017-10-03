@@ -108,29 +108,53 @@ git pull https://github.com/mrected/Central-Ave-Shirt-Co.git
                   <div class="thumbnail" id="itemLayersDiv"><!--change itemLayersDiv in css and anything having to do with it-->
                     <img id="itemImage" src='' class='img-responsive'>
                   </div>
-                  <a href="catalog.html" onclick="backLink()"><i class="fa fa-caret-left" aria-hidden="true"></i> back</a>
+                  <h5 class="text-uppercase text-center itemDetails visible-xs"> Available Colors: </h5>
+                  <div id="colorBar-sm" class="colorBar"></div>
+                  <div class="btn-group btn-group-justified">
+                    <a href="#" class="btn btn-default" onclick="backLink()"><i class="fa fa-arrow-circle-left" aria-hidden="true"></i> Back</a>
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                      Other Items <span class="caret"></span></button>
+                      <ul id="otherItems" class="dropdown-menu" role="menu">
+                        
+                      </ul>
+                    </div>
+                  </div>
                 </div>
 
 
 
                 <div class="col-md-8 col-sm-6 homeColumns">
 
-                <div class="tab roundedBorderLight">
+                <!-- <div class="tab roundedBorderLight">
                   <button class="tablinks" id="defaultOpen" onclick="catTab(event, 'info')">Info</button>
                   <button class="tablinks" onclick="catTab(event, 'pricing')">Pricing</button>
                   <button class="tablinks" onclick="catTab(event, 'links')">Links</button>
-                </div>
+                </div> -->
 
-                <div id="info" class="tabcontent">
+                <div id="info">
                   <h5 class="text-uppercase aboutItem">About this <span id="itemName"></span></h5>
                   <p id="itemDesc" class="itemContent"></p>
-                  <h5 class="text-uppercase itemDetails"> Available Sizes   <strong><span id="itemSizes" class="ltBlueTxt"></span></strong></h5>
+                  <h5 class="text-uppercase itemDetails"> Available Sizes: <span id="itemSizes" class="orangeTxt"></span></h5>
                   <p id="itemSizes" class="text-uppercase"></p>
-                  <h5 class="text-uppercase itemDetails"> Available Colors</h5>
-                  <div id="colorBar"></div> 
+                  <h5 class="text-uppercase itemDetails hidden-xs"> Available Colors: </h5>
+                  <div id="colorBar-lg" class="colorBar hidden-xs"></div>
+
+                  
+
                 </div>
 
-                <div id="pricing" class="tabcontent">
+                <div id="links">
+                  <dl>
+                    <dt><a id="designLink" class='designThisBtn' href='designer/designer.html' name='#'>Send to Designer <i class="fa fa-caret-right" aria-hidden="true"></i></a></dt>
+                    <dd>Add a custom design to this item</dd>
+                    <dt><a id="vendorLink" href='#' target="_blank">More Styles <i class="fa fa-caret-right" aria-hidden="true"></i></a></dt>
+                    <dd>Visit our supplier to find more styles.<br><i class="fa fa-info-circle" aria-hidden="true"></i> <mark>Prices listed on supplier sites do not include production charges</mark></dd>
+                  </dl>
+                </div>
+
+                <div id="pricing">
+                  <h5 class="text-uppercase aboutItem">Pricing</h5>
                   <div class="table-responsive">                          
                     <table class="table table-hover table-condensed text-center priceTableStyle" id="priceChart"></table>
                   </div>
@@ -139,14 +163,7 @@ git pull https://github.com/mrected/Central-Ave-Shirt-Co.git
                   </div>
                 </div>
 
-                <div id="links" class="tabcontent">
-                  <dl>
-                    <dt><a id="designLink" class='designThisBtn' href='designer/designer.html' name='#'>Send to Designer <i class="fa fa-caret-right" aria-hidden="true"></i></a></dt>
-                    <dd>Add a custom design to this item</dd>
-                    <dt><a id="vendorLink" href='#' target="_blank">More Styles <i class="fa fa-caret-right" aria-hidden="true"></i></a></dt>
-                    <dd>Visit our supplier to find more styles.<br><i class="fa fa-info-circle" aria-hidden="true"></i> <mark>Prices listed on supplier sites do not include production charges</mark></dd>
-                  </dl>
-                </div>
+                
 
 
 
@@ -200,7 +217,7 @@ git pull https://github.com/mrected/Central-Ave-Shirt-Co.git
                 <div class="col-sm-3 col-xs-4">
                   <h4 class="footerTitle"><a href="catalog.html" class="footerLink">Catalog</a></h4>
                   <ul>
-                    <li><a href="tshirt.html" class="footerLink footerLink-sm">T-shirt</a></li>
+                    <li class="shirt"><a href="tshirt.html" class="footerLink footerLink-sm">T-shirt</a></li>
                     <li><a href="ls.html" class="footerLink footerLink-sm">Long Sleeve</a></li>
                     <li><a href="tank.html" class="footerLink footerLink-sm">Tank Top</a></li>
                     <li><a href="polo.html" class="footerLink footerLink-sm">Polo</a></li>
