@@ -59,9 +59,11 @@ $(document).ready(function(){
 			    	},
 			actions:  {
 						'top': ['download','print', 'snap', 'preview-lightbox'],
-						'right': ['magnify-glass', 'zoom', 'reset-product', 'qr-code', 'ruler'],
+						'right': ['zoom', 'reset-product', 'qr-code', 'ruler'],
 						'bottom': ['undo','redo'],
-						'left': ['manage-layers','info','save','load']
+						'left': ['info','manage-layers','save','load']
+
+						//unused: 'magnify-glass' 
 					},
 			mainBarModules: ['products','images', 'designs', 'text'],
 					colorSelectionPlacement: 'outside-br',
