@@ -48,6 +48,7 @@ const itemInfo = [
 				royal:'images/productImages/tshirt/tshirt-royal.png',
 				sapphire:'images/productImages/tshirt/tshirt-sapphire.png',
 				yellow_gold:'images/productImages/tshirt/tshirt-yellowGold.png',
+				white:'images/productImages/tshirt/tshirt-white.png'
 			},
 			item_thumbnails:{
 				black:'images/productImages/tshirt/tshirt-black-th.png',
@@ -59,7 +60,8 @@ const itemInfo = [
 				red:'images/productImages/tshirt/tshirt-red-th.png',
 				royal:'images/productImages/tshirt/tshirt-royal-th.png',
 				sapphire:'images/productImages/tshirt/tshirt-sapphire-th.png',
-				yellow_gold:'images/productImages/tshirt/tshirt-yellowGold-th.png'
+				yellow_gold:'images/productImages/tshirt/tshirt-yellowGold-th.png',
+				white:'images/productImages/tshirt/tshirt-white-th.png'
 			}
 
 		},
