@@ -1,5 +1,6 @@
 $(document).ready(function(){
 
+
 	//sets main item on Product Designer from Home
 	// alert(sessionStorage.getItem("sendProduct"));
 	let setProduct = sessionStorage.getItem("sendProductDesign");
@@ -96,7 +97,7 @@ $(document).ready(function(){
 		}
 	});
 
-
+	$(".fpd-color-pallette > div").tooltipster('disable');
 
 /*
 
