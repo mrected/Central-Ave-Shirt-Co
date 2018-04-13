@@ -1,0 +1,43 @@
+#wrapper{
+	display: grid;
+	grid-template-columns: repeat(6,1fr);
+}
+
+//grid areas for home page
+
+#topBar{
+	grid-area: topBar;
+}
+#nav{
+	grid-area: nav;
+}
+#topImage{
+	grid-area: topImage;
+}
+#styleQuoteDesign{
+	grid-area: styleQuoteDesign;
+	display: flex;
+	align-content: space-between;
+	width: 500px;
+}
+#prodMethods{
+	grid-area: prodMethods
+}
+#apparel{
+	grid-area: apparel;
+}
+#footer{
+	grid-area: footer;
+}
+
+#wrapper.home{
+	grid-template-areas: 
+	'topBar topBar topBar topBar topBar topBar'
+	'nav nav nav nav nav nav'
+	'topImage topImage topImage topImage topImage topImage'
+	'styleQuoteDesign styleQuoteDesign styleQuoteDesign styleQuoteDesign styleQuoteDesign styleQuoteDesign'
+	'prodMethods prodMethods prodMethods prodMethods prodMethods prodMethods'
+	'apparel apparel apparel apparel apparel apparel'
+	'footer footer footer footer footer footer'
+}
+
