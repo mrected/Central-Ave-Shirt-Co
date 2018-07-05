@@ -1,6 +1,28 @@
+:root {
+  --bodyColor:#f4f4f4;
+  --ltBlueText:#2292a4;
+  --orangeText:#d84727;
+  --darkBlue:#042a2b; }
+
+html {
+  font-size: 10px; }
+
+body {
+  font-family: 'Roboto' sans-serif;
+  font-size: 2rem; }
+
+html {
+  height: 100%; }
+
 #wrapper {
   display: grid;
   grid-template-columns: repeat(6, 1fr); }
+
+.pull-left {
+  grid-column-start: 1; }
+
+.pull-right {
+  grid-column-start: 6; }
 
 #topBar {
   grid-area: topBar; }
@@ -28,5 +50,20 @@
 
 #wrapper.home {
   grid-template-areas: "topBar topBar topBar topBar topBar topBar" "nav nav nav nav nav nav" "topImage topImage topImage topImage topImage topImage" "styleQuoteDesign styleQuoteDesign styleQuoteDesign styleQuoteDesign styleQuoteDesign styleQuoteDesign" "prodMethods prodMethods prodMethods prodMethods prodMethods prodMethods" "apparel apparel apparel apparel apparel apparel" "footer footer footer footer footer footer"; }
+
+.fullWidth-flex {
+  grid-column-start: 1;
+  grid-column-end: -1; }
+
+#topBar {
+  padding: 5px 30px 7px;
+  text-decoration: none;
+  background-color: var(--darkBlue);
+  height: 30px;
+  transition: 500; }
+
+#topBar a:visited, #topBar a:active, #topBar a:hover, #topBar a {
+  color: var(--bodyColor);
+  text-decoration: none; }
 
 /*# sourceMappingURL=newstyle.css.map */

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset="UTF-8">
+    <title>Tests ES6 Compatibility</title>
+</head>
+<body>
+    <div id='testdiv'>
+
+    </div>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <script>
+
+    const thumbsUpImg = "https://static.highsnobiety.com/wp-content/uploads/2017/03/17105839/netflix-star-ratings-thumbs-up-1-960x640.jpg";
+    
+    const es6Test = () => `<img src="${thumbsUpImg}">`;
+    document.getElementById('testdiv').innerHTML = es6Test();
+    </script>
+
+</body>
+</html>

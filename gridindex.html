@@ -30,14 +30,20 @@
 
 	<link rel="shortcut icon" href="images/brand-Favicon.ico" type="image/x-icon">
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
-
+	<link href="https://fonts.googleapis.com/css?family=Anton|Zilla+Slab:300,400,700|Roboto:100,400,400i,700" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/newstyle.css">
 	
 </head>
 
-<body>
+<body onload="updateInfo()">
 	<div id="wrapper" class="home">
-		<div id="topBar">top bar</div>
+
+		<div id="topBar" class="contactBarOpen">
+				<a class="phone-link pull-left" href="tel:727-327-3333"><i class="fa fa-phone" aria-hidden="true"></i> <span class='phone-number'>727-327-3333</span></a>
+				<a class='mail-info'class="pull-right" href="mailto:artdept@helinger.com"><i class="fa fa-envelope-o" aria-hidden="true"></i> info</a>
+			</div>
+		</div>
+
 		<div id="nav">nav</div>
 		<div id="topImage">top image</div>
 		<div id="styleQuoteDesign">
@@ -47,7 +53,15 @@
 		</div>
 		<div id="prodMethods">Production Methods</div>
 		<div id="apparel">Apparel</div>
-		<div id="footer">Footer</div>
+		<div id="footer">
+			<ul>
+				<li><a class='phone-link' href='tel:727-327-3333'></a><span class='phone-number'>727-327-3333</span></li>
+				<li><a class='mail-info' href='info@centralAveShirt.com'>info@centralaveshirt.com</a></li>
+				<li><a class='mail-art' href='artdept@centralaveshirt.com'>artdept@centralaveshirt.com</a></li>
+				<li><span class='address'>4201 Central Ave<br>St. Petersburg, FL 33713</span></li>
+			</ul>
+		</div>
 	</div>
+	<script src='location/js/location.js'></script>
 </body>
 </html>
