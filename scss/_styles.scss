@@ -1,0 +1,46 @@
+//top bar
+
+#topBar{
+	padding: 5px 30px 7px;
+	text-decoration: none;
+	background-color: var(--darkBlue);
+	height: 30px;
+	transition: 500;
+}
+
+
+    #topBar a:visited, #topBar a:active, #topBar a:hover, #topBar a{
+        color: var(--bodyColor);
+        text-decoration: none;
+    }
+
+//nav
+
+#nav{
+    background:var(--bodyColor);
+}
+
+    .nav-elements{
+        display: inline-block;
+    }
+
+    #nav-logo{
+        height: 60px;
+    }
+
+        .nav-links{
+            list-style-type: none;
+            margin:0;
+            padding:0;
+        }
+
+            .nav-links li{
+                display: inline;
+                
+                margin: 10px 20px;
+            }
+
+            .nav-links li a{
+                display: inline-block;
+                padding: 15px 0;
+            }

@@ -1,0 +1,18 @@
+body{
+    font-family: var(--body-font);
+}
+
+
+.nav-links a{
+    text-transform: uppercase;
+    font: 2rem var(--button-font);
+    text-decoration: none;
+}
+
+    .nav-links a:link, .nav-links a:visited{
+        color:var(--grey);
+    }
+
+    .nav-links a:hover, .nav-links a:active{
+        color:var(--ltGrey);
+    }

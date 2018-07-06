@@ -42,7 +42,7 @@ function updateInfo(){
     const mailArt = Array.from(document.querySelectorAll('.mail-art'));
     const address = Array.from(document.querySelectorAll('.address'));
  
-    phoneLink.map(info => info.href = `tel:${loc.phone}`);
+    phoneLink.map(info => info.href = `tel:1-${loc.phone}`);
     phoneNumber.map(info => info.innerHTML = loc.phone);
     mailInfo.map(info => {
         info.href = `mailto:info${loc.emailDomain}`;

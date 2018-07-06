@@ -1,12 +1,25 @@
+//use grid-template-rows to define column heights instead of what you're using now
+
 html{
 	height:100%;
+	box-sizing:border-box;
 }
 
+/**{
+	border: 1px solid black;
+}*/
+
+*,
+*:before,
+*:after{
+	box-sizing: inherit;
+}
 
 
 #wrapper{
 	display: grid;
 	grid-template-columns: repeat(6,1fr);
+	grid-template-rows: 30px 60px 600px 657px 770px 900px 300px;
 }
 
 //layout utilities
@@ -28,7 +41,17 @@ html{
 
 #nav{
 	grid-area: nav;
+	justify-self: stretch;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
+
+
+	#nav > div{
+		border: 1px solid black;
+	}
+
 #topImage{
 	grid-area: topImage;
 }
