@@ -24,14 +24,14 @@
  */
 
 const loc = {
-    locName: 'Chicago',
+    locName: 'Chicago Shirt Co',
     city: 'Chicago',
     state: 'Illinois',
     stateAbv: 'IL',
     address: '1060 W Addison St',
     zip: '60613',
     phone: '727-479-3825',
-    emailDomain: '@someothersite.com',
+    emailDomain: '@chicagoshirt.com',
 }
 
 function updateInfo(){
@@ -41,6 +41,7 @@ function updateInfo(){
     const mailInfo = Array.from(document.querySelectorAll('.mail-info'));
     const mailArt = Array.from(document.querySelectorAll('.mail-art'));
     const address = Array.from(document.querySelectorAll('.address'));
+    const locationName = Array.from(document.querySelectorAll('.location-name'));
  
     phoneLink.map(info => info.href = `tel:1-${loc.phone}`);
     phoneNumber.map(info => info.innerHTML = loc.phone);
@@ -53,12 +54,11 @@ function updateInfo(){
         info.innerHTML = `artdept${loc.emailDomain}`;
     });
     address.map(info => info.innerHTML = `${loc.address}<br>${loc.city}, ${loc.stateAbv} ${loc.zip}`);
+    locationName.map(info => info.innerHTML = `${loc.locName}`);
     
 
 }
-
-
-
+updateInfo();
 
 
 

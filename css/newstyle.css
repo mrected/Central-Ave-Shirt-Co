@@ -27,7 +27,7 @@ html {
 #wrapper {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: 30px 60px 600px 657px 770px 900px 300px; }
+  grid-template-rows: 600px 657px 770px 900px 300px; }
 
 .pull-left {
   grid-column-start: 1; }
@@ -36,17 +36,15 @@ html {
   grid-column-start: 6; }
 
 #topBar {
-  grid-area: topBar; }
+  position: fixed;
+  width: 100%; }
 
 #nav {
-  grid-area: nav;
+  position: fixed;
   justify-self: stretch;
   display: flex;
   justify-content: center;
   align-items: center; }
-
-#nav > div {
-  border: 1px solid black; }
 
 #topImage {
   grid-area: topImage; }
@@ -67,7 +65,7 @@ html {
   grid-area: footer; }
 
 #wrapper.home {
-  grid-template-areas: "topBar topBar topBar topBar topBar topBar" "nav nav nav nav nav nav" "topImage topImage topImage topImage topImage topImage" "styleQuoteDesign styleQuoteDesign styleQuoteDesign styleQuoteDesign styleQuoteDesign styleQuoteDesign" "prodMethods prodMethods prodMethods prodMethods prodMethods prodMethods" "apparel apparel apparel apparel apparel apparel" "footer footer footer footer footer footer"; }
+  grid-template-areas: "topImage topImage topImage topImage topImage topImage" "styleQuoteDesign styleQuoteDesign styleQuoteDesign styleQuoteDesign styleQuoteDesign styleQuoteDesign" "prodMethods prodMethods prodMethods prodMethods prodMethods prodMethods" "apparel apparel apparel apparel apparel apparel" "footer footer footer footer footer footer"; }
 
 .fullWidth-flex {
   grid-column-start: 1;
@@ -99,18 +97,39 @@ body {
   text-decoration: none; }
 
 #nav {
-  background: var(--bodyColor); }
+  background: var(--bodyColor);
+  margin-top: 30px;
+  width: 100%; }
 
 .nav-elements {
   display: inline-block; }
 
 #nav-logo {
-  height: 60px; }
+  width: 0;
+  padding: 2px 0; }
+
+#nav-logo.open {
+  width: 60px; }
 
 .nav-links {
   list-style-type: none;
   margin: 0;
   padding: 0; }
+
+.nav-left, .nav-right {
+  transition: 200ms; }
+
+.nav-left.open {
+  transform: translateX(-60px); }
+
+.nav-right.open {
+  transform: translateX(60px); }
+
+.nav-left {
+  transform: translateX(0); }
+
+.nav-right {
+  transform: translateX(0); }
 
 .nav-links li {
   display: inline;
@@ -119,5 +138,8 @@ body {
 .nav-links li a {
   display: inline-block;
   padding: 15px 0; }
+
+#topImage {
+  margin-top: 90px; }
 
 /*# sourceMappingURL=newstyle.css.map */

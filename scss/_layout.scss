@@ -19,7 +19,7 @@ html{
 #wrapper{
 	display: grid;
 	grid-template-columns: repeat(6,1fr);
-	grid-template-rows: 30px 60px 600px 657px 770px 900px 300px;
+	grid-template-rows: 600px 657px 770px 900px 300px;
 }
 
 //layout utilities
@@ -35,12 +35,13 @@ html{
 //grid areas for home page
 
 #topBar{
-	grid-area: topBar;
+	position: fixed;
+	width: 100%;
 }
 
 
 #nav{
-	grid-area: nav;
+	position: fixed;
 	justify-self: stretch;
 	display: flex;
 	justify-content: center;
@@ -48,9 +49,7 @@ html{
 }
 
 
-	#nav > div{
-		border: 1px solid black;
-	}
+	
 
 #topImage{
 	grid-area: topImage;
@@ -73,8 +72,6 @@ html{
 
 #wrapper.home{
 	grid-template-areas: 
-	'topBar topBar topBar topBar topBar topBar'
-	'nav nav nav nav nav nav'
 	'topImage topImage topImage topImage topImage topImage'
 	'styleQuoteDesign styleQuoteDesign styleQuoteDesign styleQuoteDesign styleQuoteDesign styleQuoteDesign'
 	'prodMethods prodMethods prodMethods prodMethods prodMethods prodMethods'

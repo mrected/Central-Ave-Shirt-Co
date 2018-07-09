@@ -18,6 +18,8 @@
 
 #nav{
     background:var(--bodyColor);
+    margin-top: 30px;
+    width: 100%;
 }
 
     .nav-elements{
@@ -25,14 +27,44 @@
     }
 
     #nav-logo{
-        height: 60px;
+        
+        width:0;
+        padding:2px 0;
     }
+
+        #nav-logo.open{
+            width:60px;
+
+        }
 
         .nav-links{
             list-style-type: none;
             margin:0;
             padding:0;
         }
+
+        .nav-left, .nav-right{
+            transition: 200ms;
+        }
+        .nav-left.open{
+            transform: translateX(-60px);
+        }
+
+        .nav-right.open{
+            transform: translateX(60px);
+        }
+
+        .nav-left{
+            transform: translateX(0);
+        }
+
+        .nav-right{
+            transform: translateX(0);
+        }
+
+        // .nav-right{
+        //     
+        // }
 
             .nav-links li{
                 display: inline;
@@ -44,3 +76,7 @@
                 display: inline-block;
                 padding: 15px 0;
             }
+
+#topImage{
+    margin-top: 90px;
+}
