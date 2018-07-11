@@ -108,3 +108,17 @@ switch statement that takes that variable and matches corresponding div and plac
 
 });
 
+// const mailBtn = document.getElementById('send-image-mail-php');
+// mailBtn.addEventListener('click', alert('worked'));
+
+$('#send-image-mail-php').click(function() {
+
+		designer.getProductDataURL(function(dataURL) {
+			$.post( "php/send_image_via_mail.php", { base64_image: dataURL} );
+		});
+		console.log('event fired');
+
+	});
+
+//see this:  http://php.net/manual/en/function.mail.php
+

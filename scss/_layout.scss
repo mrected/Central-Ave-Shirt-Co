@@ -1,6 +1,22 @@
+html{
+	height:100%;
+}
+
+
+
 #wrapper{
 	display: grid;
 	grid-template-columns: repeat(6,1fr);
+}
+
+//layout utilities
+
+.pull-left{
+	grid-column-start: 1;
+}
+
+.pull-right{
+	grid-column-start: 6;
 }
 
 //grid areas for home page
@@ -8,6 +24,8 @@
 #topBar{
 	grid-area: topBar;
 }
+
+
 #nav{
 	grid-area: nav;
 }
@@ -41,3 +59,10 @@
 	'footer footer footer footer footer footer'
 }
 
+
+//flexboxes
+
+.fullWidth-flex{
+	grid-column-start: 1;
+	grid-column-end: -1;
+}
