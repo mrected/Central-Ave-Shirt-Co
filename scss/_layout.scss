@@ -1,12 +1,42 @@
+<<<<<<< HEAD
 html{
 	height:100%;
 }
 
+=======
+//use grid-template-rows to define column heights instead of what you're using now
+
+html{
+	height:100%;
+	box-sizing:border-box;
+}
+
+/**{
+	border: 1px solid black;
+}*/
+
+*,
+*:before,
+*:after{
+	box-sizing: inherit;
+}
+>>>>>>> 385ea659d9ce056ad71086b372f73411fc15beb6
 
 
 #wrapper{
 	display: grid;
 	grid-template-columns: repeat(6,1fr);
+	grid-template-rows: 600px 657px 770px 900px 300px;
+}
+
+//layout utilities
+
+.pull-left{
+	grid-column-start: 1;
+}
+
+.pull-right{
+	grid-column-start: 6;
 }
 
 //layout utilities
@@ -22,13 +52,22 @@ html{
 //grid areas for home page
 
 #topBar{
-	grid-area: topBar;
+	position: fixed;
+	width: 100%;
 }
 
 
 #nav{
-	grid-area: nav;
+	position: fixed;
+	justify-self: stretch;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
+
+
+	
+
 #topImage{
 	grid-area: topImage;
 }
@@ -50,8 +89,6 @@ html{
 
 #wrapper.home{
 	grid-template-areas: 
-	'topBar topBar topBar topBar topBar topBar'
-	'nav nav nav nav nav nav'
 	'topImage topImage topImage topImage topImage topImage'
 	'styleQuoteDesign styleQuoteDesign styleQuoteDesign styleQuoteDesign styleQuoteDesign styleQuoteDesign'
 	'prodMethods prodMethods prodMethods prodMethods prodMethods prodMethods'

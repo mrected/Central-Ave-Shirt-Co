@@ -31,13 +31,13 @@ git pull https://github.com/mrected/Central-Ave-Shirt-Co.git
 
     </head>
 
-    <body>
+    <body onload= 'updateInfo()'>
       <!--START NAV BLOCK-->
       <div id="navBlock">
         
         <div id="contactBar" class="contactBarOpen">
-            <a class="phoneEmailLinks pull-left" href="tel:727-327-3333"><i class="fa fa-phone" aria-hidden="true"></i> 727-327-3333</a>
-            <a class="phoneEmailLinks pull-right" href="mailto:artdept@helinger.com"><i class="fa fa-envelope-o" aria-hidden="true"></i> info</a>
+            <a class="phoneEmailLinks pull-left phone-link" href="tel:727-327-3333"><i class="fa fa-phone" aria-hidden="true"></i> <span class="phone-number">727-327-3333</span></a>
+            <a class="phoneEmailLinks pull-right mail-info" href="mailto:artdept@helinger.com"><i class="fa fa-envelope-o" aria-hidden="true"></i> info</a>
         </div>
           
         <nav class="navbar navbar-default">
@@ -322,14 +322,15 @@ git pull https://github.com/mrected/Central-Ave-Shirt-Co.git
                   <ul>
                     <li>
                       <address>
-                        <strong>Central Ave Shirt Co</strong><br>
+                        <strong><span class="location-name">Central Ave Shirt Co</span></strong><br>
+                        <span class='address'>
                         4215 Central Ave<br>
-                        St Petersburg, FL 33713
+                        St Petersburg, FL 33713</span>
                       </address>
                     </li>
-                    <li>P: <a href="tel:727-327-3333" class="footerLink footerLink-sm">(727) 823-4447</a></li>
-                    <li><strong>Email:</strong> <a href="mailto:info@centralaveshirt.com" class="footerLink footerLink-sm">info@centralaveshirt.com</a></li>
-                    <li><strong>Art:</strong> <a href="mailto:artdept@centralaveshirt.com" class="footerLink footerLink-sm">artdept@centralaveshirt.com</a></li>
+                    <li>Phone: <a href="tel:727-327-3333" class="footerLink footerLink-sm phone-link"><span class="phone-number">727-327-3333</span></a></li>
+                    <li><strong>Email:</strong> <a href="mailto:info@centralaveshirt.com" class="footerLink footerLink-sm mail-info">info@centralaveshirt.com</a></li>
+                    <li><strong>Art:</strong> <a href="mailto:artdept@centralaveshirt.com" class="footerLink footerLink-sm mail-art">artdept@centralaveshirt.com</a></li>
                     <li><a href="social.html" class="footerLink footerLink-sm" alt="facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>&nbsp;
                             <a href="social.html" class="footerLink footerLink-sm" alt="flickr"><i class="fa fa-flickr" aria-hidden="true"></i></a>&nbsp;
                             <a href="social.html" class="footerLink footerLink-sm" alt="google plus"><i class="fa fa-google-plus" aria-hidden="true"></i></a>&nbsp;
@@ -368,10 +369,14 @@ git pull https://github.com/mrected/Central-Ave-Shirt-Co.git
         <!-- <script type="text/javascript">
           const rotateBanner=true;
         </script> -->
+<<<<<<< HEAD
         <script>
           const testMsg = () => 'ES6 Works';
           console.log(testMsg());
         </script>
+=======
+        <script src='location/js/location.js'></script>
+>>>>>>> 385ea659d9ce056ad71086b372f73411fc15beb6
         <script type="text/javascript" src="js/scripts.js"></script>
         <script type="text/javascript" src="js/itemData.js"></script>
         
