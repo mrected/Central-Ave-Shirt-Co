@@ -14,30 +14,30 @@ function debounce(func, wait = 20, immediate = true) {
   }
 
 
-  const navTrigger = document.querySelector('#topImage');
+const navTrigger = document.querySelector('#topImage');
   
-//window.scrollY - distance in px top of window has traveled
-//window.innerHeight - total height of viewport
+// window.scrollY - distance in px top of window has traveled
+// window.innerHeight - total height of viewport
 
 const navLogo = document.querySelector('#nav-logo');
 const navLeft = document.querySelector('.nav-left');
 const navRight = document.querySelector('.nav-right');
 
-  function navAnimate(){
-    if(window.scrollY > navTrigger.offsetHeight){
-      navLeft.classList.add('open');
-      navRight.classList.add('open');
-      navLogo.classList.add('open');
-    }
+function navAnimate() {
+  if (window.scrollY > navTrigger.offsetHeight) {
+    navLeft.classList.add('open');
+    navRight.classList.add('open');
+    navLogo.classList.add('open');
+  }
 
-    else{
-      navLeft.classList.remove('open');
-      navRight.classList.remove('open');
-      navLogo.classList.remove('open');
-    }
+  else {
+    navLeft.classList.remove('open');
+    navRight.classList.remove('open');
+    navLogo.classList.remove('open');
+  }
 }
 
-  window.addEventListener('scroll', debounce(navAnimate));
+window.addEventListener('scroll', debounce(navAnimate));
 
 // console.log(navTrigger);
 //   function checkSlide(e){
@@ -59,6 +59,6 @@ const navRight = document.querySelector('.nav-right');
 
 //   window.addEventListener('scroll', debounce(checkSlide));
 
-  // function open(){
-  //     const 
-  // }
+// function open(){
+//     const 
+// } 
