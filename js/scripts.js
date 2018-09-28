@@ -1,125 +1,133 @@
-//VARIABLES*************************
-let currentImg="";
-let bannerImage="";
+// VARIABLES*************************
+let currentImg = '';
+let bannerImage = '';
 let navOpenState = false;
-const bannerArray = ["Banner-cheetah.jpg",
-						"Banner-dogWalker.jpg",
-						"Banner-downCentral.jpg",
-						"Banner-estInStPete.jpg",
-						"Banner-Fergs.jpg",
-						"Banner-Jannus.jpg",
-						"Banner-localArt.jpg",
-						"Banner-Monk.jpg",
-						"Banner-Piano.jpg",
-						"Banner-Sidewalk.jpg",
-						"Banner-sidewalk2.jpg",
-						"Banner-streetColors.jpg",
-						"Banner-Trolley.jpg"
-						];
+const bannerArray = ['Banner-cheetah.jpg',
+  'Banner-dogWalker.jpg',
+  'Banner-downCentral.jpg',
+  'Banner-estInStPete.jpg',
+  'Banner-Fergs.jpg',
+  'Banner-Jannus.jpg',
+  'Banner-localArt.jpg',
+  'Banner-Monk.jpg',
+  'Banner-Piano.jpg',
+  'Banner-Sidewalk.jpg',
+  'Banner-sidewalk2.jpg',
+  'Banner-streetColors.jpg',
+  'Banner-Trolley.jpg',
+];
 
 
+// FUNCTIONS*************************
 
-//FUNCTIONS*************************
-
-//Utilities
-function backLink(){
-	window.history.back();
+// Utilities
+function backLink() {
+  window.history.back();
 }
 
-//Rounds currency 
+// Rounds currency 
 // const roundCurrency = cost => cost = cost.toFixed(2);
 
-function roundCurrency(cost){
-	return cost.toFixed(2);
+function roundCurrency(cost) {
+  return cost.toFixed(2);
 }
 
 
+// fixes jumpy scroll over fixed backround in ie11
+if (navigator.userAgent.match(/Trident\/7\./)) { // if IE
+  $('body').on('mousewheel', () => {
+    event.preventDefault(); 
 
-//fixes jumpy scroll over fixed backround in ie11
-if(navigator.userAgent.match(/Trident\/7\./)) { // if IE
-        $('body').on("mousewheel", function () {
-            event.preventDefault(); 
-
-            let wheelDelta = event.wheelDelta;
-            let currentScrollPosition = window.pageYOffset;
-            window.scrollTo(0, currentScrollPosition - wheelDelta);
-        });
+    let wheelDelta = event.wheelDelta;
+    let currentScrollPosition = window.pageYOffset;
+    window.scrollTo(0, currentScrollPosition - wheelDelta);
+  });
 }
 
-//enables links in tabs
-$(document).ready(function(){
-	$('.tabbable .tab-pane a').unbind();
-});
-	
-
-
-//cancels default action
-$(".xlDefault").click(function(e){
-	e.preventDefault();
+// enables links in tabs
+$(document).ready(() => {
+  $('.tabbable .tab-pane a').unbind();
 });
 
-//Enable tooltips
-$(function () {
+
+// cancels default action
+$('.xlDefault').click((e) => {
+  e.preventDefault();
+});
+
+// Enable tooltips
+$(() => {
   $('[data-toggle="tooltip"]').tooltip()
 });
 
-//Enable popovers
-$(function () {
+// Enable popovers
+$(() => {
   $('[data-toggle="popover"]').popover();
 });
 
-//sends to designer based on name attr
+// sends to designer based on name attr
 
-function sendProductDesign(){
-	let product = "#" + $(this).attr("name");
-	sessionStorage.setItem("sendProductDesign",product);
+function sendProductDesign() {
+  const product = `#${$(this).attr('name')}`;
+  sessionStorage.setItem('sendProductDesign', product);
 }
 
-function sendProductPrice(){
-	let product = "#" + $(this).attr("name");
-	sessionStorage.setItem("sendProductPrice",product);
+function sendProductPrice() {
+  const product = `#${$(this).attr('name')}`;
+  sessionStorage.setItem('sendProductPrice', product);
 }
 
-$(".designThisBtn").on("click", sendProductDesign);
+$('.designThisBtn').on('click', sendProductDesign);
 
-$(".priceThisBtn").on("click", sendProductPrice);
+$('.priceThisBtn').on('click', sendProductPrice);
 
-//End Utilities
+// End Utilities
 
-//Opening and closing navbar
+// Opening and closing navbar
 
-function openNav(){
-	if(navOpenState===false){
-		pickBannerImg();
-
-		$("#leftNavSection").stop().animate({left:"-6.125rem"},{duration:200});
-		$("#rightNavSection").stop().animate({left:"6.125rem"},{duration:200});
-		$("#topNavSection").animate({height: "7.5rem"},{duration:300, complete: function(){
-			$("#smallLogo").fadeIn("fast");
-			}
-		});
-	}
+function pickBannerImg() {
+  if (document.getElementById('logoDivMain')) {
+    const getRandNum = Math.floor(Math.random() * (bannerArray.length));
+    currentImg = $('#logoDivMain').css('background-image');
+    bannerImage = `images/bannerImages/${bannerArray[getRandNum]}`;
+    bannerDuplicateCheck();
+  }
 }
 
-function closeNav(){
-	if(navOpenState===true){
-		$("#smallLogo, .mobileLogo").stop().fadeOut("fast", function(){
-			$("#topNavSection").animate({height: "5.45rem"},{duration:300});
-			$("#leftNavSection").animate({left:0},{duration:200});
-			$("#rightNavSection").animate({left:0},{duration:200});
-		});
-	}
+function openNav() {
+  if (navOpenState === false) {
+    pickBannerImg();
+
+    $('#leftNavSection').stop().animate({ left: '-6.125rem' }, { duration: 200 });
+    $('#rightNavSection').stop().animate({ left: '6.125rem' }, { duration: 200 });
+    $('#topNavSection').animate({ height: '7.5rem' }, { 
+      duration: 300,
+      complete() {
+        $('#smallLogo').fadeIn('fast');
+      },
+    });
+  }
+}
+
+function closeNav() {
+  if (navOpenState === true) {
+    $('#smallLogo, .mobileLogo').stop().fadeOut('fast', () => {
+      $('#topNavSection').animate({ height: '5.45rem' }, { duration: 300 });
+      $('#leftNavSection').animate({ left: 0 }, { duration: 200 });
+      $('#rightNavSection').animate({ left: 0 }, { duration: 200 });
+    });
+  }
 }
 
 
-$(window).scroll(function(){
-	clearTimeout($.data(this, 'scrollTimer'));
-	$.data(this, 'scrollTimer', setTimeout(function(){
-		if($(window).scrollTop()>500 && $(window).width()>=768){
-			openNav();
+$(window).scroll(function () {
+  clearTimeout($.data(this, 'scrollTimer'));
+  $.data(this, 'scrollTimer', setTimeout(() => {
+    if ($(Window).scrollTop() > 500 && $(Window).width() >= 768 ) {
+    openNav ();
 			navOpenState = true;
 		}
-		else if($(window).scrollTop()>200 && $(window).width()<768){
+		else if($(window).scrollTop()>200 && $(window).width()<768) {
 			$(".mobileLogo").fadeIn("fast");
 			navOpenState = true;
 		}
@@ -127,75 +135,36 @@ $(window).scroll(function(){
 			closeNav();
 			navOpenState = false;
 		}
-	},250));
+	}, 250));
 });
 
 
-
-function pickBannerImg(){
-	if(document.getElementById("logoDivMain")){
-		let getRandNum = Math.floor(Math.random()*(bannerArray.length));
-		currentImg = $("#logoDivMain").css('background-image')
-		bannerImage="images/bannerImages/" + bannerArray[getRandNum];
-		bannerDuplicateCheck();
-	}
+function bannerDuplicateCheck() {
+  if (currentImg.search(bannerImage) === -1) {
+    $('#logoDivMain').css('background-image', `url(${bannerImage})`);
+  } else {
+    pickBannerImg();
+  }
 }
 
-function bannerDuplicateCheck(){
-	if(currentImg.search(bannerImage)===-1){
-		$("#logoDivMain").css('background-image', 'url('+ bannerImage + ')');
-	}
-	else{
-		pickBannerImg();
-	}
+function getDesignerBtnLink() {
+  const product = `#${$('.designThisBtn').attr('name')}`;
+  sessionStorage.setItem('sendProduct', product);
 }
 
-function getDesignerBtnLink(){
-	let product = "#" + $(".designThisBtn").attr("name");
-	sessionStorage.setItem("sendProduct",product);
-}
-
-//EVENTS/CALLS*************************
+// EVENTS/CALLS*************************
 
 
-if(document.getElementById("logoDivMain")){
-	pickBannerImg();
+if (document.getElementById('logoDivMain')) {
+  pickBannerImg();
 }
 
 $('.dropdown-toggle').dropdown();
 
 
+// gets product name and transfers to designer page to arrange divs
 
-	
-
-
-
-	
-
-
-	
-
-
-		
-
-
-
-	
-
-
-		//gets product name and transfers to designer page to arrange divs
-
-	// $(".designThisBtn").on("click", function sendProductVar(){
-	// 	var product = "#" + $(this).attr("name");
-	// 	sessionStorage.setItem("sendProduct",product);
-	// });
-
-
-
-
-
-
-
-
-
-
+// $(".designThisBtn").on("click", function sendProductVar(){
+// var product = "#" + $(this).attr("name");
+// sessionStorage.setItem("sendProduct",product);
+// });
