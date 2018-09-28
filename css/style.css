@@ -108,6 +108,7 @@ body{
 }
 
 .navbar-brand{
+	padding: 5px 15px;
 	margin-left: -6rem;
 	position: absolute;
 	left:50%;
