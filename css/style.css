@@ -220,7 +220,7 @@ body{
 	height:7.5rem;
 }
 
-#smallLogo-static{
+#smallLogo-static-sm, #smallLogo-static-lg{
 	display: none;
 	width:8rem;
 }
@@ -875,7 +875,7 @@ div.tab button.active {
 		height:60rem;
 	}
 
-	#smallLogo-static{
+	#smallLogo-static-lg {
 		display: inline-block;
 	}
 	.navLinks{
