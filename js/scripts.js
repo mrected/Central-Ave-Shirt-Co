@@ -2,20 +2,6 @@
 let currentImg = '';
 let bannerImage = '';
 let navOpenState = false;
-const bannerArray = ['Banner-cheetah.jpg',
-  'Banner-dogWalker.jpg',
-  'Banner-downCentral.jpg',
-  'Banner-estInStPete.jpg',
-  'Banner-Fergs.jpg',
-  'Banner-Jannus.jpg',
-  'Banner-localArt.jpg',
-  'Banner-Monk.jpg',
-  'Banner-Piano.jpg',
-  'Banner-Sidewalk.jpg',
-  'Banner-sidewalk2.jpg',
-  'Banner-streetColors.jpg',
-  'Banner-Trolley.jpg',
-];
 
 
 // FUNCTIONS*************************
@@ -89,7 +75,7 @@ function pickBannerImg() {
   if (document.getElementById('logoDivMain')) {
     const getRandNum = Math.floor(Math.random() * (bannerArray.length));
     currentImg = $('#logoDivMain').css('background-image');
-    bannerImage = `images/bannerImages/${bannerArray[getRandNum]}`;
+    bannerImage = `location/bannerImages/${bannerArray[getRandNum]}`;
     bannerDuplicateCheck();
   }
 }
@@ -151,6 +137,14 @@ function getDesignerBtnLink() {
   const product = `#${$('.designThisBtn').attr('name')}`;
   sessionStorage.setItem('sendProduct', product);
 }
+
+// IMAGE Preloader**********************
+
+const preloadDiv = document.getElementById('bannerPreloader');
+const preloaderStr = bannerArray.map(image => `<img src="location/bannerImages/${image}" aria-hidden="true" alt="preloadedImg"><br>`).join('');
+preloadDiv.innerHTML = preloaderStr;
+console.log(typeof preloaderStr);
+
 
 // EVENTS/CALLS*************************
 

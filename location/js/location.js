@@ -34,6 +34,24 @@ const loc = {
   emailDomain: '@chicagoshirt.com',
 };
 
+const bannerArray = [
+  'Banner-cheetah.jpg',
+  'Banner-dogWalker.jpg',
+  'Banner-downCentral.jpg',
+  'Banner-estInStPete.jpg',
+  'Banner-Fergs.jpg',
+  'Banner-Jannus.jpg',
+  'Banner-localArt.jpg',
+  'Banner-Monk.jpg',
+  'Banner-Piano.jpg',
+  'Banner-Sidewalk.jpg',
+  'Banner-sidewalk2.jpg',
+  'Banner-streetColors.jpg',
+  'Banner-Trolley.jpg',
+];
+
+// EDIT NOTHING BELOW THIS LINE---------------------------------------------------
+
 function updateInfo() {
   const phoneLink = Array.from(document.querySelectorAll('.phone-link'));
   const phoneNumber = Array.from(document.querySelectorAll('.phone-number'));
