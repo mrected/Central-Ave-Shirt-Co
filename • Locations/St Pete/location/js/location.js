@@ -24,25 +24,33 @@
  */
 
 const loc = {
-  locName: 'Clearwater Shirt Co',
-  city: 'Clearwater',
+  locName: 'Central Ave Shirt Co',
+  city: 'Saint Petersburg',
   state: 'Florida',
   stateAbv: 'FL',
-  address: '2000 Calumet St',
-  zip: '33765',
-  phone: '727-467-5000',
-  emailDomain: '@clearwatershirt.com',
+  address: '4201 Central Ave',
+  zip: '33713',
+  phone: '727-327-3333',
+  emailDomain: '@centralaveshirt.com',
 };
 
 const bannerArray = [
-  'Banner-bridge.jpg',
-  'Banner-hotel.jpg',
-  'Banner-pier60.jpg',
-  'Banner-street.jpg',
+  'Banner-cheetah.jpg',
+  'Banner-dogWalker.jpg',
+  'Banner-downCentral.jpg',
+  'Banner-estInStPete.jpg',
+  'Banner-Fergs.jpg',
+  'Banner-Jannus.jpg',
+  'Banner-localArt.jpg',
+  'Banner-Monk.jpg',
+  'Banner-Piano.jpg',
+  'Banner-Sidewalk.jpg',
+  'Banner-sidewalk2.jpg',
+  'Banner-streetColors.jpg',
+  'Banner-Trolley.jpg',
 ];
 
 // EDIT NOTHING BELOW THIS LINE---------------------------------------------------
-
 
 function updateInfo() {
   const phoneLink = Array.from(document.querySelectorAll('.phone-link'));
