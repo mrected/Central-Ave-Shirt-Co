@@ -1,0 +1,27 @@
+:root{
+
+  --primary-bg-color:#f4f4f4;
+  --secondary-bg-color:#042a2b;
+  --tertiary-bg-color:#d84727;
+
+  --primary-accent-color:#2292a4;
+  --secondary-accent-color:#d84727;
+
+  --semitransparent-dark:rgba(10,10,10,.3);
+
+  --table-row-color:rgba(4,42,43,.1);
+
+  --primary-txt-color:#042a2b;
+  --secondary-txt-color:#f4f4f4;
+  --tertiary-txt-color:#f4f4f4;
+
+  --primary-h1-small:#777;
+  --secondary-h1-small:#d84727;
+
+  --primary-link:#777;
+  --primary-link-hover: #333;
+
+  --secondary-link:#f4f4f4;
+  --secondary-link-hover:#777;
+
+}
