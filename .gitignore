@@ -32,6 +32,12 @@ Custom shirts.docx
 *.tar
 *.zip
 
+
+# Directories #
+###############
+/• New Shirts
+/• Locations
+
 # Logs and databases #
 ######################
 *.log
