@@ -293,44 +293,51 @@ const itemInfo = [
     base: 'designer/images/designerImages/tank-base.png',
     highlights: 'designer/images/designerImages/tank-highlights.png',
     shadows: 'designer/images/designerImages/tank-shadows.png',
-    title: 'ringSpunT',
-    name: 'Ring Spun T-Shirt',
+    title: 'triblendT',
+    name: 'TriBlend T-Shirt',
     adtnlChrg: 4,
-    linkAttr_design: 'designRST',
-    linkAttr_quote: 'quoteRST',
-    linkAttr_info: 'rst.html',
+    linkAttr_design: 'designTriblend',
+    linkAttr_quote: 'quoteTriblend',
+    linkAttr_info: 'triblend.html',
     linkAttr_vendor: 'http://www.helinger.com/ProductResults/?SearchTerms=ringspun',
     productImages: {
       items: {
-        athletic_heather: 'images/productImages/tank/tank-athletichthr.png',
-        charcoal: 'images/productImages/tank/tank-charcoal.png',
-        black: 'images/productImages/tank/tank-jetblack.png',
-        navy: 'images/productImages/tank/tank-navy.png',
-        neon_blue: 'images/productImages/tank/tank-neonblue.png',
-        neon_green: 'images/productImages/tank/tank-neongreen.png',
-        neon_pink: 'images/productImages/tank/tank-neonpink.png',
-        neon_yellow: 'images/productImages/tank/tank-neonyellow.png',
-        red: 'images/productImages/tank/tank-red.png',
-        royal: 'images/productImages/tank/tank-royal.png',
-        white: 'images/productImages/tank/tank-white.png',				
+        Heather_Green: 'images/productImages/triblend/Heather_Green.png',
+        Black: 'images/productImages/triblend/Black.png',
+        Heather_DarkGrey: 'images/productImages/triblend/Heather_DarkGrey.png',
+        Heather_Orange: 'images/productImages/triblend/Heather_Orange.png',
+        Heather_Grey: 'images/productImages/triblend/Heather_Grey.png',
+        Heather_Turquoise: 'images/productImages/triblend/Heather_Turquoise.png',
+        Heather_Navy: 'images/productImages/triblend/Heather_Navy.png',
+        Heather_Red: 'images/productImages/triblend/Heather_Red.png',
+        Heather_Royal: 'images/productImages/triblend/Heather_Royal.png',
+        White: 'images/productImages/triblend/White.png',
       },
       item_thumbnails: {
-        athletic_heather: 'images/productImages/tank/tank-athletichthr-th.png',
-        charcoal: 'images/productImages/tank/tank-charcoal-th.png',
-        black: 'images/productImages/tank/tank-jetblack-th.png',
-        navy: 'images/productImages/tank/tank-navy-th.png',
-        neon_blue: 'images/productImages/tank/tank-neonblue-th.png',
-        neon_green: 'images/productImages/tank/tank-neongreen-th.png',
-        neon_pink: 'images/productImages/tank/tank-neonpink-th.png',
-        neon_yellow: 'images/productImages/tank/tank-neonyellow-th.png',
-        red: 'images/productImages/tank/tank-red-th.png',
-        royal: 'images/productImages/tank/tank-royal-th.png',
-        white: 'images/productImages/tank/tank-white-th.png',	
+        Heather_Green: 'images/productImages/triblend/Heather_Green-th.png',
+        Black: 'images/productImages/triblend/Black-th.png',
+        Heather_DarkGrey: 'images/productImages/triblend/Heather_DarkGrey-th.png',
+        Heather_Orange: 'images/productImages/triblend/Heather_Orange-th.png',
+        Heather_Grey: 'images/productImages/triblend/Heather_Grey-th.png',
+        Heather_Turquoise: 'images/productImages/triblend/Heather_Turquoise-th.png',
+        Heather_Navy: 'images/productImages/triblend/Heather_Navy-th.png',
+        Heather_Red: 'images/productImages/triblend/Heather_Red-th.png',
+        Heather_Royal: 'images/productImages/triblend/Heather_Royal-th.png',
+        White: 'images/productImages/triblend/White-th.png',
       },
 
     },
-    desc: 'Looks nothing like a tank. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-    sizes: 'xs-2x',
+    desc: `<p><strong>This ultracomfortable tee combines moisture-wicking performance, unbeatable tri-blend softness and PosiCharge technology to lock in color.</strong></p>
+            <ul>
+              <li>4.4-ounce, 75/13/12 poly/cotton/rayon jersey with PosiCharge technology</li>
+              <li>4.6-ounce, 75/13/12 poly/cotton/rayon jersey with PosiCharge technology (Black Triad Solid)</li>
+              <li>4.7-ounce, 75/13/12 poly/cotton/rayon jersey with PosiCharge technology (White)</li>
+              <li>Removable tag for comfort and relabeling</li>
+              <li>Contrast neck taping (except White, which is dyed-to-match)</li>
+              <li>Raglan sleeves</li>
+            </ul>
+          <p><em>Tri-Blend fabric infuses each garment with unique character. Please allow for slight color variations. Due to the heat sensitivity of tri-blend fabrics, special care must be taken throughout the printing process. Consult your decorator or ink supplier for best printing practices.</em></p>`,
+    sizes: 'xs-4x',
   },
 
   // POLY -------------------------------------------------------------- ST350
