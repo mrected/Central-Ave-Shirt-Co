@@ -1,0 +1,286 @@
+<!--
+todo list
+https://keep.google.com/u/0/#LIST/1497877583818.1479456097
+
+-->
+
+<!--
+GIT INFO
+
+cd ART\ FILES/Active\ Files/Websites/In\ Progress/Central-Ave-Shirt-Co/
+
+git pull https://github.com/mrected/Central-Ave-Shirt-Co.git
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Central Avenue T-Shirt Co</title>
+
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.css">
+        <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Anton|Zilla+Slab:300,400,700|Roboto:100,400,400i,700|Caveat+Brush" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    </head>
+
+    <body onload='updateInfo()'>
+      <!--START NAV BLOCK-->
+      <div id="navBlock">
+        
+        <div id="contactBar" class="contactBarOpen">
+          <a class="phoneEmailLinks pull-left phone-link" href="tel:727-327-3333"><i class="fa fa-phone" aria-hidden="true"></i> <span class="phone-number">727-327-3333</span></a>
+          <a class="phoneEmailLinks pull-right mail-info" href="mailto:artdept@helinger.com"><i class="fa fa-envelope-o" aria-hidden="true"></i> info</a>
+        </div>
+          
+        <nav class="navbar navbar-default">
+          <div class="container-fluid noPadding">
+
+            <div class="navbar-header">
+              <button type="button" id="navbarToggleBtn" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+            </div>
+              <a class="navbar-brand" href="index.html"><img src="images/cascLogo1.svg" id="smallLogo-static-sm" class="img-responsive navSection" style="display: inline-block"></a>
+            <div class="collapse navbar-collapse" id="navbar-collapse">
+
+              <div id="topNavSection-xs" class=" visible-xs">
+
+                  <ul class="nav navbar-nav">
+                    <li class="navLinks"><a href="designer/designer.html" class="text-uppercase">Design</a></li>
+                    <li class="navLinks"><a href="catalog.html" class="text-uppercase">Catalog</a></li>
+                    <li class="navLinks"><a href="pricing.html" class="text-uppercase">Pricing</a></li>
+                    <li class="navLinks"><a href="contact.html" class="text-uppercase">Contact</a></li>
+                  </ul>
+
+              </div>
+
+              <div id="topNavSection-static" class="hidden-xs" aria-hidden="true">
+
+                <div id="smallLogoDiv" class="navSection">
+                  <a href="index.html"><img src="images/cascLogo1.svg" id="smallLogo-static-lg" class="img-responsive navSection"></a>
+                </div>
+
+                <div id="leftNavSection-static" class="navSection">
+                  <ul class="nav navbar-nav">
+                    <li class="navLinks"><a href="designer/designer.html" class="text-uppercase">Design</a></li>
+                    <li class="navLinks"><a href="catalog.html" class="text-uppercase">Catalog</a></li>
+                  </ul>
+                </div>
+
+                <div id="rightNavSection-static" class="navSection">
+                  <ul class="nav navbar-nav">
+                    <li class="navLinks"><a href="pricing.html" class="text-uppercase">Pricing</a></li>
+                    <li class="navLinks"><a href="contact.html" class="text-uppercase">Contact</a></li>
+                  </ul>
+                </div>
+
+              </div>
+
+
+
+            </div><!-- /.navbar-collapse -->
+            
+          </div><!-- /.container-fluid -->
+        </nav>
+      </div>
+      <!--END NAV BLOCK-->
+
+        <div id="mainBody-staticNav">
+          <section id="productsSection"> 
+            <div class="container">
+              <div id="productName">
+                <h1 class="text-uppercase text-center"><span id="selectedItem"></span></h1>
+              </div>
+              <div class="row">
+                <div class="col-md-4 col-sm-6 homeColumns">
+                  <div class="thumbnail" id="itemLayersDiv"><!--change itemLayersDiv in css and anything having to do with it-->
+                    <img id="itemImage" src='' class='img-responsive'>
+                  </div>
+                  <h5 class="text-uppercase text-center itemDetails visible-xs"> Available Colors: </h5>
+                  <div id="colorBar-sm" class="colorBar"></div>
+                  <div class="btn-group btn-group-justified">
+                    <a href="catalog.html" class="btn btn-default" ><i class="fa fa-arrow-circle-left" aria-hidden="true"></i> Catalog</a>
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                      Other Items <span class="caret"></span></button>
+                      <ul id="otherItems" class="dropdown-menu" role="menu">
+                        
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+
+
+                <div class="col-md-8 col-sm-6 homeColumns">
+
+                <!-- <div class="tab roundedBorderLight">
+                  <button class="tablinks" id="defaultOpen" onclick="catTab(event, 'info')">Info</button>
+                  <button class="tablinks" onclick="catTab(event, 'pricing')">Pricing</button>
+                  <button class="tablinks" onclick="catTab(event, 'links')">Links</button>
+                </div> -->
+
+                <div id="info">
+                  <h5 class="text-uppercase aboutItem">About this <span id="itemName"></span></h5>
+                  <p id="itemDesc" class="itemContent"></p>
+                  <h5 class="text-uppercase itemDetails"> Available Sizes: <span id="itemSizes" class="orangeTxt"></span></h5>
+                  <p id="itemSizes" class="text-uppercase"></p>
+                  <h5 class="text-uppercase itemDetails hidden-xs"> Available Colors: </h5>
+                  <div id="colorBar-lg" class="colorBar hidden-xs"></div>
+
+                  
+
+                </div>
+
+                <div id="links">
+                  <dl>
+                    <dt><a id="designLink" class='designThisBtn' href='designer/designer.html' name='#'>Send to Designer <i class="fa fa-caret-right" aria-hidden="true"></i></a></dt>
+                    <dd>Add a custom design to this item</dd>
+                    <dt><a id="vendorLink" href='#' target="_blank">More Styles <i class="fa fa-caret-right" aria-hidden="true"></i></a></dt>
+                    <dd>Visit our supplier to find more styles.<br><i class="fa fa-info-circle" aria-hidden="true"></i> <mark>Prices listed on supplier sites do not include production charges</mark></dd>
+                  </dl>
+                </div>
+
+                <div id="pricing">
+                  <h5 class="text-uppercase aboutItem">Pricing</h5>
+                  <div class="table-responsive">                          
+                    <table class="table table-hover table-condensed text-center priceTableStyle" id="priceChart"></table>
+                  </div>
+                  <div>
+                    <p>These prices are based on the base price for each production method. <a alt="link to contact page" href="contact.html"><strong>Contact us</strong></a> to get a more accurate quote on your order.</p>
+                  </div>
+                </div>
+
+                
+
+
+
+
+                
+                <!-- SET ITEM IMAGE AND INFO IN 2 DIFFERENT SECTIONS OF THE GRID SO THEY STACK-->
+                <!-- MAKE COLOR BOXES SCALE IN MEDIA QUERIES-->
+                <!-- REMOVE OR FIX LINK ON CATVIEWER IMAGES-->
+                <!-- ADD LINKS TO HELINGER SITE FOR INFO ON MORE STYLES-->
+                  <!-- Nav tabs -->
+
+
+                  <!-- Tab panes -->
+
+
+
+
+                      
+
+
+                  
+                 
+
+              </div><!--END row-->
+            
+
+
+
+            </div>
+                  
+          </section>
+        </div>
+        </div>
+
+    </div>
+
+        <div class="container-fluid" id="footerDiv">
+          <div class="container">
+            <div class="row">
+                <div class="col-sm-3 col-xs-4">
+                  <h4 class="footerTitle"><a href="designer/designer.html" class="footerLink">Design</a></h4>
+                  <ul>
+                    <li><a href="designer/designer.html" class="designThisBtn footerLink footerLink-sm" name='designShirt'>T-shirt</a></li>
+                    <li><a href="designer/designer.html" class="designThisBtn footerLink footerLink-sm" name='designLs'>Long Sleeve</a></li>
+                    <li><a href="designer/designer.html" class="designThisBtn footerLink footerLink-sm" name='designTank'>Tank Top</a></li>
+                    <li><a href="designer/designer.html" class="designThisBtn footerLink footerLink-sm" name='designPolo'>Polo</a></li>
+                    <li><a href="designer/designer.html" class="designThisBtn footerLink footerLink-sm" name='designHoodie'>Hoodie</a></li>
+                    <li><a href="designer/designer.html" class="designThisBtn footerLink footerLink-sm" name='designHat'>Hat</a></li>
+                  </ul>
+                </div>
+                <div class="col-sm-3 col-xs-4">
+                  <h4 class="footerTitle"><a href="catalog.html" class="footerLink">Catalog</a></h4>
+                  <ul>
+                    <li class="shirt"><a href="tshirt.html" class="footerLink footerLink-sm">T-shirt</a></li>
+                    <li><a href="longsleeve.html" class="footerLink footerLink-sm">Long Sleeve</a></li>
+                    <li><a href="tank.html" class="footerLink footerLink-sm">Tank Top</a></li>
+                    <li><a href="polo.html" class="footerLink footerLink-sm">Polo</a></li>
+                    <li><a href="hoodie.html" class="footerLink footerLink-sm">Hoodie</a></li>
+                    <li><a href="hat.html" class="footerLink footerLink-sm">Hat</a></li>
+                  </ul>
+                </div>
+                <div class="col-sm-3 col-xs-4">
+                    <h4 class="footerTitle"><a href="pricing.html" class="footerLink">Pricing</a></h4>
+                    <ul>
+                      <li><a href="pricing.html" class="priceThisBtn footerLink footerLink-sm" name='0'>T-shirt</a></li>
+                      <li><a href="pricing.html" class="priceThisBtn footerLink footerLink-sm" name='1'>Long Sleeve</a></li>
+                      <li><a href="pricing.html" class="priceThisBtn footerLink footerLink-sm" name='2'>Tank Top</a></li>
+                      <li><a href="pricing.html" class="priceThisBtn footerLink footerLink-sm" name='3'>Polo</a></li>
+                      <li><a href="pricing.html" class="priceThisBtn footerLink footerLink-sm" name='4'>Hoodie</a></li>
+                      <li><a href="pricing.html" class="priceThisBtn footerLink footerLink-sm" name='5'>Hat</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-3 col-xs-12">
+                  <h4 class="footerTitle"><a href="contact.html" class="footerLink">Contact Us</a></h4>
+                  <ul>
+                    <li>
+                      <address>
+                        <strong><span class="location-name">Central Ave Shirt Co</span></strong><br>
+                        <span class='address'>
+                        4215 Central Ave<br>
+                        St Petersburg, FL 33713</span>
+                      </address>
+                    </li>
+                    <li>Phone: <a href="tel:727-327-3333" class="footerLink footerLink-sm phone-link"><span class="phone-number">727-327-3333</span></a></li>
+                    <li><strong>Email:</strong> <a href="mailto:info@centralaveshirt.com" class="footerLink footerLink-sm mail-info">info@centralaveshirt.com</a></li>
+                    <li><strong>Art:</strong> <a href="mailto:artdept@centralaveshirt.com" class="footerLink footerLink-sm mail-art">artdept@centralaveshirt.com</a></li>
+                    <li><a href="social.html" class="footerLink footerLink-sm" alt="facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>&nbsp;
+                            <a href="social.html" class="footerLink footerLink-sm" alt="flickr"><i class="fa fa-flickr" aria-hidden="true"></i></a>&nbsp;
+                            <a href="social.html" class="footerLink footerLink-sm" alt="google plus"><i class="fa fa-google-plus" aria-hidden="true"></i></a>&nbsp;
+                            <a href="social.html" class="footerLink footerLink-sm" alt="instargram"><i class="fa fa-instagram" aria-hidden="true"></i></a>&nbsp;
+                            <a href="social.html" class="footerLink footerLink-sm" alt="pinterest"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a>&nbsp;
+                            <a href="social.html" class="footerLink footerLink-sm" alt="snapchat"><i class="fa fa-snapchat-ghost" aria-hidden="true"></i></a>&nbsp;
+                            <a href="social.html" class="footerLink footerLink-sm" alt="twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                  </ul>
+                </div>
+            </div>
+          </div>
+        </div>  
+
+        <div id="preloader" class="preloader">
+        </div>
+
+        <div id="bannerPreloader" class=preloader>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <script src='location/js/location.js'></script>
+        <script type="text/javascript">
+          let itemToShow = 0;
+        </script>
+        <script type="text/javascript" src="js/itemData.js"></script>
+        <script type="text/javascript" src="js/scripts.js"></script>
+        <script type="text/javascript" src="js/catalogScripts.js"></script>
+
+        <script type='text/javascript' data-cfasync='false'>window.purechatApi = { l: [], t: [], on: function () { this.l.push(arguments); } }; (function () { var done = false; var script = document.createElement('script'); script.async = true; script.type = 'text/javascript'; script.src = 'https://app.purechat.com/VisitorWidget/WidgetScript'; document.getElementsByTagName('HEAD').item(0).appendChild(script); script.onreadystatechange = script.onload = function (e) { if (!done && (!this.readyState || this.readyState == 'loaded' || this.readyState == 'complete')) { var w = new PCWidget({c: '9ac5d4bc-be06-4864-a124-9fc4df5cd56d', f: true }); done = true; } }; })();</script>
+        
+
+    </body>
+</html>

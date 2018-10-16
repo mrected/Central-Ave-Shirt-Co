@@ -301,6 +301,7 @@ p{
 
 .homeInfoBox{
 	font-size: 1.35rem;
+	text-align: center;
 }
 
 .thumbnailTitle{
@@ -331,7 +332,7 @@ p{
 
 
 
-.homeBoxBtns .btn-default, .defaultBtns .btn-default{
+/* .homeBoxBtns .btn-default, .defaultBtns .btn-default{
 	font-size: .85rem;
 }
 
@@ -345,6 +346,33 @@ p{
 	color:var(--secondary-txt-color);
 	
 	border-color: var(--primary-bg-color);
+} */
+
+
+.button-group{
+	width:100%;
+}
+
+.button-grp{
+	display:flex;
+	flex-wrap: nowrap;
+}
+
+.button-rnd{
+	flex-grow: 1;
+	text-align: center;
+	border: solid var(--primary-bg-color) .5px;
+}
+
+.button-rnd:link, .button-rnd:active, .button-rnd:visited{
+	background-color: var(--secondary-bg-color);
+	color:var(--secondary-txt-color);
+}
+
+
+.button-rnd:hover{
+	background-color: var(--primary-accent-color);
+	text-decoration: none;
 }
 
 
@@ -570,7 +598,7 @@ select{
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-origin: padding-box;
-	background-image: url('../images/productsHomeBg.jpg');
+	background-image: url('../images/productsHomeBg.png');
 }
 
 .apparelHomeImg{
