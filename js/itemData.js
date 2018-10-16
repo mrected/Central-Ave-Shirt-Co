@@ -151,7 +151,7 @@ const itemInfo = [
     base: 'designer/images/designerImages/tank-base.png',
     highlights: 'designer/images/designerImages/tank-highlights.png',
     shadows: 'designer/images/designerImages/tank-shadows.png',
-    title: 'ringSpunT',
+    title: 'ringspun',
     name: 'Ring Spun T-Shirt',
     adtnlChrg: 2,
     linkAttr_design: 'designRST',
@@ -190,7 +190,6 @@ const itemInfo = [
         Olive: 'images/productImages/ringspun/Olive.png',
         Orange: 'images/productImages/ringspun/Orange.png',
         Purple: 'images/productImages/ringspun/Purple.png',
-        Royal_Frost: 'images/productImages/ringspun/Royal_Frost.png',
         White: 'images/productImages/ringspun/White.png',
       },
       item_thumbnails: {
@@ -224,13 +223,21 @@ const itemInfo = [
         Olive: 'images/productImages/ringspun/Olive-th.png',
         Orange: 'images/productImages/ringspun/Orange-th.png',
         Purple: 'images/productImages/ringspun/Purple-th.png',
-        Royal_Frost: 'images/productImages/ringspun/Royal_Frost-th.png',
         White: 'images/productImages/ringspun/White-th.png',
       },
 
     },
-    desc: 'Looks nothing like a tank. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-    sizes: 'xs-2x',
+    desc: `<p><strong>Crafted from ring spun cotton for ultimate comfort.</strong></p>
+            <ul>
+              <li>4.3-ounce, 100% ring spun combed cotton, 30 singles</li>
+              <li>50/50 ring spun combed cotton/poly (Heathers, Frosts, Neon Pink)</li>
+              <li>90/10 ring spun combed cotton/poly (Light Heather Grey)</li>
+              <li>Slightly slimmer body and shorter sleeves</li>
+              <li>1x1 rib knit neck</li>
+              <li>Tear-away label</li>
+              <li>Shoulder to shoulder taping</li>
+            </ul>`,
+    sizes: 'xs-4x',
   },
 
   // LADIES TANK -------------------------------------------------------------- DM138L
@@ -258,7 +265,7 @@ const itemInfo = [
         neon_yellow: 'images/productImages/tank/tank-neonyellow.png',
         red: 'images/productImages/tank/tank-red.png',
         royal: 'images/productImages/tank/tank-royal.png',
-        white: 'images/productImages/tank/tank-white.png',				
+        white: 'images/productImages/tank/tank-white.png',
       },
       item_thumbnails: {
         athletic_heather: 'images/productImages/tank/tank-athletichthr-th.png',
@@ -271,7 +278,7 @@ const itemInfo = [
         neon_yellow: 'images/productImages/tank/tank-neonyellow-th.png',
         red: 'images/productImages/tank/tank-red-th.png',
         royal: 'images/productImages/tank/tank-royal-th.png',
-        white: 'images/productImages/tank/tank-white-th.png',	
+        white: 'images/productImages/tank/tank-white-th.png',
       },
 
     },
