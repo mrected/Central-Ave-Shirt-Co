@@ -297,7 +297,7 @@ const itemInfo = [
     highlights: 'designer/images/designerImages/tank-highlights.png',
     shadows: 'designer/images/designerImages/tank-shadows.png',
     title: 'triblendT',
-    name: 'TriBlend T-Shirt',
+    name: 'Athletic TriBlend',
     adtnlChrg: 4,
     linkAttr_design: 'designTriblend',
     linkAttr_quote: 'quoteTriblend',
