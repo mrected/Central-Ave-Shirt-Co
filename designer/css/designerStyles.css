@@ -1,6 +1,7 @@
 
 #mainBody-staticNav{
 	padding-top:15rem;
+	margin-bottom:400px;
 }
 
 #checkout-button{
@@ -10,4 +11,11 @@
 	width:12rem;
 	font-family: sans-serif;
 	margin-bottom: 1rem;
+}
+
+@media (min-width:768px){
+	#mainBody-staticNav{
+		padding-top:15rem;
+		margin-bottom:200px;
+	}
 }
