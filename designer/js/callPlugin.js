@@ -1,4 +1,4 @@
-$(document).ready(function(){
+$(document).ready(() => {
 
 
 	//sets main item on Product Designer from Home
@@ -111,7 +111,7 @@ switch statement that takes that variable and matches corresponding div and plac
 // const mailBtn = document.getElementById('send-image-mail-php');
 // mailBtn.addEventListener('click', alert('worked'));
 
-$('#send-image-mail-php').click(function() {
+$('#send-image-mail-php').click(() => {
 
 		designer.getProductDataURL(function(dataURL) {
 			$.post( "php/send_image_via_mail.php", { base64_image: dataURL} );
@@ -120,5 +120,4 @@ $('#send-image-mail-php').click(function() {
 
 	});
 
-//see this:  http://php.net/manual/en/function.mail.php
-
+// see this:  http://php.net/manual/en/function.mail.php

@@ -148,9 +148,9 @@ const itemInfo = [
   // RINGSPUN -------------------------------------------------------------- DT6000
   {
     image: 'images/catImages/item_1.jpg',
-    base: 'designer/images/designerImages/tank-base.png',
-    highlights: 'designer/images/designerImages/tank-highlights.png',
-    shadows: 'designer/images/designerImages/tank-shadows.png',
+    base: 'designer/images/designerImages/ringspun-base.png',
+    highlights: 'designer/images/designerImages/ringspun-highlights.png',
+    shadows: 'designer/images/designerImages/ringspun-shadows.png',
     title: 'ringspun',
     name: 'Ring Spun T-Shirt',
     adtnlChrg: 2,
@@ -293,9 +293,9 @@ const itemInfo = [
   // TRIBLEND -------------------------------------------------------------- ST400
   {
     image: 'images/catImages/item_3.jpg',
-    base: 'designer/images/designerImages/tank-base.png',
-    highlights: 'designer/images/designerImages/tank-highlights.png',
-    shadows: 'designer/images/designerImages/tank-shadows.png',
+    base: 'designer/images/designerImages/triblend-base.png',
+    highlights: 'designer/images/designerImages/triblend-highlights.png',
+    shadows: 'designer/images/designerImages/triblend-shadows.png',
     title: 'triblendT',
     name: 'Athletic TriBlend',
     adtnlChrg: 4,
@@ -347,14 +347,14 @@ const itemInfo = [
 
   {
     image: 'images/catImages/item_4.jpg',
-    base: 'designer/images/designerImages/tank-base.png',
-    highlights: 'designer/images/designerImages/tank-highlights.png',
-    shadows: 'designer/images/designerImages/tank-shadows.png',
-    title: 'polyt',
+    base: 'designer/images/designerImages/poly-base.png',
+    highlights: 'designer/images/designerImages/poly-highlights.png',
+    shadows: 'designer/images/designerImages/poly-shadows.png',
+    title: 'poly',
     name: 'Poly T',
     adtnlChrg: 3,
-    linkAttr_design: 'polyt',
-    linkAttr_quote: 'quotePolyt',
+    linkAttr_design: 'designPoly',
+    linkAttr_quote: 'quotePoly',
     linkAttr_info: 'polyt.html',
     linkAttr_vendor: 'http://www.helinger.com/ProductResults/?SearchTerms=tank%20top',
     productImages: {
