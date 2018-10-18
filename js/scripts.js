@@ -109,7 +109,7 @@ function closeNav() {
 $(window).scroll(function () {
   clearTimeout($.data(this, 'scrollTimer'));
   $.data(this, 'scrollTimer', setTimeout(() => {
-    if ($(Window).scrollTop() > 500 && $(Window).width() >= 768 ) {
+    if ($(window).scrollTop() > 500 && $(window).width() >= 768 ) {
     openNav ();
 			navOpenState = true;
 		}
@@ -143,7 +143,6 @@ function getDesignerBtnLink() {
 const preloadDiv = document.getElementById('bannerPreloader');
 const preloaderStr = bannerArray.map(image => `<img src="location/bannerImages/${image}" aria-hidden="true" alt="preloadedImg"><br>`).join('');
 preloadDiv.innerHTML = preloaderStr;
-console.log(typeof preloaderStr);
 
 
 // EVENTS/CALLS*************************

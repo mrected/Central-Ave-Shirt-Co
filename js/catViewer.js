@@ -1,90 +1,88 @@
-//VARIABLES*************************
+// VARIABLES*************************
 
-let itemNumber=0;
+let itemNumber = 0;
 const numberOfItems = Object.keys(itemInfo).length;
-let itemSrcString = "images/catImages/item_" + itemNumber + ".jpg";
+let itemSrcString = 'images/catImages/item_' + itemNumber + '.jpg';
 
-//FUNCTIONS*************************
+// FUNCTIONS*************************
 
-	function preloadImages(){
-		let preloaderString = "";
-		for(let i=0; i<numberOfItems;i++){
-			preloaderString+="<img aria-hidden='true' src='images/catImages/item_" + i + ".jpg'>";
-		}
-		$("#preloader").html(preloaderString);
-	}
+function preloadImages() {
+  let preloaderString = '';
+  for (let i = 0; i < numberOfItems; i++) {
+    preloaderString += `<img aria-hidden='true' src='images/catImages/item_${  i  }.jpg'>`;
+  }
+  $('#preloader').html(preloaderString);
+}
 
-	function displayInfo(){
-		$("#itemType").html(itemInfo[itemNumber].name);
-		$("#startCostTxt").html("$" + roundCurrency(itemCostData.c1[13] + itemInfo[itemNumber].adtnlChrg));
-	}
+function sendProductDesign() {
+  const product = `#${$(this).attr('name')}`;
+  sessionStorage.setItem('sendProductDesign', product);
+}
 
-	function updateLinks(){
-		$("#designLink").attr('name',itemInfo[itemNumber].linkAttr_design);
-		$("#infoLink").attr('href',itemInfo[itemNumber].linkAttr_info);
-		$(".designThisBtn").on("click", sendProductDesign);
-	}
+function displayInfo() {
+  $('#itemType').html(itemInfo[itemNumber].name);
+  $('#startCostTxt').html('$' + roundCurrency(itemCostData.c1[13] + itemInfo[itemNumber].adtnlChrg));
+}
 
-	function nextItem(){
-		if(itemNumber>=numberOfItems-1){
-			itemNumber = 0;
-			itemSrcString = "images/catImages/item_" + itemNumber + ".jpg";
-		}
-		else{
-			itemNumber++;
-			itemSrcString = "images/catImages/item_" + itemNumber + ".jpg";
-		}
-		$(".catViewerImg").animate({opacity: 0,left:"+=150px"},200, function(){
+function updateLinks() {
+  $('#designLink').attr('name', itemInfo[itemNumber].linkAttr_design);
+  $('#infoLink').attr('href', itemInfo[itemNumber].linkAttr_info);
+  $('#designLink').on('click', sendProductDesign);
+}
+
+function nextItem() {
+  if (itemNumber >= numberOfItems - 1) {
+    itemNumber = 0;
+    itemSrcString = 'images/catImages/item_' + itemNumber + '.jpg';
+  } else {
+    itemNumber++;
+    itemSrcString = 'images/catImages/item_' + itemNumber + '.jpg';
+  }
+  $('.catViewerImg').animate({ opacity: 0, left: '+=150px' }, 200, () => {
 			$(".catViewerImg").attr("src", itemSrcString);
 			$(".catViewerImg").animate({left:"-=300px"},1);
 			$(".catViewerImg").animate({opacity:1,left:"+=150px"},200);
 			displayInfo();
 			updateLinks();
 		});
-		
-	}
+}
 
-	function prevItem(){
-		if(itemNumber<=0){
-			itemNumber = numberOfItems-1;
-			itemSrcString = "images/catImages/item_" + itemNumber + ".jpg";
-
-		}
-		else{
-			itemNumber--;
-			itemSrcString = "images/catImages/item_" + itemNumber + ".jpg";
-		}
-		$(".catViewerImg").animate({opacity: 0,left:"-=150px"},200, function(){
+function prevItem() {
+  if (itemNumber <= 0) {
+    itemNumber = numberOfItems - 1;
+    itemSrcString = 'images/catImages/item_' + itemNumber + '.jpg';
+  } else {
+    itemNumber--;
+    itemSrcString = 'images/catImages/item_' + itemNumber + '.jpg';
+  }
+  $('.catViewerImg').animate({ opacity: 0, left: '-=150px' }, 200, () => {
 			$(".catViewerImg").attr("src", itemSrcString);
 			$(".catViewerImg").animate({left:"+=300px"},1);
 			$(".catViewerImg").animate({opacity:1,left:"-=150px"},200);
 			displayInfo();
 			updateLinks();
 		});
+}
+// EVENTS/CALLS*************************
+preloadImages();
+displayInfo();
+updateLinks();
 
-	}
-//EVENTS/CALLS*************************
-	preloadImages();
-	displayInfo();
-	updateLinks();
-
-	$("#catViewerPrev, #catViewerNext").hover(function(){
-		$(this).css({"color": "#d84727","cursor": "pointer"});
-	},function(){
-		$(this).css("color","#2292a4");
-	});
+$('#catViewerPrev, #catViewerNext').hover(function () {
+  $(this).css({ 'color': '#d84727', cursor: 'pointer' });
+}, function () {
+  $(this).css('color', '#2292a4');
+});
 	
 
-	$("#catViewerPrev").click(function(){
+$('#catViewerPrev').click(() => {
 		prevItem();
 	});
 
-	$("#catViewerPrev").hover(function(){
+$('#catViewerPrev').hover(() => {
 		$("#");
 	});
 
-	$("#catViewerNext").click(function(){
+$('#catViewerNext').click(() => {
 		nextItem();
 	});
-
-
